@@ -1,3 +1,5 @@
+This repository has been created by me to make changes to an existing repository. I do not claim it to be my own work.
+
 # Architectural Support for Optimizing Huge Page Selection Within the OS
 
 To alleviate address translation overheads that memory-intensive irregular applications incur, we introduce a hardware-OS co-design to manage huge pages, which can effectively eliminate TLB misses when used efficiently. We design a novel hardware promotion candidate cache (PCC) to track huge page (2MB)-aligned regions that collectively incur the most page table walks from constituent base page accesses. We then decouple OS page promotion decisions from page data tracking performed by the PCC to alleviate the OS from scanning overheads and enable quicker promotion of candidates, especially when the system is under memory pressure and huge page resources are limited. This repository provides the workflow to evaluate this proposal. For further details, please refer to our manuscript referenced below.
