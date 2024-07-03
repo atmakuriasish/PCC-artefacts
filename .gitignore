@@ -1,0 +1,13 @@
+data/
+results/
+applications/launch/mcf/
+applications/launch/omnetpp/
+applications/launch/xalancbmk/
+
+__pycache__/
+*.pyc
+pin3.7/source/tools/PromotionCache/out*
+done.txt
+out.*
+*output*.txt
+.vscode/
