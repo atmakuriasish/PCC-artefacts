@@ -17,7 +17,7 @@ PCC_SIZE=128
 INTERVAL_FACTOR=30
 
 # ----- APPLICATIONS -----
-vp_apps=(bfs)
+vp_apps=(sssp)
 parsec_apps=(canneal dedup)
 spec_apps=(mcf omnetpp xalancbmk)
 other_apps=("${parsec_apps[@]}" "${spec_apps[@]}")

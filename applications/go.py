@@ -22,8 +22,8 @@ NUM_ITER = 3
 # APPS
 #vp = ["bfs", "sssp", "pagerank"]
 vp = ["bfs"]
-parsec = ["canneal", "dedup"]
-spec = ["mcf", "omnetpp", "xalancbmk"]
+parsec = []
+spec = []
 apps = vp + parsec + spec
 
 # INPUTS
@@ -43,8 +43,8 @@ dataset_names = {"DBG_Kronecker_25/": "dbg_kron25",
             "t5.xml": "xalancbmk"}
 
 vp_inputs = ["Kronecker_21/"]
-for dataset in datasets:
-  vp_inputs += [dataset + "/", "DBG_" + dataset + "/"]
+#for dataset in datasets:
+#  vp_inputs += [dataset + "/", "DBG_" + dataset + "/"]
 #vp_inputs = ["Kronecker_21/"]
 
 #inputs = {

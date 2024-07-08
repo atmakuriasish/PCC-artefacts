@@ -1,9 +1,9 @@
 from go import *
 from metrics import *
 
-NUMA_NODE = 1
-CPU = 8
-CPU_LIST = [8, 9, 10, 11, 12, 13, 14, 15, 24, 25, 26, 27, 28, 29, 30, 31]
+NUMA_NODE = 0
+CPU = 0
+CPU_LIST = [0, 1, 2, 3, 4, 5, 6, 7]
 FREQ = 2.1e9
 
 def parse_args():
