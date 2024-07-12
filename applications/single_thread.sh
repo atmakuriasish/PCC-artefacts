@@ -9,12 +9,12 @@ echo "sudo bash ../pin3.7/source/tools/PromotionCache/run.sh hawkeye single_thre
 sudo bash ../pin3.7/source/tools/PromotionCache/run.sh hawkeye single_thread
 
 # Huge Page Utility for PCC
-echo "sudo python go.py -x single_thread_pcc"
-sudo python go.py -x single_thread_pcc
+echo "sudo python3 go.py -x single_thread_pcc"
+sudo python3 go.py -x single_thread_pcc
 
 # Huge Page Utility for HawkEye
-echo "sudo python go.py -x hawkeye"
-sudo python go.py -x hawkeye
+echo "sudo python3 go.py -x hawkeye"
+sudo python3 go.py -x hawkeye
 
 # -------------------- START THP --------------------
 
@@ -26,12 +26,12 @@ echo "echo always > /sys/kernel/mm/transparent_hugepage/defrag"
 echo always > /sys/kernel/mm/transparent_hugepage/defrag
 
 # Huge Page Utility for PCC
-echo "sudo python go.py -x single_thread_pcc"
-sudo python go.py -x single_thread_pcc
+echo "sudo python3 go.py -x single_thread_pcc"
+sudo python3 go.py -x single_thread_pcc
 
 # Huge Page Utility for HawkEye
-echo "sudo python go.py -x hawkeye"
-sudo python go.py -x hawkeye
+echo "sudo python3 go.py -x hawkeye"
+sudo python3 go.py -x hawkeye
 
 # Disable Linux THP
 echo "echo madvise > /sys/kernel/mm/transparent_hugepage/enabled"
