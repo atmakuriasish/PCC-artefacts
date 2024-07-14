@@ -3,7 +3,7 @@
 DATA_DIR=../../data
 TLB_SIZE=1024
 
-apps=(bfs)
+apps=(bfs sssp)
 
 #datasets=(Kronecker_25 Twitter Sd1_Arc DBG_Kronecker_25 DBG_Twitter DBG_Sd1_Arc)
 #dataset_names=(kron25 twit web dbg_kron25 dbg_twit dbg_web)

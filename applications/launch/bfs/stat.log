@@ -1,0 +1,12 @@
+# started on Sun Jul 14 22:22:03 2024
+
+dTLB-load-misses: 44892850 624198691 624198691
+dTLB-loads: 245140128 624201951 624201951
+
+ Performance counter stats for process id '16958':
+
+       4,48,92,850      dTLB-load-misses          #   18.31% of all dTLB cache accesses
+      24,51,40,128      dTLB-loads                                                  
+
+       1.604335978 seconds time elapsed
+

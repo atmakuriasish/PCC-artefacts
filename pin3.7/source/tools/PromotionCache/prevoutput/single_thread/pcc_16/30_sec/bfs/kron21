@@ -1,0 +1,55 @@
+13 arguments, path = /home/asish/promotion-candidate-cache/pin3.7/source/tools/PromotionCache/../../../../applications/pin_source/bfs/main, exec = main
+MODE = 0, ACCESS INTERVAL = 73285645, PROMOTION CACHE SIZE = 16, FACTOR = 30
+Routine = _Z9pin_startv
+Routine = _Z7pin_endv
+Nodes: 2097152, Edges: 63537176
+reading byte length of:    8388612
+reading byte length of:    254148704
+Reading graph elapsed time: 23.5544s
+
+Memory Regions:
+NODE_ARRAY: starting base = 3ffff12, ending base = 3ffff1b
+EDGE_ARRAY: starting base = 3fffe20, ending base = 3ffff13
+PROP_ARRAY: starting base = 3fffe18, ending base = 3fffe21
+IN_WL: starting base = 3fffe08, ending base = 3fffe18
+OUT_WL: starting base = 3fffdf7, ending base = 3fffe07
+
+
+73285645: Memory Regions:
+	base = 3fffe19, 35.8316, 275215, 179
+	base = 3fffe1a, 30.7434, 279917, 76
+	base = 3fffe18, 24.5158, 172648, 44
+	base = 3fffe1e, 19.2247, 281622, 22
+	base = 3fffe1f, 18.3943, 278567, 20
+	base = 3fffe1d, 17.9954, 278670, 17
+	base = 3fffe1b, 18.8528, 285205, 14
+	base = 3fffe1c, 23.6093, 288322, 14
+	base = 3fffe20, 167.544, 91981, 7
+	base = 3fffe88, 4639.9, 21, 2
+	base = 3ffff16, 58375.8, 84, 0
+	base = 3fffe08, 101174, 1072, 0
+	base = 3fffe87, 7992.44, 207, 0
+	base = 3fffdf9, 105434, 39, 0
+	base = 3fffe86, 6078.08, 87, 0
+	base = 3fffe85, 7352.4, 128, 0
+
+
+starting kernel
+-- epoch 1 1 --> push
+-- epoch 2 8 --> push
+-- epoch 3 23529 --> push
+-- epoch 4 989678 --> push
+-- epoch 5 228767 --> push
+-- epoch 6 1181 --> push
+-- epoch 7 2 --> push
+ending kernel
+
+total kernel computation time: 58.419362
+user time: 58.390000
+kernel time: 0.020000
+footprint: start = 565836KB, end = 576584KB, diff = 10748KB
+page reclaims: 12910
+page faults: 0
+swaps: 0
+Total Accesses = 994071799
+Num 2MB PTWs = 0

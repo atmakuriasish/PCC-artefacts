@@ -1,0 +1,6 @@
+12 arguments, path = /home/asish/promotion-candidate-cache/pin3.7/source/tools/PromotionCache/../../../../applications/launch/canneal/canneal, exec = canneal
+MODE = 0, ACCESS INTERVAL = 0, PROMOTION CACHE SIZE = 128, FACTOR = 30
+Routine = _Z9pin_startv
+Routine = _Z7pin_endv
+Routine = _GLOBAL__sub_I__Z9pin_startv
+C: Tool (or Pin) caused signal 8 at PC 0x7ffff6e36ec0

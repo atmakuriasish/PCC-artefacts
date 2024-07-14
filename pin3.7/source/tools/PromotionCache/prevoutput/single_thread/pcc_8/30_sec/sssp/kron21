@@ -1,0 +1,131 @@
+13 arguments, path = /home/asish/promotion-candidate-cache/pin3.7/source/tools/PromotionCache/../../../../applications/pin_source/sssp/main, exec = main
+MODE = 0, ACCESS INTERVAL = 73285645, PROMOTION CACHE SIZE = 8, FACTOR = 30
+Routine = _Z9pin_startv
+Routine = _Z7pin_endv
+Nodes: 2097152, Edges: 63537176
+reading byte length of:    8388612
+reading byte length of:    254148704
+reading byte length of:    254148704
+Reading graph elapsed time: 46.4728s
+
+Memory Regions:
+NODE_ARRAY: starting base = 3ffff12, ending base = 3ffff1b
+EDGE_ARRAY: starting base = 3fffe20, ending base = 3ffff13
+EDGE_VALUES: starting base = 3fffd2d, ending base = 3fffe21
+PROP_ARRAY: starting base = 3fffd25, ending base = 3fffd2e
+IN_WL: starting base = 3fffcfd, ending base = 3fffd25
+OUT_WL: starting base = 3fffcd4, ending base = 3fffcfc
+
+
+73285645: Memory Regions:
+	base = 3fffd2b, 33.2761, 340, 212
+	base = 3fffd2a, 53.7343, 387, 65
+	base = 3fffd29, 53.2739, 395, 17
+	base = 3fffd28, 50.5356, 391, 4
+	base = 3fffd27, 50.4645, 382, 1
+	base = 3fffe64, 12571.4, 31, 1
+	base = 3fffd72, 12991, 1, 1
+	base = 3fffd26, 45.3874, 392, 0
+
+2198569350: Memory Regions:
+	base = 3fffd26, 42.4951, 4957449, 238
+	base = 3fffd2d, 656.127, 4854170, 183
+	base = 3fffd2c, 280.743, 5073484, 170
+	base = 3fffd53, 5123.24, 34, 14
+	base = 3fffd25, 8318.82, 25, 11
+	base = 3fffe45, 7393.77, 42, 10
+	base = 3ffff14, 5546.61, 7, 7
+	base = 3fffd54, 0, 0, 0
+
+2271854995: Memory Regions:
+	base = 3fffe49, 5862.31, 133, 133
+	base = 3fffd54, 7317.86, 116, 115
+	base = 3fffd56, 11738.7, 108, 108
+	base = 3fffe46, 6912.64, 93, 93
+	base = 3fffe47, 19339.6, 89, 89
+	base = 3fffe48, 28732.6, 80, 80
+	base = 3fffd55, 4506.12, 63, 63
+	base = 3fffd5d, 0, 0, 0
+
+4397138700: Memory Regions:
+	base = 3fffe52, 1.40277e+06, 1906, 175
+	base = 3fffd5f, 2.93287e+06, 2049, 159
+	base = 3fffd60, 1.02263e+06, 1858, 154
+	base = 3fffe51, 3.22503e+06, 1994, 140
+	base = 3fffe50, 1.98702e+06, 1993, 130
+	base = 3fffe53, 945956, 1808, 126
+	base = 3fffd5e, 2.45124e+06, 1937, 119
+	base = 3fffdc9, 0, 0, 0
+
+4470424345: Memory Regions:
+	base = 3fffd61, 2545.12, 139, 139
+	base = 3fffd2f, 4791, 137, 137
+	base = 3fffe21, 4615.78, 119, 119
+	base = 3fffd2e, 3129.93, 111, 111
+	base = 3fffd57, 2090.04, 104, 104
+	base = 3fffe20, 2542.91, 74, 74
+	base = 3ffff18, 15411.8, 70, 70
+	base = 3fffda5, 0, 0, 0
+
+6595708050: Memory Regions:
+	base = 3ffff15, 3181.16, 2156, 248
+	base = 3ffff16, 6337.72, 51124, 219
+	base = 3ffff1a, 8667.32, 8153, 71
+	base = 3ffff12, 7995, 4394, 48
+	base = 3fffe22, 3870.42, 19, 9
+	base = 3fffd30, 2844.26, 19, 9
+	base = 3fffe1e, 184108, 66, 7
+	base = 3fffda0, 0, 0, 0
+
+6668993695: Memory Regions:
+	base = 3fffda4, 362279, 119, 119
+	base = 3fffe96, 301018, 116, 116
+	base = 3fffda2, 768568, 110, 110
+	base = 3fffe94, 787523, 100, 100
+	base = 3fffe95, 720815, 94, 94
+	base = 3fffda1, 1.42279e+06, 87, 87
+	base = 3fffe93, 1.09754e+06, 82, 82
+	base = 3fffd62, 0, 0, 0
+
+8794277400: Memory Regions:
+	base = 3fffd65, 268725, 4575, 248
+	base = 3ffff10, 247006, 4835, 245
+	base = 3fffe57, 284460, 4451, 238
+	base = 3fffe58, 394804, 4189, 208
+	base = 3fffe55, 418563, 4320, 197
+	base = 3fffd64, 344949, 3936, 191
+	base = 3fffd63, 388502, 4034, 183
+	base = 3fffda7, 0, 0, 0
+
+8867563045: Memory Regions:
+	base = 3fffe4a, 69052.6, 268, 140
+	base = 3fffe24, 200021, 260, 133
+	base = 3fffd32, 153421, 246, 127
+	base = 3fffd58, 128181, 238, 124
+	base = 3fffd31, 159563, 236, 121
+	base = 3fffe56, 371029, 188, 98
+	base = 3fffe23, 218402, 189, 97
+	base = 3fffd36, 0, 0, 0
+
+
+starting kernel
+-- epoch 1 1 --> push
+-- epoch 2 8 --> push
+-- epoch 3 25481 --> push
+-- epoch 4 2843123 --> push
+-- epoch 5 1235456 --> push
+-- epoch 6 3853 --> push
+-- epoch 7 228 --> push
+-- epoch 8 37 --> push
+-- epoch 9 3 --> push
+ending kernel
+
+total kernel computation time: 624.155504
+user time: 624.110000
+kernel time: 0.040000
+footprint: start = 1062252KB, end = 1097788KB, diff = 35536KB
+page reclaims: 19128
+page faults: 0
+swaps: 0
+Total Accesses = 10955529561
+Num 2MB PTWs = 42257

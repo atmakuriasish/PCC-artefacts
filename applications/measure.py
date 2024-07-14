@@ -3,7 +3,7 @@ from metrics import *
 
 NUMA_NODE = 0
 CPU = 0
-CPU_LIST = [0, 1, 2, 3, 4, 5, 6, 7]
+CPU_LIST = [0, 1, 2, 3]
 FREQ = 2.1e9
 
 def parse_args():
@@ -16,7 +16,7 @@ def parse_args():
     parser.add_argument("-t", "--num_threads", type=int, default=0, help="Number of threads")
     parser.add_argument("-o", "--output", type=str, help="Output path")
     parser.add_argument("-mo", "--measure_only", type=int, default=0, help="Perform parsing of results only (no compilation or application execution)")
-    parser.add_argument("-mf", "--measure_full", type=int, default=0, help="Measure all performance counters (default is to only measure counters needed to determine TLB and PTW rates)")
+    parser.add_argument("-mf", "--measure_full", type=int, default=1, help="Measure all performance counters (default is to only measure counters needed to determine TLB and PTW rates)")
     parser.add_argument("-ma", "--madvise", type=str, default="0", help="Madvise mode")
     parser.add_argument("-pd", "--promotion_data", type=str, default="", help="Promotion filename")
     parser.add_argument("-dd", "--demotion_data", type=str, default="", help="Demotion filename")
@@ -143,6 +143,8 @@ def parse_results(run_kernel, iteration=""):
       measurements_file = "measurements.txt"
 
     measurements = open(output + results_file, "w+")
+    
+    print("reaching here\n")
 
     if (measure_only):
       measure = False
@@ -177,7 +179,7 @@ def parse_results(run_kernel, iteration=""):
             print(metric, value)
       averages.close()
 
-      write_results(measurements)
+    write_results(measurements)
 
 def write_results(measurements):
     measurements.write("RESULTS:\n----------\n\n")

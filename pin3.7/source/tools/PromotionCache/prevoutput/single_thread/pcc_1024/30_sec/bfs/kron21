@@ -1,0 +1,169 @@
+13 arguments, path = /home/asish/promotion-candidate-cache/pin3.7/source/tools/PromotionCache/../../../../applications/pin_source/bfs/main, exec = main
+MODE = 0, ACCESS INTERVAL = 73285645, PROMOTION CACHE SIZE = 1024, FACTOR = 30
+Routine = _Z9pin_startv
+Routine = _Z7pin_endv
+Nodes: 2097152, Edges: 63537176
+reading byte length of:    8388612
+reading byte length of:    254148704
+Reading graph elapsed time: 23.5597s
+
+Memory Regions:
+NODE_ARRAY: starting base = 3ffff12, ending base = 3ffff1b
+EDGE_ARRAY: starting base = 3fffe20, ending base = 3ffff13
+PROP_ARRAY: starting base = 3fffe18, ending base = 3fffe21
+IN_WL: starting base = 3fffe08, ending base = 3fffe18
+OUT_WL: starting base = 3fffdf7, ending base = 3fffe07
+
+
+73285645: Memory Regions:
+	base = 3fffe19, 32.823, 276093, 176
+	base = 3fffe1a, 37.3883, 279711, 66
+	base = 3fffe18, 31.5476, 179245, 45
+	base = 3fffe1e, 20.3419, 281742, 21
+	base = 3fffe1f, 18.3899, 277923, 20
+	base = 3fffe1d, 19.5094, 278984, 16
+	base = 3fffe1b, 21.5743, 284955, 14
+	base = 3fffe1c, 22.9166, 288088, 13
+	base = 3fffe20, 172.538, 85446, 6
+	base = 3fffe88, 4075.38, 19, 1
+	base = 3ffff16, 58258.6, 75, 0
+	base = 3fffe08, 125466, 1038, 0
+	base = 3fffe87, 7753.05, 209, 0
+	base = 3fffdf9, 97273, 39, 0
+	base = 3fffe86, 6078.08, 87, 0
+	base = 3fffe85, 7352.4, 128, 0
+	base = 3fffe84, 4118.87, 49, 0
+	base = 3fffe83, 7568.04, 154, 0
+	base = 3fffe82, 7838.12, 135, 0
+	base = 3ffff15, 81824.1, 386, 0
+	base = 3fffdf8, 131189, 566, 0
+	base = 3fffe81, 5457.86, 94, 0
+	base = 3fffe80, 7463.81, 141, 0
+	base = 3fffe7f, 7887.53, 96, 0
+	base = 3fffe7e, 4300.92, 66, 0
+	base = 3fffe7d, 5107.28, 76, 0
+	base = 3fffe7c, 6076.2, 75, 0
+	base = 3fffe7b, 5285.83, 92, 0
+	base = 3fffe7a, 6016.93, 64, 0
+	base = 3fffe79, 8362.76, 170, 0
+	base = 3fffe78, 5660.04, 107, 0
+	base = 3fffe77, 7034.55, 93, 0
+	base = 3fffe76, 7290.86, 134, 0
+	base = 3fffe75, 6909.02, 133, 0
+	base = 3fffe74, 5328.52, 57, 0
+	base = 3fffe73, 5694.25, 166, 0
+	base = 3fffe72, 7042.34, 105, 0
+	base = 3fffe71, 6610.1, 160, 0
+	base = 3fffe70, 4662.75, 87, 0
+	base = 3fffe6f, 6813.78, 92, 0
+	base = 3fffe6e, 5419.95, 151, 0
+	base = 3fffe6d, 7649.72, 144, 0
+	base = 3fffe6c, 5769.75, 69, 0
+	base = 3fffe6b, 8231.21, 137, 0
+	base = 3fffe6a, 4669.56, 85, 0
+	base = 3fffe69, 7318.67, 125, 0
+	base = 3fffe68, 6920.06, 127, 0
+	base = 3fffe67, 6802.89, 93, 0
+	base = 3fffe66, 6064.2, 72, 0
+	base = 3fffe65, 6640.99, 152, 0
+	base = 3fffe64, 4894.78, 164, 0
+	base = 3fffe63, 7230.35, 67, 0
+	base = 3ffff14, 33411.5, 394, 0
+	base = 3fffe62, 4942.56, 67, 0
+	base = 3fffe61, 5240.54, 69, 0
+	base = 3fffe60, 7407.23, 133, 0
+	base = 3fffe5f, 4683.6, 77, 0
+	base = 3fffe5e, 6049.3, 108, 0
+	base = 3fffe5d, 4640.77, 74, 0
+	base = 3fffe5c, 4534.78, 68, 0
+	base = 3fffe5b, 5984.46, 45, 0
+	base = 3fffe5a, 7293.23, 125, 0
+	base = 3fffe59, 6903.92, 94, 0
+	base = 3fffe58, 7283.92, 115, 0
+	base = 3fffe57, 6498.47, 130, 0
+	base = 3fffe56, 4837.66, 74, 0
+	base = 3fffe55, 7140.02, 66, 0
+	base = 3fffe54, 5987.17, 126, 0
+	base = 3fffe53, 5705.44, 157, 0
+	base = 3fffe52, 7000.56, 108, 0
+	base = 3fffe51, 5184.58, 85, 0
+	base = 3fffe50, 7738.33, 100, 0
+	base = 3fffe4f, 5155.59, 65, 0
+	base = 3fffe4e, 5358.04, 80, 0
+	base = 3fffe4d, 7771.3, 161, 0
+	base = 3fffe4c, 5381.07, 120, 0
+	base = 3fffe4b, 7441.4, 148, 0
+	base = 3fffe4a, 6047.9, 92, 0
+	base = 3fffe49, 6114.61, 60, 0
+	base = 3fffe48, 8284.33, 152, 0
+	base = 3fffe47, 7304.26, 109, 0
+	base = 3fffe46, 7345.18, 105, 0
+	base = 3fffe45, 4645.06, 86, 0
+	base = 3ffff13, 43148.2, 401, 0
+	base = 3fffe44, 3598.7, 74, 0
+	base = 3fffe43, 6156.65, 131, 0
+	base = 3fffe42, 6169.31, 95, 0
+	base = 3fffe41, 6056.69, 85, 0
+	base = 3fffe40, 6610.03, 111, 0
+	base = 3fffe3f, 8085.86, 181, 0
+	base = 3fffe3e, 4345.84, 45, 0
+	base = 3fffe3d, 3396.98, 116, 0
+	base = 3fffdf7, 44775.8, 564, 0
+	base = 3fffe3c, 5269.78, 72, 0
+	base = 3fffe3b, 7941.27, 90, 0
+	base = 3fffe3a, 6402.93, 90, 0
+	base = 3fffe39, 8937.65, 117, 0
+	base = 3fffe38, 7411.95, 127, 0
+	base = 3fffe37, 6109.05, 85, 0
+	base = 3fffe36, 6909.72, 78, 0
+	base = 3fffe35, 6257.3, 103, 0
+	base = 3fffe34, 7045.41, 72, 0
+	base = 3fffe33, 4942.67, 80, 0
+	base = 3fffe32, 6203.61, 53, 0
+	base = 3fffe31, 6586.89, 71, 0
+	base = 3fffe30, 6146.53, 106, 0
+	base = 3fffe2f, 5128.39, 76, 0
+	base = 3fffe2e, 6015.97, 107, 0
+	base = 3fffe2d, 4619.81, 90, 0
+	base = 3fffe2c, 8542.78, 66, 0
+	base = 3fffe2b, 9656.73, 103, 0
+	base = 3fffe2a, 7330.39, 80, 0
+	base = 3fffe29, 7022.07, 93, 0
+	base = 3fffe28, 7648.89, 124, 0
+	base = 3ffff12, 86079.6, 119, 0
+	base = 3fffe27, 9180.6, 134, 0
+	base = 3fffe26, 5444.33, 71, 0
+	base = 3fffe25, 9902.9, 85, 0
+	base = 3fffe24, 5845.85, 53, 0
+	base = 3fffe23, 4355.88, 83, 0
+	base = 3fffe22, 9255.35, 90, 0
+	base = 3fffe21, 9051.97, 99, 0
+	base = 3ffff21, 39981.4, 12, 0
+	base = 2aaaaaa, 54850.1, 6, 0
+	base = 3ffff20, 676804, 2, 0
+	base = 3fffeab, 12894.6, 3, 0
+	base = 3ffff0f, 0, 0, 0
+	base = 3ffff1a, 0, 0, 0
+	base = 3fffefa, 0, 0, 0
+	base = 3ffff22, 16.8, 2, 0
+
+
+starting kernel
+-- epoch 1 1 --> push
+-- epoch 2 8 --> push
+-- epoch 3 23529 --> push
+-- epoch 4 989678 --> push
+-- epoch 5 228767 --> push
+-- epoch 6 1181 --> push
+-- epoch 7 2 --> push
+ending kernel
+
+total kernel computation time: 58.524560
+user time: 58.490000
+kernel time: 0.030000
+footprint: start = 565724KB, end = 576428KB, diff = 10704KB
+page reclaims: 12787
+page faults: 0
+swaps: 0
+Total Accesses = 994071799
+Num 2MB PTWs = 0
