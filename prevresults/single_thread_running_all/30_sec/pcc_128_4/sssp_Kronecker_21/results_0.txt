@@ -1,0 +1,46 @@
+RESULTS:
+----------
+
+CACHE:
+L1 Miss Rate: 27.535809308757344
+LLC Miss Rate: 41.37644805627256
+L3 Miss: 8.701439950521873
+
+4KB STLB Hit: 98.9967575880176
+2MB STLB Hit: 0.04931702093179321
+Page Walker L1 Loads: 47.474068306952766
+Page Walker L2 Loads: 44.69757904113159
+Page Walker L3 Loads: 7.022519155247411
+Page Walker Mem Loads: 0.23774340872114294
+
+TLB:
+TLB Miss Rate: 14.612241279904186
+STLB Miss Rate: 79.88571199485268
+Page Fault Rate: 0.002399568190986687
+Percent of TLB Accesses with PT Walks: 11.673092984857234
+Percent of TLB Accesses with Completed PT Walks: 11.597416849603047
+Percent of TLB Accesses with Page Faults: 0.0002801038261689326
+Percent of Cycles Spent on PT Walks: 48.900098533323536
+Average Cycles Spent on PT Walk: 2193.3979927877217
+4KB Page Table Walks: 99.98542699831702
+2MB/4MB Page Table Walks: 0.014573001682980091
+1GB Page Table Walks: 0.0
+
+PIPELINE:
+Cycles: 14794157425
+Percent of Cycles Spent on L1 Miss Stalls: 0.0
+Percent of Cycles Spent on L2 Miss Stalls: 0.0
+Percent of Cycles Spent on L3 Miss Stalls: 0.0
+Percent of Cycles Spent on Mem Subsystem Stalls: 0.0
+Percent of Cycles Spent on All Stalls: 0.0
+Calculated IPC: 0.3877276758125345
+Calculated Compute to Memory Ratio: 0.9918063776883628
+Average BW: 8.480670712748898
+Total Number of Memory Instructions: 2843945443
+
+Percent of Instructions Spent on Memory: 49.58
+Percent of Instructions Spent on Loads: 41.295
+Percent of Instructions Spent on Stores: 8.285
+Percent of Memory Instructions Spent on Loads: 83.29
+Percent of Memory Instructions Spent on Stores: 16.71
+
