@@ -1,0 +1,7 @@
+13 arguments, path = /home/asish/promotion-candidate-cache/pin3.7/source/tools/PromotionCache/../../../../applications/pin_source/bfs/main, exec = main
+MODE = 0, ACCESS INTERVAL = 73285645, PROMOTION CACHE SIZE = 128, FACTOR = 30
+Routine = _Z9pin_startv
+Routine = _Z7pin_endv
+Nodes: 33554431, Edges: 1047218258
+reading byte length of:    134217728
+reading byte length of:    4188873032

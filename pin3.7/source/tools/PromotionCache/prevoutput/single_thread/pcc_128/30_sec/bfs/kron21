@@ -5,7 +5,7 @@ Routine = _Z7pin_endv
 Nodes: 2097152, Edges: 63537176
 reading byte length of:    8388612
 reading byte length of:    254148704
-Reading graph elapsed time: 23.5639s
+Reading graph elapsed time: 23.5258s
 
 Memory Regions:
 NODE_ARRAY: starting base = 3ffff12, ending base = 3ffff1b
@@ -156,11 +156,11 @@ starting kernel
 -- epoch 7 2 --> push
 ending kernel
 
-total kernel computation time: 58.493658
-user time: 58.450000
+total kernel computation time: 58.516886
+user time: 58.480000
 kernel time: 0.030000
-footprint: start = 565768KB, end = 576528KB, diff = 10760KB
-page reclaims: 12914
+footprint: start = 565776KB, end = 576532KB, diff = 10756KB
+page reclaims: 12915
 page faults: 0
 swaps: 0
 Total Accesses = 994071799

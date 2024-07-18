@@ -6,7 +6,7 @@ Nodes: 2097152, Edges: 63537176
 reading byte length of:    8388612
 reading byte length of:    254148704
 reading byte length of:    254148704
-Reading graph elapsed time: 46.042s
+Reading graph elapsed time: 46.4034s
 
 Memory Regions:
 NODE_ARRAY: starting base = 3ffff12, ending base = 3ffff1b
@@ -810,11 +810,11 @@ starting kernel
 -- epoch 9 3 --> push
 ending kernel
 
-total kernel computation time: 615.787237
-user time: 615.730000
-kernel time: 0.060000
+total kernel computation time: 622.870076
+user time: 622.810000
+kernel time: 0.050000
 footprint: start = 1062232KB, end = 1114428KB, diff = 52196KB
-page reclaims: 24925
+page reclaims: 24926
 page faults: 0
 swaps: 0
 Total Accesses = 10955529561

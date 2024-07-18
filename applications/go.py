@@ -27,7 +27,7 @@ spec = []
 apps = vp + parsec + spec
 
 # INPUTS
-datasets = ["Kronecker_21"]
+datasets = ["Kronecker_25"]
 dataset_names = {"DBG_Kronecker_25/": "dbg_kron25",
             "DBG_Twitter/": "dbg_twit",
             "DBG_Sd1_Arc/": "dbg_web",
@@ -42,7 +42,7 @@ dataset_names = {"DBG_Kronecker_25/": "dbg_kron25",
             "omnetpp.ini": "omnetpp",
             "t5.xml": "xalancbmk"}
 
-vp_inputs = ["Kronecker_21/"]
+vp_inputs = ["Kronecker_25/"]
 #for dataset in datasets:
 #  vp_inputs += [dataset + "/", "DBG_" + dataset + "/"]
 #vp_inputs = ["Kronecker_21/"]
@@ -64,7 +64,7 @@ inputs = {
 
 #start_seed = {"Kronecker_21/": "0", "Kronecker_25/": "0", "Twitter/": "0", "Sd1_Arc/": "0", "DBG_Kronecker_25/": "3287496", "DBG_Twitter/": "15994127", "DBG_Sd1_Arc/": "18290613"}
 
-start_seed = {"Kronecker_21/": "0"}
+start_seed = {"Kronecker_25/": "0"}
 
 
 def parse_args():

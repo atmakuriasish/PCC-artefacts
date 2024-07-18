@@ -3,7 +3,7 @@ from metrics import *
 
 NUMA_NODE = 0
 CPU = 0
-CPU_LIST = [0, 1, 2, 3]
+CPU_LIST = [2]
 FREQ = 2.1e9
 
 def parse_args():
