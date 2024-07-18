@@ -1,6 +1,0 @@
-dTLBloads: 194623558
-dTLBstores: 2506368
-dtlb_load_misses.stlb_hit: 26607777
-dtlb_load_misses.walk_active: 1038860517
-dtlb_store_misses.stlb_hit: 1358503
-dtlb_store_misses.walk_active: 2257118

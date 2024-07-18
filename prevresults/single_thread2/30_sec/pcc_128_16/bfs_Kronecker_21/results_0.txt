@@ -1,7 +1,0 @@
-RESULTS:
-----------
-
-TLB:
-TLB Miss Rate: 392.0547277893542
-Percent of TLB Accesses with PT Walks: 377.040069770744
-
