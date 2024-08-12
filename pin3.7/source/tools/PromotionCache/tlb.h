@@ -15,11 +15,11 @@
 
 #define L1_TLB_4K_ENTRIES 64
 #define L1_TLB_2M_ENTRIES 32
-#define L2_TLB_ENTRIES 1024
+#define L2_TLB_ENTRIES 1024   //Asish : changed tlb size
 #define PAGE_SIZE 4096
 #define HUGE_PAGE_SIZE 2097152
 #define L1_ASSOC 4
-#define L2_ASSOC 6
+#define L2_ASSOC 8
 #define MAX_FREQ 255
 
 using namespace std;
