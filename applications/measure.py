@@ -3,7 +3,8 @@ from metrics import *
 
 NUMA_NODE = 0
 CPU = 0
-CPU_LIST = [2]
+#CPU_LIST = [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54]
+CPU_LIST = [0]
 FREQ = 2.1e9
 
 def parse_args():
@@ -371,7 +372,7 @@ def main():
         if args.output:
           output = args.output
         else:
-          output = HOME_DIR + "results/" + app_name + "_" + app_input + "/"
+          output = HOME_DIR + "results2/" + app_name + "_" + app_input + "/"
 
         if (not os.path.isdir(output)):
           os.mkdir(output)
@@ -401,7 +402,7 @@ def main():
         if "multiprocess" in source:
           new_output = output.replace("tmp_", "")
           os.system("mv " + output + " " + new_output)
-          print("Done! Navigate to " + new_output + "results.txt to see the results!")
+          print("Done! Navigate to " + new_output + "results2.txt to see the results!")
 
 if __name__ == "__main__":
     main()

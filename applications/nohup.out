@@ -1,0 +1,1260 @@
+Application: sssp
+Application file path: launch/sssp/main.cpp
+Application input: Kronecker_25
+Output directory: /users/atma/PCC-artefacts/results/single_thread/30_sec/none/tmp_sssp_Kronecker_25/
+------------------------------------------------------------
+
+Compiling application...
+
+g++ -O3 -o main -std=c++11 -Wno-unused-result main.cpp > /users/atma/PCC-artefacts/results/single_thread/30_sec/none/tmp_sssp_Kronecker_25/compiler_output.txt 2> /users/atma/PCC-artefacts/results/single_thread/30_sec/none/tmp_sssp_Kronecker_25/compiler_err.txt
+Executing application...
+numactl -C 0 --membind 0 sudo ./main /users/atma/PCC-artefacts/data/Kronecker_25/ 0 0 "perf stat -p %d -B -v -o perf_output_0_0.txt -e instructions:u -e cpu-cycles:u -e L1-dcache-loads:u -e L1-dcache-load-misses:u -e L1-dcache-stores:u -e LLC-loads:u -e LLC-load-misses:u -e LLC-stores:u -e LLC-store-misses:u -e dTLB-loads:u -e dTLB-stores:u -e page-faults:u -e dtlb_load_misses.stlb_hit:u -e dtlb_load_misses.miss_causes_a_walk:u -e dtlb_load_misses.walk_completed:u -e dtlb_load_misses.walk_completed_1g:u -e dtlb_load_misses.walk_completed_2m_4m:u -e dtlb_load_misses.walk_completed_4k:u -e dtlb_store_misses.stlb_hit:u -e dtlb_store_misses.miss_causes_a_walk:u -e dtlb_store_misses.walk_completed:u -e dtlb_store_misses.walk_completed_1g:u -e dtlb_store_misses.walk_completed_2m_4m:u -e dtlb_store_misses.walk_completed_4k:u -e dtlb_load_misses.walk_duration:u -e dtlb_store_misses.walk_duration:u -e dtlb_load_misses.stlb_hit_4k:u -e dtlb_load_misses.stlb_hit_2m:u -e dtlb_store_misses.stlb_hit_4k:u -e dtlb_store_misses.stlb_hit_2m:u -e page_walker_loads.dtlb_l1:u -e page_walker_loads.dtlb_l2:u -e page_walker_loads.dtlb_l3:u -e page_walker_loads.dtlb_memory:u" access_output_0_0.txt pf_output_0_0.txt /users/atma/PCC-artefacts/pin3.7/source/tools/PromotionCache/output/promotion_data/single_thread/pcc_128/30_sec/sssp/kron25_0 > app_output_0_0.txt 2> err_output_0_0.txt
+Gathering measurements...
+instructions 166165946134
+cpucycles 752614147235
+L1dcacheloads 69244647433
+L1dcacheloadmisses 27903512939
+L1dcachestores 13915967845
+LLCloads 25439331388
+LLCloadmisses 11594334976
+LLCstores 8197243
+LLCstoremisses 202981
+dTLBloads 69204196622
+dTLBstores 13875818750
+pagefaults 125330
+dtlb_load_misses.stlb_hit 315010873
+dtlb_load_misses.miss_causes_a_walk 13087440302
+dtlb_load_misses.walk_completed 13044254797
+dtlb_load_misses.walk_completed_1g 0
+dtlb_load_misses.walk_completed_2m_4m 0
+dtlb_load_misses.walk_completed_4k 13038104971
+dtlb_store_misses.stlb_hit 10065715
+dtlb_store_misses.miss_causes_a_walk 2578923
+dtlb_store_misses.walk_completed 2458724
+dtlb_store_misses.walk_completed_1g 0
+dtlb_store_misses.walk_completed_2m_4m 0
+dtlb_store_misses.walk_completed_4k 2483873
+dtlb_load_misses.walk_duration 588355066837
+dtlb_store_misses.walk_duration 191411413
+dtlb_load_misses.stlb_hit_4k 313032866
+dtlb_load_misses.stlb_hit_2m 0
+dtlb_store_misses.stlb_hit_4k 10170331
+dtlb_store_misses.stlb_hit_2m 0
+page_walker_loads.dtlb_l1 5090059991
+page_walker_loads.dtlb_l2 2249814567
+page_walker_loads.dtlb_l3 7582532706
+page_walker_loads.dtlb_memory 231687124
+
+
+reaching here
+
+Executing application...
+numactl -C 0 --membind 0 sudo ./main /users/atma/PCC-artefacts/data/Kronecker_25/ 0 0 "perf stat -p %d -B -v -o perf_output_0_1.txt -e instructions:u -e cpu-cycles:u -e L1-dcache-loads:u -e L1-dcache-load-misses:u -e L1-dcache-stores:u -e LLC-loads:u -e LLC-load-misses:u -e LLC-stores:u -e LLC-store-misses:u -e dTLB-loads:u -e dTLB-stores:u -e page-faults:u -e dtlb_load_misses.stlb_hit:u -e dtlb_load_misses.miss_causes_a_walk:u -e dtlb_load_misses.walk_completed:u -e dtlb_load_misses.walk_completed_1g:u -e dtlb_load_misses.walk_completed_2m_4m:u -e dtlb_load_misses.walk_completed_4k:u -e dtlb_store_misses.stlb_hit:u -e dtlb_store_misses.miss_causes_a_walk:u -e dtlb_store_misses.walk_completed:u -e dtlb_store_misses.walk_completed_1g:u -e dtlb_store_misses.walk_completed_2m_4m:u -e dtlb_store_misses.walk_completed_4k:u -e dtlb_load_misses.walk_duration:u -e dtlb_store_misses.walk_duration:u -e dtlb_load_misses.stlb_hit_4k:u -e dtlb_load_misses.stlb_hit_2m:u -e dtlb_store_misses.stlb_hit_4k:u -e dtlb_store_misses.stlb_hit_2m:u -e page_walker_loads.dtlb_l1:u -e page_walker_loads.dtlb_l2:u -e page_walker_loads.dtlb_l3:u -e page_walker_loads.dtlb_memory:u" access_output_0_1.txt pf_output_0_1.txt /users/atma/PCC-artefacts/pin3.7/source/tools/PromotionCache/output/promotion_data/single_thread/pcc_128/30_sec/sssp/kron25_0 > app_output_0_1.txt 2> err_output_0_1.txt
+Gathering measurements...
+instructions 165843804468
+cpucycles 753801647430
+L1dcacheloads 69183937060
+L1dcacheloadmisses 27881441688
+L1dcachestores 13888795042
+LLCloads 25461764869
+LLCloadmisses 11721225311
+LLCstores 8159136
+LLCstoremisses 218695
+dTLBloads 69307215254
+dTLBstores 13899777849
+pagefaults 125330
+dtlb_load_misses.stlb_hit 315409682
+dtlb_load_misses.miss_causes_a_walk 13109194205
+dtlb_load_misses.walk_completed 13063310934
+dtlb_load_misses.walk_completed_1g 0
+dtlb_load_misses.walk_completed_2m_4m 0
+dtlb_load_misses.walk_completed_4k 13062730605
+dtlb_store_misses.stlb_hit 10068574
+dtlb_store_misses.miss_causes_a_walk 2533913
+dtlb_store_misses.walk_completed 2381606
+dtlb_store_misses.walk_completed_1g 0
+dtlb_store_misses.walk_completed_2m_4m 0
+dtlb_store_misses.walk_completed_4k 2464512
+dtlb_load_misses.walk_duration 588728511840
+dtlb_store_misses.walk_duration 186031889
+dtlb_load_misses.stlb_hit_4k 314496365
+dtlb_load_misses.stlb_hit_2m 0
+dtlb_store_misses.stlb_hit_4k 10139354
+dtlb_store_misses.stlb_hit_2m 0
+page_walker_loads.dtlb_l1 5092115082
+page_walker_loads.dtlb_l2 2234891545
+page_walker_loads.dtlb_l3 7607844331
+page_walker_loads.dtlb_memory 233876712
+
+
+reaching here
+
+Executing application...
+numactl -C 0 --membind 0 sudo ./main /users/atma/PCC-artefacts/data/Kronecker_25/ 0 0 "perf stat -p %d -B -v -o perf_output_0_2.txt -e instructions:u -e cpu-cycles:u -e L1-dcache-loads:u -e L1-dcache-load-misses:u -e L1-dcache-stores:u -e LLC-loads:u -e LLC-load-misses:u -e LLC-stores:u -e LLC-store-misses:u -e dTLB-loads:u -e dTLB-stores:u -e page-faults:u -e dtlb_load_misses.stlb_hit:u -e dtlb_load_misses.miss_causes_a_walk:u -e dtlb_load_misses.walk_completed:u -e dtlb_load_misses.walk_completed_1g:u -e dtlb_load_misses.walk_completed_2m_4m:u -e dtlb_load_misses.walk_completed_4k:u -e dtlb_store_misses.stlb_hit:u -e dtlb_store_misses.miss_causes_a_walk:u -e dtlb_store_misses.walk_completed:u -e dtlb_store_misses.walk_completed_1g:u -e dtlb_store_misses.walk_completed_2m_4m:u -e dtlb_store_misses.walk_completed_4k:u -e dtlb_load_misses.walk_duration:u -e dtlb_store_misses.walk_duration:u -e dtlb_load_misses.stlb_hit_4k:u -e dtlb_load_misses.stlb_hit_2m:u -e dtlb_store_misses.stlb_hit_4k:u -e dtlb_store_misses.stlb_hit_2m:u -e page_walker_loads.dtlb_l1:u -e page_walker_loads.dtlb_l2:u -e page_walker_loads.dtlb_l3:u -e page_walker_loads.dtlb_memory:u" access_output_0_2.txt pf_output_0_2.txt /users/atma/PCC-artefacts/pin3.7/source/tools/PromotionCache/output/promotion_data/single_thread/pcc_128/30_sec/sssp/kron25_0 > app_output_0_2.txt 2> err_output_0_2.txt
+Gathering measurements...
+instructions 165770726285
+cpucycles 752298924820
+L1dcacheloads 69073213278
+L1dcacheloadmisses 27877634158
+L1dcachestores 13884124589
+LLCloads 25428706294
+LLCloadmisses 11497288473
+LLCstores 8366027
+LLCstoremisses 228355
+dTLBloads 69402896312
+dTLBstores 13895422715
+pagefaults 125330
+dtlb_load_misses.stlb_hit 312024305
+dtlb_load_misses.miss_causes_a_walk 13122691603
+dtlb_load_misses.walk_completed 13075886640
+dtlb_load_misses.walk_completed_1g 0
+dtlb_load_misses.walk_completed_2m_4m 0
+dtlb_load_misses.walk_completed_4k 13053343228
+dtlb_store_misses.stlb_hit 10092863
+dtlb_store_misses.miss_causes_a_walk 2607593
+dtlb_store_misses.walk_completed 2399554
+dtlb_store_misses.walk_completed_1g 0
+dtlb_store_misses.walk_completed_2m_4m 0
+dtlb_store_misses.walk_completed_4k 2403004
+dtlb_load_misses.walk_duration 588039232200
+dtlb_store_misses.walk_duration 190628154
+dtlb_load_misses.stlb_hit_4k 315090028
+dtlb_load_misses.stlb_hit_2m 0
+dtlb_store_misses.stlb_hit_4k 10168327
+dtlb_store_misses.stlb_hit_2m 0
+page_walker_loads.dtlb_l1 5090648050
+page_walker_loads.dtlb_l2 2248870746
+page_walker_loads.dtlb_l3 7597945254
+page_walker_loads.dtlb_memory 228669371
+
+
+reaching here
+
+reaching here
+
+Total Time = 2414 seconds.
+
+3.55user 0.30system 40:14.38elapsed 0%CPU (0avgtext+0avgdata 237712maxresident)k
+0inputs+1368outputs (0major+79384minor)pagefaults 0swaps
+Application: sssp
+Application file path: launch/sssp/main.cpp
+Application input: Kronecker_25
+Output directory: /users/atma/PCC-artefacts/results/single_thread/30_sec/pcc_128_1/tmp_sssp_Kronecker_25/
+------------------------------------------------------------
+
+Compiling application...
+
+g++ -O3 -o main -std=c++11 -Wno-unused-result main.cpp > /users/atma/PCC-artefacts/results/single_thread/30_sec/pcc_128_1/tmp_sssp_Kronecker_25/compiler_output.txt 2> /users/atma/PCC-artefacts/results/single_thread/30_sec/pcc_128_1/tmp_sssp_Kronecker_25/compiler_err.txt
+Executing application...
+numactl -C 0 --membind 0 sudo ./main /users/atma/PCC-artefacts/data/Kronecker_25/ 21 0 "perf stat -p %d -B -v -o perf_output_21_0.txt -e instructions:u -e cpu-cycles:u -e L1-dcache-loads:u -e L1-dcache-load-misses:u -e L1-dcache-stores:u -e LLC-loads:u -e LLC-load-misses:u -e LLC-stores:u -e LLC-store-misses:u -e dTLB-loads:u -e dTLB-stores:u -e page-faults:u -e dtlb_load_misses.stlb_hit:u -e dtlb_load_misses.miss_causes_a_walk:u -e dtlb_load_misses.walk_completed:u -e dtlb_load_misses.walk_completed_1g:u -e dtlb_load_misses.walk_completed_2m_4m:u -e dtlb_load_misses.walk_completed_4k:u -e dtlb_store_misses.stlb_hit:u -e dtlb_store_misses.miss_causes_a_walk:u -e dtlb_store_misses.walk_completed:u -e dtlb_store_misses.walk_completed_1g:u -e dtlb_store_misses.walk_completed_2m_4m:u -e dtlb_store_misses.walk_completed_4k:u -e dtlb_load_misses.walk_duration:u -e dtlb_store_misses.walk_duration:u -e dtlb_load_misses.stlb_hit_4k:u -e dtlb_load_misses.stlb_hit_2m:u -e dtlb_store_misses.stlb_hit_4k:u -e dtlb_store_misses.stlb_hit_2m:u -e page_walker_loads.dtlb_l1:u -e page_walker_loads.dtlb_l2:u -e page_walker_loads.dtlb_l3:u -e page_walker_loads.dtlb_memory:u" access_output_21_0.txt pf_output_21_0.txt /users/atma/PCC-artefacts/pin3.7/source/tools/PromotionCache/output/promotion_data/single_thread/pcc_128/30_sec/sssp/kron25_1 > app_output_21_0.txt 2> err_output_21_0.txt
+Gathering measurements...
+instructions 165763678827
+cpucycles 552483979194
+L1dcacheloads 69065671211
+L1dcacheloadmisses 22352763113
+L1dcachestores 13903911046
+LLCloads 20999323218
+LLCloadmisses 11254557021
+LLCstores 8107804
+LLCstoremisses 196371
+dTLBloads 69426509894
+dTLBstores 13910982321
+pagefaults 125330
+dtlb_load_misses.stlb_hit 1777380655
+dtlb_load_misses.miss_causes_a_walk 6159140870
+dtlb_load_misses.walk_completed 6135641785
+dtlb_load_misses.walk_completed_1g 0
+dtlb_load_misses.walk_completed_2m_4m 96145337
+dtlb_load_misses.walk_completed_4k 6037363589
+dtlb_store_misses.stlb_hit 5519831
+dtlb_store_misses.miss_causes_a_walk 2043354
+dtlb_store_misses.walk_completed 1884507
+dtlb_store_misses.walk_completed_1g 0
+dtlb_store_misses.walk_completed_2m_4m 3713
+dtlb_store_misses.walk_completed_4k 1864133
+dtlb_load_misses.walk_duration 279090900138
+dtlb_store_misses.walk_duration 157657054
+dtlb_load_misses.stlb_hit_4k 265805069
+dtlb_load_misses.stlb_hit_2m 1515841060
+dtlb_store_misses.stlb_hit_4k 5462848
+dtlb_store_misses.stlb_hit_2m 122456
+page_walker_loads.dtlb_l1 2361103645
+page_walker_loads.dtlb_l2 1200263389
+page_walker_loads.dtlb_l3 3311818782
+page_walker_loads.dtlb_memory 129274864
+
+
+reaching here
+
+Executing application...
+numactl -C 0 --membind 0 sudo ./main /users/atma/PCC-artefacts/data/Kronecker_25/ 21 0 "perf stat -p %d -B -v -o perf_output_21_1.txt -e instructions:u -e cpu-cycles:u -e L1-dcache-loads:u -e L1-dcache-load-misses:u -e L1-dcache-stores:u -e LLC-loads:u -e LLC-load-misses:u -e LLC-stores:u -e LLC-store-misses:u -e dTLB-loads:u -e dTLB-stores:u -e page-faults:u -e dtlb_load_misses.stlb_hit:u -e dtlb_load_misses.miss_causes_a_walk:u -e dtlb_load_misses.walk_completed:u -e dtlb_load_misses.walk_completed_1g:u -e dtlb_load_misses.walk_completed_2m_4m:u -e dtlb_load_misses.walk_completed_4k:u -e dtlb_store_misses.stlb_hit:u -e dtlb_store_misses.miss_causes_a_walk:u -e dtlb_store_misses.walk_completed:u -e dtlb_store_misses.walk_completed_1g:u -e dtlb_store_misses.walk_completed_2m_4m:u -e dtlb_store_misses.walk_completed_4k:u -e dtlb_load_misses.walk_duration:u -e dtlb_store_misses.walk_duration:u -e dtlb_load_misses.stlb_hit_4k:u -e dtlb_load_misses.stlb_hit_2m:u -e dtlb_store_misses.stlb_hit_4k:u -e dtlb_store_misses.stlb_hit_2m:u -e page_walker_loads.dtlb_l1:u -e page_walker_loads.dtlb_l2:u -e page_walker_loads.dtlb_l3:u -e page_walker_loads.dtlb_memory:u" access_output_21_1.txt pf_output_21_1.txt /users/atma/PCC-artefacts/pin3.7/source/tools/PromotionCache/output/promotion_data/single_thread/pcc_128/30_sec/sssp/kron25_1 > app_output_21_1.txt 2> err_output_21_1.txt
+Gathering measurements...
+instructions 165883858942
+cpucycles 551645055630
+L1dcacheloads 69135737293
+L1dcacheloadmisses 22374696030
+L1dcachestores 13892894897
+LLCloads 20968830666
+LLCloadmisses 11291212049
+LLCstores 8152088
+LLCstoremisses 184976
+dTLBloads 69282224284
+dTLBstores 13885809800
+pagefaults 125330
+dtlb_load_misses.stlb_hit 1788585981
+dtlb_load_misses.miss_causes_a_walk 6154502040
+dtlb_load_misses.walk_completed 6131698678
+dtlb_load_misses.walk_completed_1g 0
+dtlb_load_misses.walk_completed_2m_4m 96066011
+dtlb_load_misses.walk_completed_4k 6036160234
+dtlb_store_misses.stlb_hit 5544993
+dtlb_store_misses.miss_causes_a_walk 2038454
+dtlb_store_misses.walk_completed 1931680
+dtlb_store_misses.walk_completed_1g 0
+dtlb_store_misses.walk_completed_2m_4m 3992
+dtlb_store_misses.walk_completed_4k 1880608
+dtlb_load_misses.walk_duration 278739323606
+dtlb_store_misses.walk_duration 161513992
+dtlb_load_misses.stlb_hit_4k 264249634
+dtlb_load_misses.stlb_hit_2m 1511822889
+dtlb_store_misses.stlb_hit_4k 5477736
+dtlb_store_misses.stlb_hit_2m 133783
+page_walker_loads.dtlb_l1 2360351564
+page_walker_loads.dtlb_l2 1208735479
+page_walker_loads.dtlb_l3 3293940153
+page_walker_loads.dtlb_memory 129800555
+
+
+reaching here
+
+Executing application...
+numactl -C 0 --membind 0 sudo ./main /users/atma/PCC-artefacts/data/Kronecker_25/ 21 0 "perf stat -p %d -B -v -o perf_output_21_2.txt -e instructions:u -e cpu-cycles:u -e L1-dcache-loads:u -e L1-dcache-load-misses:u -e L1-dcache-stores:u -e LLC-loads:u -e LLC-load-misses:u -e LLC-stores:u -e LLC-store-misses:u -e dTLB-loads:u -e dTLB-stores:u -e page-faults:u -e dtlb_load_misses.stlb_hit:u -e dtlb_load_misses.miss_causes_a_walk:u -e dtlb_load_misses.walk_completed:u -e dtlb_load_misses.walk_completed_1g:u -e dtlb_load_misses.walk_completed_2m_4m:u -e dtlb_load_misses.walk_completed_4k:u -e dtlb_store_misses.stlb_hit:u -e dtlb_store_misses.miss_causes_a_walk:u -e dtlb_store_misses.walk_completed:u -e dtlb_store_misses.walk_completed_1g:u -e dtlb_store_misses.walk_completed_2m_4m:u -e dtlb_store_misses.walk_completed_4k:u -e dtlb_load_misses.walk_duration:u -e dtlb_store_misses.walk_duration:u -e dtlb_load_misses.stlb_hit_4k:u -e dtlb_load_misses.stlb_hit_2m:u -e dtlb_store_misses.stlb_hit_4k:u -e dtlb_store_misses.stlb_hit_2m:u -e page_walker_loads.dtlb_l1:u -e page_walker_loads.dtlb_l2:u -e page_walker_loads.dtlb_l3:u -e page_walker_loads.dtlb_memory:u" access_output_21_2.txt pf_output_21_2.txt /users/atma/PCC-artefacts/pin3.7/source/tools/PromotionCache/output/promotion_data/single_thread/pcc_128/30_sec/sssp/kron25_1 > app_output_21_2.txt 2> err_output_21_2.txt
+Gathering measurements...
+instructions 165887961693
+cpucycles 548974550778
+L1dcacheloads 69097567192
+L1dcacheloadmisses 22354665853
+L1dcachestores 13885633079
+LLCloads 20961746915
+LLCloadmisses 11011802821
+LLCstores 8202942
+LLCstoremisses 199735
+dTLBloads 69377040621
+dTLBstores 13880912151
+pagefaults 125330
+dtlb_load_misses.stlb_hit 1781649443
+dtlb_load_misses.miss_causes_a_walk 6158655055
+dtlb_load_misses.walk_completed 6138009404
+dtlb_load_misses.walk_completed_1g 0
+dtlb_load_misses.walk_completed_2m_4m 95854974
+dtlb_load_misses.walk_completed_4k 6038970339
+dtlb_store_misses.stlb_hit 5475165
+dtlb_store_misses.miss_causes_a_walk 2037550
+dtlb_store_misses.walk_completed 1902087
+dtlb_store_misses.walk_completed_1g 0
+dtlb_store_misses.walk_completed_2m_4m 3893
+dtlb_store_misses.walk_completed_4k 1897205
+dtlb_load_misses.walk_duration 277933849194
+dtlb_store_misses.walk_duration 145919269
+dtlb_load_misses.stlb_hit_4k 265630035
+dtlb_load_misses.stlb_hit_2m 1509053146
+dtlb_store_misses.stlb_hit_4k 5426536
+dtlb_store_misses.stlb_hit_2m 133037
+page_walker_loads.dtlb_l1 2358632167
+page_walker_loads.dtlb_l2 1205652014
+page_walker_loads.dtlb_l3 3299595120
+page_walker_loads.dtlb_memory 126535397
+
+
+reaching here
+
+reaching here
+
+Total Time = 1956 seconds.
+
+3.59user 0.29system 32:35.75elapsed 0%CPU (0avgtext+0avgdata 237712maxresident)k
+0inputs+1368outputs (0major+79384minor)pagefaults 0swaps
+Application: sssp
+Application file path: launch/sssp/main.cpp
+Application input: Kronecker_25
+Output directory: /users/atma/PCC-artefacts/results/single_thread/30_sec/pcc_128_2/tmp_sssp_Kronecker_25/
+------------------------------------------------------------
+
+Compiling application...
+
+g++ -O3 -o main -std=c++11 -Wno-unused-result main.cpp > /users/atma/PCC-artefacts/results/single_thread/30_sec/pcc_128_2/tmp_sssp_Kronecker_25/compiler_output.txt 2> /users/atma/PCC-artefacts/results/single_thread/30_sec/pcc_128_2/tmp_sssp_Kronecker_25/compiler_err.txt
+Executing application...
+numactl -C 0 --membind 0 sudo ./main /users/atma/PCC-artefacts/data/Kronecker_25/ 21 0 "perf stat -p %d -B -v -o perf_output_21_0.txt -e instructions:u -e cpu-cycles:u -e L1-dcache-loads:u -e L1-dcache-load-misses:u -e L1-dcache-stores:u -e LLC-loads:u -e LLC-load-misses:u -e LLC-stores:u -e LLC-store-misses:u -e dTLB-loads:u -e dTLB-stores:u -e page-faults:u -e dtlb_load_misses.stlb_hit:u -e dtlb_load_misses.miss_causes_a_walk:u -e dtlb_load_misses.walk_completed:u -e dtlb_load_misses.walk_completed_1g:u -e dtlb_load_misses.walk_completed_2m_4m:u -e dtlb_load_misses.walk_completed_4k:u -e dtlb_store_misses.stlb_hit:u -e dtlb_store_misses.miss_causes_a_walk:u -e dtlb_store_misses.walk_completed:u -e dtlb_store_misses.walk_completed_1g:u -e dtlb_store_misses.walk_completed_2m_4m:u -e dtlb_store_misses.walk_completed_4k:u -e dtlb_load_misses.walk_duration:u -e dtlb_store_misses.walk_duration:u -e dtlb_load_misses.stlb_hit_4k:u -e dtlb_load_misses.stlb_hit_2m:u -e dtlb_store_misses.stlb_hit_4k:u -e dtlb_store_misses.stlb_hit_2m:u -e page_walker_loads.dtlb_l1:u -e page_walker_loads.dtlb_l2:u -e page_walker_loads.dtlb_l3:u -e page_walker_loads.dtlb_memory:u" access_output_21_0.txt pf_output_21_0.txt /users/atma/PCC-artefacts/pin3.7/source/tools/PromotionCache/output/promotion_data/single_thread/pcc_128/30_sec/sssp/kron25_2 > app_output_21_0.txt 2> err_output_21_0.txt
+Gathering measurements...
+instructions 165996414388
+cpucycles 472788882767
+L1dcacheloads 69170008749
+L1dcacheloadmisses 19845406823
+L1dcachestores 13870550300
+LLCloads 19096120470
+LLCloadmisses 11052164736
+LLCstores 8070341
+LLCstoremisses 173125
+dTLBloads 69376778863
+dTLBstores 13906706710
+pagefaults 125330
+dtlb_load_misses.stlb_hit 2800216355
+dtlb_load_misses.miss_causes_a_walk 2958132012
+dtlb_load_misses.walk_completed 2948771653
+dtlb_load_misses.walk_completed_1g 0
+dtlb_load_misses.walk_completed_2m_4m 54975574
+dtlb_load_misses.walk_completed_4k 2899802362
+dtlb_store_misses.stlb_hit 3828206
+dtlb_store_misses.miss_causes_a_walk 1670264
+dtlb_store_misses.walk_completed 1556696
+dtlb_store_misses.walk_completed_1g 0
+dtlb_store_misses.walk_completed_2m_4m 2763
+dtlb_store_misses.walk_completed_4k 1556707
+dtlb_load_misses.walk_duration 142022572715
+dtlb_store_misses.walk_duration 122453006
+dtlb_load_misses.stlb_hit_4k 252064664
+dtlb_load_misses.stlb_hit_2m 2550892769
+dtlb_store_misses.stlb_hit_4k 3600535
+dtlb_store_misses.stlb_hit_2m 231519
+page_walker_loads.dtlb_l1 994608487
+page_walker_loads.dtlb_l2 550776503
+page_walker_loads.dtlb_l3 1523189385
+page_walker_loads.dtlb_memory 78124093
+
+
+reaching here
+
+Executing application...
+numactl -C 0 --membind 0 sudo ./main /users/atma/PCC-artefacts/data/Kronecker_25/ 21 0 "perf stat -p %d -B -v -o perf_output_21_1.txt -e instructions:u -e cpu-cycles:u -e L1-dcache-loads:u -e L1-dcache-load-misses:u -e L1-dcache-stores:u -e LLC-loads:u -e LLC-load-misses:u -e LLC-stores:u -e LLC-store-misses:u -e dTLB-loads:u -e dTLB-stores:u -e page-faults:u -e dtlb_load_misses.stlb_hit:u -e dtlb_load_misses.miss_causes_a_walk:u -e dtlb_load_misses.walk_completed:u -e dtlb_load_misses.walk_completed_1g:u -e dtlb_load_misses.walk_completed_2m_4m:u -e dtlb_load_misses.walk_completed_4k:u -e dtlb_store_misses.stlb_hit:u -e dtlb_store_misses.miss_causes_a_walk:u -e dtlb_store_misses.walk_completed:u -e dtlb_store_misses.walk_completed_1g:u -e dtlb_store_misses.walk_completed_2m_4m:u -e dtlb_store_misses.walk_completed_4k:u -e dtlb_load_misses.walk_duration:u -e dtlb_store_misses.walk_duration:u -e dtlb_load_misses.stlb_hit_4k:u -e dtlb_load_misses.stlb_hit_2m:u -e dtlb_store_misses.stlb_hit_4k:u -e dtlb_store_misses.stlb_hit_2m:u -e page_walker_loads.dtlb_l1:u -e page_walker_loads.dtlb_l2:u -e page_walker_loads.dtlb_l3:u -e page_walker_loads.dtlb_memory:u" access_output_21_1.txt pf_output_21_1.txt /users/atma/PCC-artefacts/pin3.7/source/tools/PromotionCache/output/promotion_data/single_thread/pcc_128/30_sec/sssp/kron25_2 > app_output_21_1.txt 2> err_output_21_1.txt
+Gathering measurements...
+instructions 166009820500
+cpucycles 473292542884
+L1dcacheloads 69153727589
+L1dcacheloadmisses 19845789429
+L1dcachestores 13875030194
+LLCloads 19101097227
+LLCloadmisses 11059055253
+LLCstores 8012454
+LLCstoremisses 188479
+dTLBloads 69335561748
+dTLBstores 13886845462
+pagefaults 125330
+dtlb_load_misses.stlb_hit 2813633591
+dtlb_load_misses.miss_causes_a_walk 2961019789
+dtlb_load_misses.walk_completed 2951162653
+dtlb_load_misses.walk_completed_1g 0
+dtlb_load_misses.walk_completed_2m_4m 54456859
+dtlb_load_misses.walk_completed_4k 2894783874
+dtlb_store_misses.stlb_hit 3809296
+dtlb_store_misses.miss_causes_a_walk 1649206
+dtlb_store_misses.walk_completed 1560356
+dtlb_store_misses.walk_completed_1g 0
+dtlb_store_misses.walk_completed_2m_4m 2945
+dtlb_store_misses.walk_completed_4k 1563150
+dtlb_load_misses.walk_duration 142087530087
+dtlb_store_misses.walk_duration 128769720
+dtlb_load_misses.stlb_hit_4k 251828308
+dtlb_load_misses.stlb_hit_2m 2558186008
+dtlb_store_misses.stlb_hit_4k 3579623
+dtlb_store_misses.stlb_hit_2m 227098
+page_walker_loads.dtlb_l1 992569624
+page_walker_loads.dtlb_l2 548636071
+page_walker_loads.dtlb_l3 1526640530
+page_walker_loads.dtlb_memory 78292111
+
+
+reaching here
+
+Executing application...
+numactl -C 0 --membind 0 sudo ./main /users/atma/PCC-artefacts/data/Kronecker_25/ 21 0 "perf stat -p %d -B -v -o perf_output_21_2.txt -e instructions:u -e cpu-cycles:u -e L1-dcache-loads:u -e L1-dcache-load-misses:u -e L1-dcache-stores:u -e LLC-loads:u -e LLC-load-misses:u -e LLC-stores:u -e LLC-store-misses:u -e dTLB-loads:u -e dTLB-stores:u -e page-faults:u -e dtlb_load_misses.stlb_hit:u -e dtlb_load_misses.miss_causes_a_walk:u -e dtlb_load_misses.walk_completed:u -e dtlb_load_misses.walk_completed_1g:u -e dtlb_load_misses.walk_completed_2m_4m:u -e dtlb_load_misses.walk_completed_4k:u -e dtlb_store_misses.stlb_hit:u -e dtlb_store_misses.miss_causes_a_walk:u -e dtlb_store_misses.walk_completed:u -e dtlb_store_misses.walk_completed_1g:u -e dtlb_store_misses.walk_completed_2m_4m:u -e dtlb_store_misses.walk_completed_4k:u -e dtlb_load_misses.walk_duration:u -e dtlb_store_misses.walk_duration:u -e dtlb_load_misses.stlb_hit_4k:u -e dtlb_load_misses.stlb_hit_2m:u -e dtlb_store_misses.stlb_hit_4k:u -e dtlb_store_misses.stlb_hit_2m:u -e page_walker_loads.dtlb_l1:u -e page_walker_loads.dtlb_l2:u -e page_walker_loads.dtlb_l3:u -e page_walker_loads.dtlb_memory:u" access_output_21_2.txt pf_output_21_2.txt /users/atma/PCC-artefacts/pin3.7/source/tools/PromotionCache/output/promotion_data/single_thread/pcc_128/30_sec/sssp/kron25_2 > app_output_21_2.txt 2> err_output_21_2.txt
+Gathering measurements...
+instructions 166042142659
+cpucycles 475012441151
+L1dcacheloads 69238351793
+L1dcacheloadmisses 19859630805
+L1dcachestores 13904535439
+LLCloads 19107041511
+LLCloadmisses 11107147444
+LLCstores 8001463
+LLCstoremisses 189178
+dTLBloads 69377974968
+dTLBstores 13902228082
+pagefaults 125330
+dtlb_load_misses.stlb_hit 2791151006
+dtlb_load_misses.miss_causes_a_walk 2962552885
+dtlb_load_misses.walk_completed 2950481893
+dtlb_load_misses.walk_completed_1g 0
+dtlb_load_misses.walk_completed_2m_4m 54586236
+dtlb_load_misses.walk_completed_4k 2897355407
+dtlb_store_misses.stlb_hit 3886210
+dtlb_store_misses.miss_causes_a_walk 1734917
+dtlb_store_misses.walk_completed 1590448
+dtlb_store_misses.walk_completed_1g 0
+dtlb_store_misses.walk_completed_2m_4m 3176
+dtlb_store_misses.walk_completed_4k 1591299
+dtlb_load_misses.walk_duration 142268895944
+dtlb_store_misses.walk_duration 125757455
+dtlb_load_misses.stlb_hit_4k 252086448
+dtlb_load_misses.stlb_hit_2m 2559612209
+dtlb_store_misses.stlb_hit_4k 3619917
+dtlb_store_misses.stlb_hit_2m 267221
+page_walker_loads.dtlb_l1 994327563
+page_walker_loads.dtlb_l2 552510648
+page_walker_loads.dtlb_l3 1520332625
+page_walker_loads.dtlb_memory 78801224
+
+
+reaching here
+
+reaching here
+
+Total Time = 1767 seconds.
+
+3.56user 0.31system 29:26.85elapsed 0%CPU (0avgtext+0avgdata 237712maxresident)k
+0inputs+1368outputs (0major+79387minor)pagefaults 0swaps
+Application: sssp
+Application file path: launch/sssp/main.cpp
+Application input: Kronecker_25
+Output directory: /users/atma/PCC-artefacts/results/single_thread/30_sec/pcc_128_4/tmp_sssp_Kronecker_25/
+------------------------------------------------------------
+
+Compiling application...
+
+g++ -O3 -o main -std=c++11 -Wno-unused-result main.cpp > /users/atma/PCC-artefacts/results/single_thread/30_sec/pcc_128_4/tmp_sssp_Kronecker_25/compiler_output.txt 2> /users/atma/PCC-artefacts/results/single_thread/30_sec/pcc_128_4/tmp_sssp_Kronecker_25/compiler_err.txt
+Executing application...
+numactl -C 0 --membind 0 sudo ./main /users/atma/PCC-artefacts/data/Kronecker_25/ 21 0 "perf stat -p %d -B -v -o perf_output_21_0.txt -e instructions:u -e cpu-cycles:u -e L1-dcache-loads:u -e L1-dcache-load-misses:u -e L1-dcache-stores:u -e LLC-loads:u -e LLC-load-misses:u -e LLC-stores:u -e LLC-store-misses:u -e dTLB-loads:u -e dTLB-stores:u -e page-faults:u -e dtlb_load_misses.stlb_hit:u -e dtlb_load_misses.miss_causes_a_walk:u -e dtlb_load_misses.walk_completed:u -e dtlb_load_misses.walk_completed_1g:u -e dtlb_load_misses.walk_completed_2m_4m:u -e dtlb_load_misses.walk_completed_4k:u -e dtlb_store_misses.stlb_hit:u -e dtlb_store_misses.miss_causes_a_walk:u -e dtlb_store_misses.walk_completed:u -e dtlb_store_misses.walk_completed_1g:u -e dtlb_store_misses.walk_completed_2m_4m:u -e dtlb_store_misses.walk_completed_4k:u -e dtlb_load_misses.walk_duration:u -e dtlb_store_misses.walk_duration:u -e dtlb_load_misses.stlb_hit_4k:u -e dtlb_load_misses.stlb_hit_2m:u -e dtlb_store_misses.stlb_hit_4k:u -e dtlb_store_misses.stlb_hit_2m:u -e page_walker_loads.dtlb_l1:u -e page_walker_loads.dtlb_l2:u -e page_walker_loads.dtlb_l3:u -e page_walker_loads.dtlb_memory:u" access_output_21_0.txt pf_output_21_0.txt /users/atma/PCC-artefacts/pin3.7/source/tools/PromotionCache/output/promotion_data/single_thread/pcc_128/30_sec/sssp/kron25_4 > app_output_21_0.txt 2> err_output_21_0.txt
+Gathering measurements...
+instructions 165995170567
+cpucycles 474004397223
+L1dcacheloads 69196650383
+L1dcacheloadmisses 19854429430
+L1dcachestores 13906087818
+LLCloads 19104205177
+LLCloadmisses 11108551231
+LLCstores 8126111
+LLCstoremisses 193341
+dTLBloads 69279677551
+dTLBstores 13896424355
+pagefaults 125330
+dtlb_load_misses.stlb_hit 2814152455
+dtlb_load_misses.miss_causes_a_walk 2963236914
+dtlb_load_misses.walk_completed 2950102288
+dtlb_load_misses.walk_completed_1g 0
+dtlb_load_misses.walk_completed_2m_4m 57073829
+dtlb_load_misses.walk_completed_4k 2886487845
+dtlb_store_misses.stlb_hit 3873924
+dtlb_store_misses.miss_causes_a_walk 1694405
+dtlb_store_misses.walk_completed 1547440
+dtlb_store_misses.walk_completed_1g 0
+dtlb_store_misses.walk_completed_2m_4m 2838
+dtlb_store_misses.walk_completed_4k 1554353
+dtlb_load_misses.walk_duration 141571502004
+dtlb_store_misses.walk_duration 129553263
+dtlb_load_misses.stlb_hit_4k 249792717
+dtlb_load_misses.stlb_hit_2m 2552795801
+dtlb_store_misses.stlb_hit_4k 3583199
+dtlb_store_misses.stlb_hit_2m 243186
+page_walker_loads.dtlb_l1 990670204
+page_walker_loads.dtlb_l2 550899994
+page_walker_loads.dtlb_l3 1522244508
+page_walker_loads.dtlb_memory 77698004
+
+
+reaching here
+
+Executing application...
+numactl -C 0 --membind 0 sudo ./main /users/atma/PCC-artefacts/data/Kronecker_25/ 21 0 "perf stat -p %d -B -v -o perf_output_21_1.txt -e instructions:u -e cpu-cycles:u -e L1-dcache-loads:u -e L1-dcache-load-misses:u -e L1-dcache-stores:u -e LLC-loads:u -e LLC-load-misses:u -e LLC-stores:u -e LLC-store-misses:u -e dTLB-loads:u -e dTLB-stores:u -e page-faults:u -e dtlb_load_misses.stlb_hit:u -e dtlb_load_misses.miss_causes_a_walk:u -e dtlb_load_misses.walk_completed:u -e dtlb_load_misses.walk_completed_1g:u -e dtlb_load_misses.walk_completed_2m_4m:u -e dtlb_load_misses.walk_completed_4k:u -e dtlb_store_misses.stlb_hit:u -e dtlb_store_misses.miss_causes_a_walk:u -e dtlb_store_misses.walk_completed:u -e dtlb_store_misses.walk_completed_1g:u -e dtlb_store_misses.walk_completed_2m_4m:u -e dtlb_store_misses.walk_completed_4k:u -e dtlb_load_misses.walk_duration:u -e dtlb_store_misses.walk_duration:u -e dtlb_load_misses.stlb_hit_4k:u -e dtlb_load_misses.stlb_hit_2m:u -e dtlb_store_misses.stlb_hit_4k:u -e dtlb_store_misses.stlb_hit_2m:u -e page_walker_loads.dtlb_l1:u -e page_walker_loads.dtlb_l2:u -e page_walker_loads.dtlb_l3:u -e page_walker_loads.dtlb_memory:u" access_output_21_1.txt pf_output_21_1.txt /users/atma/PCC-artefacts/pin3.7/source/tools/PromotionCache/output/promotion_data/single_thread/pcc_128/30_sec/sssp/kron25_4 > app_output_21_1.txt 2> err_output_21_1.txt
+Gathering measurements...
+instructions 165895926186
+cpucycles 473692654944
+L1dcacheloads 69131583368
+L1dcacheloadmisses 19841543964
+L1dcachestores 13875767505
+LLCloads 19082615303
+LLCloadmisses 11125714845
+LLCstores 7953799
+LLCstoremisses 189666
+dTLBloads 69352187375
+dTLBstores 13896901736
+pagefaults 125330
+dtlb_load_misses.stlb_hit 2804924817
+dtlb_load_misses.miss_causes_a_walk 2957709326
+dtlb_load_misses.walk_completed 2944521284
+dtlb_load_misses.walk_completed_1g 0
+dtlb_load_misses.walk_completed_2m_4m 57267251
+dtlb_load_misses.walk_completed_4k 2887793178
+dtlb_store_misses.stlb_hit 3795178
+dtlb_store_misses.miss_causes_a_walk 1563894
+dtlb_store_misses.walk_completed 1490571
+dtlb_store_misses.walk_completed_1g 0
+dtlb_store_misses.walk_completed_2m_4m 2697
+dtlb_store_misses.walk_completed_4k 1521625
+dtlb_load_misses.walk_duration 141568077742
+dtlb_store_misses.walk_duration 126777332
+dtlb_load_misses.stlb_hit_4k 250222231
+dtlb_load_misses.stlb_hit_2m 2554551072
+dtlb_store_misses.stlb_hit_4k 3550235
+dtlb_store_misses.stlb_hit_2m 209740
+page_walker_loads.dtlb_l1 991774099
+page_walker_loads.dtlb_l2 551715881
+page_walker_loads.dtlb_l3 1517951249
+page_walker_loads.dtlb_memory 78030390
+
+
+reaching here
+
+Executing application...
+numactl -C 0 --membind 0 sudo ./main /users/atma/PCC-artefacts/data/Kronecker_25/ 21 0 "perf stat -p %d -B -v -o perf_output_21_2.txt -e instructions:u -e cpu-cycles:u -e L1-dcache-loads:u -e L1-dcache-load-misses:u -e L1-dcache-stores:u -e LLC-loads:u -e LLC-load-misses:u -e LLC-stores:u -e LLC-store-misses:u -e dTLB-loads:u -e dTLB-stores:u -e page-faults:u -e dtlb_load_misses.stlb_hit:u -e dtlb_load_misses.miss_causes_a_walk:u -e dtlb_load_misses.walk_completed:u -e dtlb_load_misses.walk_completed_1g:u -e dtlb_load_misses.walk_completed_2m_4m:u -e dtlb_load_misses.walk_completed_4k:u -e dtlb_store_misses.stlb_hit:u -e dtlb_store_misses.miss_causes_a_walk:u -e dtlb_store_misses.walk_completed:u -e dtlb_store_misses.walk_completed_1g:u -e dtlb_store_misses.walk_completed_2m_4m:u -e dtlb_store_misses.walk_completed_4k:u -e dtlb_load_misses.walk_duration:u -e dtlb_store_misses.walk_duration:u -e dtlb_load_misses.stlb_hit_4k:u -e dtlb_load_misses.stlb_hit_2m:u -e dtlb_store_misses.stlb_hit_4k:u -e dtlb_store_misses.stlb_hit_2m:u -e page_walker_loads.dtlb_l1:u -e page_walker_loads.dtlb_l2:u -e page_walker_loads.dtlb_l3:u -e page_walker_loads.dtlb_memory:u" access_output_21_2.txt pf_output_21_2.txt /users/atma/PCC-artefacts/pin3.7/source/tools/PromotionCache/output/promotion_data/single_thread/pcc_128/30_sec/sssp/kron25_4 > app_output_21_2.txt 2> err_output_21_2.txt
+Gathering measurements...
+instructions 165997785049
+cpucycles 474003179843
+L1dcacheloads 69140303609
+L1dcacheloadmisses 19844370466
+L1dcachestores 13889730662
+LLCloads 19100659191
+LLCloadmisses 11156654689
+LLCstores 8285872
+LLCstoremisses 204773
+dTLBloads 69279759809
+dTLBstores 13892411184
+pagefaults 125330
+dtlb_load_misses.stlb_hit 2816559363
+dtlb_load_misses.miss_causes_a_walk 2951962208
+dtlb_load_misses.walk_completed 2943591914
+dtlb_load_misses.walk_completed_1g 0
+dtlb_load_misses.walk_completed_2m_4m 57280205
+dtlb_load_misses.walk_completed_4k 2890583004
+dtlb_store_misses.stlb_hit 3840168
+dtlb_store_misses.miss_causes_a_walk 1671146
+dtlb_store_misses.walk_completed 1554872
+dtlb_store_misses.walk_completed_1g 0
+dtlb_store_misses.walk_completed_2m_4m 2911
+dtlb_store_misses.walk_completed_4k 1505312
+dtlb_load_misses.walk_duration 141342824870
+dtlb_store_misses.walk_duration 135461264
+dtlb_load_misses.stlb_hit_4k 250028852
+dtlb_load_misses.stlb_hit_2m 2558705443
+dtlb_store_misses.stlb_hit_4k 3622825
+dtlb_store_misses.stlb_hit_2m 246646
+page_walker_loads.dtlb_l1 989925413
+page_walker_loads.dtlb_l2 551772625
+page_walker_loads.dtlb_l3 1517791554
+page_walker_loads.dtlb_memory 77981440
+
+
+reaching here
+
+reaching here
+
+Total Time = 1755 seconds.
+
+3.58user 0.30system 29:14.62elapsed 0%CPU (0avgtext+0avgdata 237712maxresident)k
+0inputs+1368outputs (0major+79384minor)pagefaults 0swaps
+Application: sssp
+Application file path: launch/sssp/main.cpp
+Application input: Kronecker_25
+Output directory: /users/atma/PCC-artefacts/results/single_thread/30_sec/pcc_128_8/tmp_sssp_Kronecker_25/
+------------------------------------------------------------
+
+Compiling application...
+
+g++ -O3 -o main -std=c++11 -Wno-unused-result main.cpp > /users/atma/PCC-artefacts/results/single_thread/30_sec/pcc_128_8/tmp_sssp_Kronecker_25/compiler_output.txt 2> /users/atma/PCC-artefacts/results/single_thread/30_sec/pcc_128_8/tmp_sssp_Kronecker_25/compiler_err.txt
+Executing application...
+numactl -C 0 --membind 0 sudo ./main /users/atma/PCC-artefacts/data/Kronecker_25/ 21 0 "perf stat -p %d -B -v -o perf_output_21_0.txt -e instructions:u -e cpu-cycles:u -e L1-dcache-loads:u -e L1-dcache-load-misses:u -e L1-dcache-stores:u -e LLC-loads:u -e LLC-load-misses:u -e LLC-stores:u -e LLC-store-misses:u -e dTLB-loads:u -e dTLB-stores:u -e page-faults:u -e dtlb_load_misses.stlb_hit:u -e dtlb_load_misses.miss_causes_a_walk:u -e dtlb_load_misses.walk_completed:u -e dtlb_load_misses.walk_completed_1g:u -e dtlb_load_misses.walk_completed_2m_4m:u -e dtlb_load_misses.walk_completed_4k:u -e dtlb_store_misses.stlb_hit:u -e dtlb_store_misses.miss_causes_a_walk:u -e dtlb_store_misses.walk_completed:u -e dtlb_store_misses.walk_completed_1g:u -e dtlb_store_misses.walk_completed_2m_4m:u -e dtlb_store_misses.walk_completed_4k:u -e dtlb_load_misses.walk_duration:u -e dtlb_store_misses.walk_duration:u -e dtlb_load_misses.stlb_hit_4k:u -e dtlb_load_misses.stlb_hit_2m:u -e dtlb_store_misses.stlb_hit_4k:u -e dtlb_store_misses.stlb_hit_2m:u -e page_walker_loads.dtlb_l1:u -e page_walker_loads.dtlb_l2:u -e page_walker_loads.dtlb_l3:u -e page_walker_loads.dtlb_memory:u" access_output_21_0.txt pf_output_21_0.txt /users/atma/PCC-artefacts/pin3.7/source/tools/PromotionCache/output/promotion_data/single_thread/pcc_128/30_sec/sssp/kron25_8 > app_output_21_0.txt 2> err_output_21_0.txt
+Gathering measurements...
+instructions 166014952289
+cpucycles 468802332372
+L1dcacheloads 69223942107
+L1dcacheloadmisses 19838490702
+L1dcachestores 13891474181
+LLCloads 19097447831
+LLCloadmisses 10834773476
+LLCstores 8002442
+LLCstoremisses 148268
+dTLBloads 69285200869
+dTLBstores 13873140568
+pagefaults 125330
+dtlb_load_misses.stlb_hit 2821698721
+dtlb_load_misses.miss_causes_a_walk 2954941985
+dtlb_load_misses.walk_completed 2941497473
+dtlb_load_misses.walk_completed_1g 0
+dtlb_load_misses.walk_completed_2m_4m 61758856
+dtlb_load_misses.walk_completed_4k 2877915620
+dtlb_store_misses.stlb_hit 3835735
+dtlb_store_misses.miss_causes_a_walk 1723314
+dtlb_store_misses.walk_completed 1639364
+dtlb_store_misses.walk_completed_1g 0
+dtlb_store_misses.walk_completed_2m_4m 3020
+dtlb_store_misses.walk_completed_4k 1621520
+dtlb_load_misses.walk_duration 140294785318
+dtlb_store_misses.walk_duration 128560939
+dtlb_load_misses.stlb_hit_4k 248719048
+dtlb_load_misses.stlb_hit_2m 2560780704
+dtlb_store_misses.stlb_hit_4k 3624377
+dtlb_store_misses.stlb_hit_2m 251171
+page_walker_loads.dtlb_l1 978525337
+page_walker_loads.dtlb_l2 541334655
+page_walker_loads.dtlb_l3 1533264127
+page_walker_loads.dtlb_memory 75205567
+
+
+reaching here
+
+Executing application...
+numactl -C 0 --membind 0 sudo ./main /users/atma/PCC-artefacts/data/Kronecker_25/ 21 0 "perf stat -p %d -B -v -o perf_output_21_1.txt -e instructions:u -e cpu-cycles:u -e L1-dcache-loads:u -e L1-dcache-load-misses:u -e L1-dcache-stores:u -e LLC-loads:u -e LLC-load-misses:u -e LLC-stores:u -e LLC-store-misses:u -e dTLB-loads:u -e dTLB-stores:u -e page-faults:u -e dtlb_load_misses.stlb_hit:u -e dtlb_load_misses.miss_causes_a_walk:u -e dtlb_load_misses.walk_completed:u -e dtlb_load_misses.walk_completed_1g:u -e dtlb_load_misses.walk_completed_2m_4m:u -e dtlb_load_misses.walk_completed_4k:u -e dtlb_store_misses.stlb_hit:u -e dtlb_store_misses.miss_causes_a_walk:u -e dtlb_store_misses.walk_completed:u -e dtlb_store_misses.walk_completed_1g:u -e dtlb_store_misses.walk_completed_2m_4m:u -e dtlb_store_misses.walk_completed_4k:u -e dtlb_load_misses.walk_duration:u -e dtlb_store_misses.walk_duration:u -e dtlb_load_misses.stlb_hit_4k:u -e dtlb_load_misses.stlb_hit_2m:u -e dtlb_store_misses.stlb_hit_4k:u -e dtlb_store_misses.stlb_hit_2m:u -e page_walker_loads.dtlb_l1:u -e page_walker_loads.dtlb_l2:u -e page_walker_loads.dtlb_l3:u -e page_walker_loads.dtlb_memory:u" access_output_21_1.txt pf_output_21_1.txt /users/atma/PCC-artefacts/pin3.7/source/tools/PromotionCache/output/promotion_data/single_thread/pcc_128/30_sec/sssp/kron25_8 > app_output_21_1.txt 2> err_output_21_1.txt
+Gathering measurements...
+instructions 165959171513
+cpucycles 474043074247
+L1dcacheloads 69169846680
+L1dcacheloadmisses 19817329818
+L1dcachestores 13888081447
+LLCloads 19082998227
+LLCloadmisses 11100643494
+LLCstores 7953736
+LLCstoremisses 188261
+dTLBloads 69287317358
+dTLBstores 13881120834
+pagefaults 125330
+dtlb_load_misses.stlb_hit 2818481179
+dtlb_load_misses.miss_causes_a_walk 2950178528
+dtlb_load_misses.walk_completed 2936746546
+dtlb_load_misses.walk_completed_1g 0
+dtlb_load_misses.walk_completed_2m_4m 61510579
+dtlb_load_misses.walk_completed_4k 2871828242
+dtlb_store_misses.stlb_hit 3777859
+dtlb_store_misses.miss_causes_a_walk 1673747
+dtlb_store_misses.walk_completed 1562687
+dtlb_store_misses.walk_completed_1g 0
+dtlb_store_misses.walk_completed_2m_4m 3242
+dtlb_store_misses.walk_completed_4k 1523435
+dtlb_load_misses.walk_duration 140123145681
+dtlb_store_misses.walk_duration 129507709
+dtlb_load_misses.stlb_hit_4k 248650422
+dtlb_load_misses.stlb_hit_2m 2559082170
+dtlb_store_misses.stlb_hit_4k 3570533
+dtlb_store_misses.stlb_hit_2m 221750
+page_walker_loads.dtlb_l1 978879972
+page_walker_loads.dtlb_l2 547887377
+page_walker_loads.dtlb_l3 1519658318
+page_walker_loads.dtlb_memory 76407042
+
+
+reaching here
+
+Executing application...
+numactl -C 0 --membind 0 sudo ./main /users/atma/PCC-artefacts/data/Kronecker_25/ 21 0 "perf stat -p %d -B -v -o perf_output_21_2.txt -e instructions:u -e cpu-cycles:u -e L1-dcache-loads:u -e L1-dcache-load-misses:u -e L1-dcache-stores:u -e LLC-loads:u -e LLC-load-misses:u -e LLC-stores:u -e LLC-store-misses:u -e dTLB-loads:u -e dTLB-stores:u -e page-faults:u -e dtlb_load_misses.stlb_hit:u -e dtlb_load_misses.miss_causes_a_walk:u -e dtlb_load_misses.walk_completed:u -e dtlb_load_misses.walk_completed_1g:u -e dtlb_load_misses.walk_completed_2m_4m:u -e dtlb_load_misses.walk_completed_4k:u -e dtlb_store_misses.stlb_hit:u -e dtlb_store_misses.miss_causes_a_walk:u -e dtlb_store_misses.walk_completed:u -e dtlb_store_misses.walk_completed_1g:u -e dtlb_store_misses.walk_completed_2m_4m:u -e dtlb_store_misses.walk_completed_4k:u -e dtlb_load_misses.walk_duration:u -e dtlb_store_misses.walk_duration:u -e dtlb_load_misses.stlb_hit_4k:u -e dtlb_load_misses.stlb_hit_2m:u -e dtlb_store_misses.stlb_hit_4k:u -e dtlb_store_misses.stlb_hit_2m:u -e page_walker_loads.dtlb_l1:u -e page_walker_loads.dtlb_l2:u -e page_walker_loads.dtlb_l3:u -e page_walker_loads.dtlb_memory:u" access_output_21_2.txt pf_output_21_2.txt /users/atma/PCC-artefacts/pin3.7/source/tools/PromotionCache/output/promotion_data/single_thread/pcc_128/30_sec/sssp/kron25_8 > app_output_21_2.txt 2> err_output_21_2.txt
+Gathering measurements...
+instructions 165902683537
+cpucycles 471944953111
+L1dcacheloads 69170896578
+L1dcacheloadmisses 19837840998
+L1dcachestores 13878151785
+LLCloads 19084535380
+LLCloadmisses 11113034944
+LLCstores 7964998
+LLCstoremisses 173827
+dTLBloads 69350972717
+dTLBstores 13887504743
+pagefaults 125330
+dtlb_load_misses.stlb_hit 2827986829
+dtlb_load_misses.miss_causes_a_walk 2949260691
+dtlb_load_misses.walk_completed 2936796970
+dtlb_load_misses.walk_completed_1g 0
+dtlb_load_misses.walk_completed_2m_4m 61651456
+dtlb_load_misses.walk_completed_4k 2875042557
+dtlb_store_misses.stlb_hit 3846961
+dtlb_store_misses.miss_causes_a_walk 1678157
+dtlb_store_misses.walk_completed 1532469
+dtlb_store_misses.walk_completed_1g 0
+dtlb_store_misses.walk_completed_2m_4m 2821
+dtlb_store_misses.walk_completed_4k 1506488
+dtlb_load_misses.walk_duration 139996380269
+dtlb_store_misses.walk_duration 125030615
+dtlb_load_misses.stlb_hit_4k 247957950
+dtlb_load_misses.stlb_hit_2m 2565233807
+dtlb_store_misses.stlb_hit_4k 3614270
+dtlb_store_misses.stlb_hit_2m 240929
+page_walker_loads.dtlb_l1 980299465
+page_walker_loads.dtlb_l2 550538193
+page_walker_loads.dtlb_l3 1516170247
+page_walker_loads.dtlb_memory 76932714
+
+
+reaching here
+
+reaching here
+
+Total Time = 1753 seconds.
+
+3.59user 0.29system 29:12.77elapsed 0%CPU (0avgtext+0avgdata 237712maxresident)k
+0inputs+1368outputs (0major+79383minor)pagefaults 0swaps
+Application: sssp
+Application file path: launch/sssp/main.cpp
+Application input: Kronecker_25
+Output directory: /users/atma/PCC-artefacts/results/single_thread/30_sec/pcc_128_16/tmp_sssp_Kronecker_25/
+------------------------------------------------------------
+
+Compiling application...
+
+g++ -O3 -o main -std=c++11 -Wno-unused-result main.cpp > /users/atma/PCC-artefacts/results/single_thread/30_sec/pcc_128_16/tmp_sssp_Kronecker_25/compiler_output.txt 2> /users/atma/PCC-artefacts/results/single_thread/30_sec/pcc_128_16/tmp_sssp_Kronecker_25/compiler_err.txt
+Executing application...
+numactl -C 0 --membind 0 sudo ./main /users/atma/PCC-artefacts/data/Kronecker_25/ 21 0 "perf stat -p %d -B -v -o perf_output_21_0.txt -e instructions:u -e cpu-cycles:u -e L1-dcache-loads:u -e L1-dcache-load-misses:u -e L1-dcache-stores:u -e LLC-loads:u -e LLC-load-misses:u -e LLC-stores:u -e LLC-store-misses:u -e dTLB-loads:u -e dTLB-stores:u -e page-faults:u -e dtlb_load_misses.stlb_hit:u -e dtlb_load_misses.miss_causes_a_walk:u -e dtlb_load_misses.walk_completed:u -e dtlb_load_misses.walk_completed_1g:u -e dtlb_load_misses.walk_completed_2m_4m:u -e dtlb_load_misses.walk_completed_4k:u -e dtlb_store_misses.stlb_hit:u -e dtlb_store_misses.miss_causes_a_walk:u -e dtlb_store_misses.walk_completed:u -e dtlb_store_misses.walk_completed_1g:u -e dtlb_store_misses.walk_completed_2m_4m:u -e dtlb_store_misses.walk_completed_4k:u -e dtlb_load_misses.walk_duration:u -e dtlb_store_misses.walk_duration:u -e dtlb_load_misses.stlb_hit_4k:u -e dtlb_load_misses.stlb_hit_2m:u -e dtlb_store_misses.stlb_hit_4k:u -e dtlb_store_misses.stlb_hit_2m:u -e page_walker_loads.dtlb_l1:u -e page_walker_loads.dtlb_l2:u -e page_walker_loads.dtlb_l3:u -e page_walker_loads.dtlb_memory:u" access_output_21_0.txt pf_output_21_0.txt /users/atma/PCC-artefacts/pin3.7/source/tools/PromotionCache/output/promotion_data/single_thread/pcc_128/30_sec/sssp/kron25_16 > app_output_21_0.txt 2> err_output_21_0.txt
+Gathering measurements...
+instructions 166102544000
+cpucycles 464330948221
+L1dcacheloads 69251270179
+L1dcacheloadmisses 19830568622
+L1dcachestores 13873628777
+LLCloads 19069811848
+LLCloadmisses 10773264967
+LLCstores 8038740
+LLCstoremisses 187623
+dTLBloads 69308412232
+dTLBstores 13879791754
+pagefaults 125330
+dtlb_load_misses.stlb_hit 2823780222
+dtlb_load_misses.miss_causes_a_walk 2938455188
+dtlb_load_misses.walk_completed 2925312610
+dtlb_load_misses.walk_completed_1g 0
+dtlb_load_misses.walk_completed_2m_4m 69750757
+dtlb_load_misses.walk_completed_4k 2853749392
+dtlb_store_misses.stlb_hit 3826788
+dtlb_store_misses.miss_causes_a_walk 1696227
+dtlb_store_misses.walk_completed 1575215
+dtlb_store_misses.walk_completed_1g 0
+dtlb_store_misses.walk_completed_2m_4m 3135
+dtlb_store_misses.walk_completed_4k 1538345
+dtlb_load_misses.walk_duration 137857133983
+dtlb_store_misses.walk_duration 127983828
+dtlb_load_misses.stlb_hit_4k 244737052
+dtlb_load_misses.stlb_hit_2m 2571931398
+dtlb_store_misses.stlb_hit_4k 3572193
+dtlb_store_misses.stlb_hit_2m 247714
+page_walker_loads.dtlb_l1 963967843
+page_walker_loads.dtlb_l2 545205507
+page_walker_loads.dtlb_l3 1517299879
+page_walker_loads.dtlb_memory 72549807
+
+
+reaching here
+
+Executing application...
+numactl -C 0 --membind 0 sudo ./main /users/atma/PCC-artefacts/data/Kronecker_25/ 21 0 "perf stat -p %d -B -v -o perf_output_21_1.txt -e instructions:u -e cpu-cycles:u -e L1-dcache-loads:u -e L1-dcache-load-misses:u -e L1-dcache-stores:u -e LLC-loads:u -e LLC-load-misses:u -e LLC-stores:u -e LLC-store-misses:u -e dTLB-loads:u -e dTLB-stores:u -e page-faults:u -e dtlb_load_misses.stlb_hit:u -e dtlb_load_misses.miss_causes_a_walk:u -e dtlb_load_misses.walk_completed:u -e dtlb_load_misses.walk_completed_1g:u -e dtlb_load_misses.walk_completed_2m_4m:u -e dtlb_load_misses.walk_completed_4k:u -e dtlb_store_misses.stlb_hit:u -e dtlb_store_misses.miss_causes_a_walk:u -e dtlb_store_misses.walk_completed:u -e dtlb_store_misses.walk_completed_1g:u -e dtlb_store_misses.walk_completed_2m_4m:u -e dtlb_store_misses.walk_completed_4k:u -e dtlb_load_misses.walk_duration:u -e dtlb_store_misses.walk_duration:u -e dtlb_load_misses.stlb_hit_4k:u -e dtlb_load_misses.stlb_hit_2m:u -e dtlb_store_misses.stlb_hit_4k:u -e dtlb_store_misses.stlb_hit_2m:u -e page_walker_loads.dtlb_l1:u -e page_walker_loads.dtlb_l2:u -e page_walker_loads.dtlb_l3:u -e page_walker_loads.dtlb_memory:u" access_output_21_1.txt pf_output_21_1.txt /users/atma/PCC-artefacts/pin3.7/source/tools/PromotionCache/output/promotion_data/single_thread/pcc_128/30_sec/sssp/kron25_16 > app_output_21_1.txt 2> err_output_21_1.txt
+Gathering measurements...
+instructions 166037011511
+cpucycles 469068241012
+L1dcacheloads 69191417494
+L1dcacheloadmisses 19827725227
+L1dcachestores 13895221293
+LLCloads 19082773549
+LLCloadmisses 11099398169
+LLCstores 7995838
+LLCstoremisses 189820
+dTLBloads 69276985584
+dTLBstores 13881388591
+pagefaults 125330
+dtlb_load_misses.stlb_hit 2818539770
+dtlb_load_misses.miss_causes_a_walk 2929304820
+dtlb_load_misses.walk_completed 2918298695
+dtlb_load_misses.walk_completed_1g 0
+dtlb_load_misses.walk_completed_2m_4m 69891893
+dtlb_load_misses.walk_completed_4k 2849788572
+dtlb_store_misses.stlb_hit 3825414
+dtlb_store_misses.miss_causes_a_walk 1650999
+dtlb_store_misses.walk_completed 1557138
+dtlb_store_misses.walk_completed_1g 0
+dtlb_store_misses.walk_completed_2m_4m 3052
+dtlb_store_misses.walk_completed_4k 1519001
+dtlb_load_misses.walk_duration 137512282957
+dtlb_store_misses.walk_duration 125752422
+dtlb_load_misses.stlb_hit_4k 244921187
+dtlb_load_misses.stlb_hit_2m 2579394862
+dtlb_store_misses.stlb_hit_4k 3598416
+dtlb_store_misses.stlb_hit_2m 237116
+page_walker_loads.dtlb_l1 966045775
+page_walker_loads.dtlb_l2 546913033
+page_walker_loads.dtlb_l3 1512826538
+page_walker_loads.dtlb_memory 73572298
+
+
+reaching here
+
+Executing application...
+numactl -C 0 --membind 0 sudo ./main /users/atma/PCC-artefacts/data/Kronecker_25/ 21 0 "perf stat -p %d -B -v -o perf_output_21_2.txt -e instructions:u -e cpu-cycles:u -e L1-dcache-loads:u -e L1-dcache-load-misses:u -e L1-dcache-stores:u -e LLC-loads:u -e LLC-load-misses:u -e LLC-stores:u -e LLC-store-misses:u -e dTLB-loads:u -e dTLB-stores:u -e page-faults:u -e dtlb_load_misses.stlb_hit:u -e dtlb_load_misses.miss_causes_a_walk:u -e dtlb_load_misses.walk_completed:u -e dtlb_load_misses.walk_completed_1g:u -e dtlb_load_misses.walk_completed_2m_4m:u -e dtlb_load_misses.walk_completed_4k:u -e dtlb_store_misses.stlb_hit:u -e dtlb_store_misses.miss_causes_a_walk:u -e dtlb_store_misses.walk_completed:u -e dtlb_store_misses.walk_completed_1g:u -e dtlb_store_misses.walk_completed_2m_4m:u -e dtlb_store_misses.walk_completed_4k:u -e dtlb_load_misses.walk_duration:u -e dtlb_store_misses.walk_duration:u -e dtlb_load_misses.stlb_hit_4k:u -e dtlb_load_misses.stlb_hit_2m:u -e dtlb_store_misses.stlb_hit_4k:u -e dtlb_store_misses.stlb_hit_2m:u -e page_walker_loads.dtlb_l1:u -e page_walker_loads.dtlb_l2:u -e page_walker_loads.dtlb_l3:u -e page_walker_loads.dtlb_memory:u" access_output_21_2.txt pf_output_21_2.txt /users/atma/PCC-artefacts/pin3.7/source/tools/PromotionCache/output/promotion_data/single_thread/pcc_128/30_sec/sssp/kron25_16 > app_output_21_2.txt 2> err_output_21_2.txt
+Gathering measurements...
+instructions 166141665841
+cpucycles 472992269466
+L1dcacheloads 69218634309
+L1dcacheloadmisses 19801734619
+L1dcachestores 13890702384
+LLCloads 19067205976
+LLCloadmisses 11088706114
+LLCstores 7904354
+LLCstoremisses 184186
+dTLBloads 69298133499
+dTLBstores 13888835281
+pagefaults 125330
+dtlb_load_misses.stlb_hit 2808331341
+dtlb_load_misses.miss_causes_a_walk 2930936460
+dtlb_load_misses.walk_completed 2921663739
+dtlb_load_misses.walk_completed_1g 0
+dtlb_load_misses.walk_completed_2m_4m 70428984
+dtlb_load_misses.walk_completed_4k 2853679770
+dtlb_store_misses.stlb_hit 3802724
+dtlb_store_misses.miss_causes_a_walk 1664327
+dtlb_store_misses.walk_completed 1563012
+dtlb_store_misses.walk_completed_1g 0
+dtlb_store_misses.walk_completed_2m_4m 2871
+dtlb_store_misses.walk_completed_4k 1536623
+dtlb_load_misses.walk_duration 138177362922
+dtlb_store_misses.walk_duration 121684114
+dtlb_load_misses.stlb_hit_4k 244674176
+dtlb_load_misses.stlb_hit_2m 2567769132
+dtlb_store_misses.stlb_hit_4k 3582029
+dtlb_store_misses.stlb_hit_2m 238408
+page_walker_loads.dtlb_l1 967601371
+page_walker_loads.dtlb_l2 539048725
+page_walker_loads.dtlb_l3 1515216267
+page_walker_loads.dtlb_memory 73366317
+
+
+reaching here
+
+reaching here
+
+Total Time = 1743 seconds.
+
+3.60user 0.28system 29:03.13elapsed 0%CPU (0avgtext+0avgdata 237712maxresident)k
+0inputs+1368outputs (0major+79385minor)pagefaults 0swaps
+Application: sssp
+Application file path: launch/sssp/main.cpp
+Application input: Kronecker_25
+Output directory: /users/atma/PCC-artefacts/results/single_thread/30_sec/pcc_128_32/tmp_sssp_Kronecker_25/
+------------------------------------------------------------
+
+Compiling application...
+
+g++ -O3 -o main -std=c++11 -Wno-unused-result main.cpp > /users/atma/PCC-artefacts/results/single_thread/30_sec/pcc_128_32/tmp_sssp_Kronecker_25/compiler_output.txt 2> /users/atma/PCC-artefacts/results/single_thread/30_sec/pcc_128_32/tmp_sssp_Kronecker_25/compiler_err.txt
+Executing application...
+numactl -C 0 --membind 0 sudo ./main /users/atma/PCC-artefacts/data/Kronecker_25/ 21 0 "perf stat -p %d -B -v -o perf_output_21_0.txt -e instructions:u -e cpu-cycles:u -e L1-dcache-loads:u -e L1-dcache-load-misses:u -e L1-dcache-stores:u -e LLC-loads:u -e LLC-load-misses:u -e LLC-stores:u -e LLC-store-misses:u -e dTLB-loads:u -e dTLB-stores:u -e page-faults:u -e dtlb_load_misses.stlb_hit:u -e dtlb_load_misses.miss_causes_a_walk:u -e dtlb_load_misses.walk_completed:u -e dtlb_load_misses.walk_completed_1g:u -e dtlb_load_misses.walk_completed_2m_4m:u -e dtlb_load_misses.walk_completed_4k:u -e dtlb_store_misses.stlb_hit:u -e dtlb_store_misses.miss_causes_a_walk:u -e dtlb_store_misses.walk_completed:u -e dtlb_store_misses.walk_completed_1g:u -e dtlb_store_misses.walk_completed_2m_4m:u -e dtlb_store_misses.walk_completed_4k:u -e dtlb_load_misses.walk_duration:u -e dtlb_store_misses.walk_duration:u -e dtlb_load_misses.stlb_hit_4k:u -e dtlb_load_misses.stlb_hit_2m:u -e dtlb_store_misses.stlb_hit_4k:u -e dtlb_store_misses.stlb_hit_2m:u -e page_walker_loads.dtlb_l1:u -e page_walker_loads.dtlb_l2:u -e page_walker_loads.dtlb_l3:u -e page_walker_loads.dtlb_memory:u" access_output_21_0.txt pf_output_21_0.txt /users/atma/PCC-artefacts/pin3.7/source/tools/PromotionCache/output/promotion_data/single_thread/pcc_128/30_sec/sssp/kron25_32 > app_output_21_0.txt 2> err_output_21_0.txt
+Gathering measurements...
+instructions 166016265493
+cpucycles 464023669811
+L1dcacheloads 69181620790
+L1dcacheloadmisses 19820876750
+L1dcachestores 13896034348
+LLCloads 19109502709
+LLCloadmisses 10796072826
+LLCstores 8013188
+LLCstoremisses 189712
+dTLBloads 69296928089
+dTLBstores 13891984874
+pagefaults 125330
+dtlb_load_misses.stlb_hit 2824044018
+dtlb_load_misses.miss_causes_a_walk 2927163318
+dtlb_load_misses.walk_completed 2915049158
+dtlb_load_misses.walk_completed_1g 0
+dtlb_load_misses.walk_completed_2m_4m 71202676
+dtlb_load_misses.walk_completed_4k 2844005738
+dtlb_store_misses.stlb_hit 3704407
+dtlb_store_misses.miss_causes_a_walk 1504877
+dtlb_store_misses.walk_completed 1406390
+dtlb_store_misses.walk_completed_1g 0
+dtlb_store_misses.walk_completed_2m_4m 2977
+dtlb_store_misses.walk_completed_4k 1384775
+dtlb_load_misses.walk_duration 137533115010
+dtlb_store_misses.walk_duration 127852395
+dtlb_load_misses.stlb_hit_4k 245408858
+dtlb_load_misses.stlb_hit_2m 2590184024
+dtlb_store_misses.stlb_hit_4k 3577403
+dtlb_store_misses.stlb_hit_2m 197327
+page_walker_loads.dtlb_l1 961503855
+page_walker_loads.dtlb_l2 535410140
+page_walker_loads.dtlb_l3 1527904042
+page_walker_loads.dtlb_memory 70561300
+
+
+reaching here
+
+Executing application...
+numactl -C 0 --membind 0 sudo ./main /users/atma/PCC-artefacts/data/Kronecker_25/ 21 0 "perf stat -p %d -B -v -o perf_output_21_1.txt -e instructions:u -e cpu-cycles:u -e L1-dcache-loads:u -e L1-dcache-load-misses:u -e L1-dcache-stores:u -e LLC-loads:u -e LLC-load-misses:u -e LLC-stores:u -e LLC-store-misses:u -e dTLB-loads:u -e dTLB-stores:u -e page-faults:u -e dtlb_load_misses.stlb_hit:u -e dtlb_load_misses.miss_causes_a_walk:u -e dtlb_load_misses.walk_completed:u -e dtlb_load_misses.walk_completed_1g:u -e dtlb_load_misses.walk_completed_2m_4m:u -e dtlb_load_misses.walk_completed_4k:u -e dtlb_store_misses.stlb_hit:u -e dtlb_store_misses.miss_causes_a_walk:u -e dtlb_store_misses.walk_completed:u -e dtlb_store_misses.walk_completed_1g:u -e dtlb_store_misses.walk_completed_2m_4m:u -e dtlb_store_misses.walk_completed_4k:u -e dtlb_load_misses.walk_duration:u -e dtlb_store_misses.walk_duration:u -e dtlb_load_misses.stlb_hit_4k:u -e dtlb_load_misses.stlb_hit_2m:u -e dtlb_store_misses.stlb_hit_4k:u -e dtlb_store_misses.stlb_hit_2m:u -e page_walker_loads.dtlb_l1:u -e page_walker_loads.dtlb_l2:u -e page_walker_loads.dtlb_l3:u -e page_walker_loads.dtlb_memory:u" access_output_21_1.txt pf_output_21_1.txt /users/atma/PCC-artefacts/pin3.7/source/tools/PromotionCache/output/promotion_data/single_thread/pcc_128/30_sec/sssp/kron25_32 > app_output_21_1.txt 2> err_output_21_1.txt
+Gathering measurements...
+instructions 165997095065
+cpucycles 470642642347
+L1dcacheloads 69212527665
+L1dcacheloadmisses 19809662769
+L1dcachestores 13871843873
+LLCloads 19070691000
+LLCloadmisses 11130814805
+LLCstores 8079081
+LLCstoremisses 186628
+dTLBloads 69361936926
+dTLBstores 13898332877
+pagefaults 125330
+dtlb_load_misses.stlb_hit 2828034837
+dtlb_load_misses.miss_causes_a_walk 2930422798
+dtlb_load_misses.walk_completed 2917115505
+dtlb_load_misses.walk_completed_1g 0
+dtlb_load_misses.walk_completed_2m_4m 73520565
+dtlb_load_misses.walk_completed_4k 2842091412
+dtlb_store_misses.stlb_hit 3812280
+dtlb_store_misses.miss_causes_a_walk 1647853
+dtlb_store_misses.walk_completed 1545171
+dtlb_store_misses.walk_completed_1g 0
+dtlb_store_misses.walk_completed_2m_4m 2994
+dtlb_store_misses.walk_completed_4k 1528695
+dtlb_load_misses.walk_duration 137571976842
+dtlb_store_misses.walk_duration 133018970
+dtlb_load_misses.stlb_hit_4k 243873742
+dtlb_load_misses.stlb_hit_2m 2578970720
+dtlb_store_misses.stlb_hit_4k 3565563
+dtlb_store_misses.stlb_hit_2m 233047
+page_walker_loads.dtlb_l1 962140717
+page_walker_loads.dtlb_l2 530155113
+page_walker_loads.dtlb_l3 1528419067
+page_walker_loads.dtlb_memory 72994213
+
+
+reaching here
+
+Executing application...
+numactl -C 0 --membind 0 sudo ./main /users/atma/PCC-artefacts/data/Kronecker_25/ 21 0 "perf stat -p %d -B -v -o perf_output_21_2.txt -e instructions:u -e cpu-cycles:u -e L1-dcache-loads:u -e L1-dcache-load-misses:u -e L1-dcache-stores:u -e LLC-loads:u -e LLC-load-misses:u -e LLC-stores:u -e LLC-store-misses:u -e dTLB-loads:u -e dTLB-stores:u -e page-faults:u -e dtlb_load_misses.stlb_hit:u -e dtlb_load_misses.miss_causes_a_walk:u -e dtlb_load_misses.walk_completed:u -e dtlb_load_misses.walk_completed_1g:u -e dtlb_load_misses.walk_completed_2m_4m:u -e dtlb_load_misses.walk_completed_4k:u -e dtlb_store_misses.stlb_hit:u -e dtlb_store_misses.miss_causes_a_walk:u -e dtlb_store_misses.walk_completed:u -e dtlb_store_misses.walk_completed_1g:u -e dtlb_store_misses.walk_completed_2m_4m:u -e dtlb_store_misses.walk_completed_4k:u -e dtlb_load_misses.walk_duration:u -e dtlb_store_misses.walk_duration:u -e dtlb_load_misses.stlb_hit_4k:u -e dtlb_load_misses.stlb_hit_2m:u -e dtlb_store_misses.stlb_hit_4k:u -e dtlb_store_misses.stlb_hit_2m:u -e page_walker_loads.dtlb_l1:u -e page_walker_loads.dtlb_l2:u -e page_walker_loads.dtlb_l3:u -e page_walker_loads.dtlb_memory:u" access_output_21_2.txt pf_output_21_2.txt /users/atma/PCC-artefacts/pin3.7/source/tools/PromotionCache/output/promotion_data/single_thread/pcc_128/30_sec/sssp/kron25_32 > app_output_21_2.txt 2> err_output_21_2.txt
+Gathering measurements...
+instructions 165919679531
+cpucycles 469057608896
+L1dcacheloads 69127149829
+L1dcacheloadmisses 19806354959
+L1dcachestores 13886050287
+LLCloads 19071404852
+LLCloadmisses 11167801731
+LLCstores 8081216
+LLCstoremisses 193952
+dTLBloads 69348747271
+dTLBstores 13904179391
+pagefaults 125330
+dtlb_load_misses.stlb_hit 2819018571
+dtlb_load_misses.miss_causes_a_walk 2926392048
+dtlb_load_misses.walk_completed 2914630314
+dtlb_load_misses.walk_completed_1g 0
+dtlb_load_misses.walk_completed_2m_4m 73324447
+dtlb_load_misses.walk_completed_4k 2842977196
+dtlb_store_misses.stlb_hit 3834344
+dtlb_store_misses.miss_causes_a_walk 1689868
+dtlb_store_misses.walk_completed 1540696
+dtlb_store_misses.walk_completed_1g 0
+dtlb_store_misses.walk_completed_2m_4m 2978
+dtlb_store_misses.walk_completed_4k 1523487
+dtlb_load_misses.walk_duration 137067853118
+dtlb_store_misses.walk_duration 138522450
+dtlb_load_misses.stlb_hit_4k 244310230
+dtlb_load_misses.stlb_hit_2m 2586141554
+dtlb_store_misses.stlb_hit_4k 3581779
+dtlb_store_misses.stlb_hit_2m 235654
+page_walker_loads.dtlb_l1 960533106
+page_walker_loads.dtlb_l2 547215197
+page_walker_loads.dtlb_l3 1509919230
+page_walker_loads.dtlb_memory 73186093
+
+
+reaching here
+
+reaching here
+
+Total Time = 1737 seconds.
+
+3.61user 0.26system 28:57.11elapsed 0%CPU (0avgtext+0avgdata 237712maxresident)k
+0inputs+1368outputs (0major+79386minor)pagefaults 0swaps
+Application: sssp
+Application file path: launch/sssp/main.cpp
+Application input: Kronecker_25
+Output directory: /users/atma/PCC-artefacts/results/single_thread/30_sec/pcc_128_64/tmp_sssp_Kronecker_25/
+------------------------------------------------------------
+
+Compiling application...
+
+g++ -O3 -o main -std=c++11 -Wno-unused-result main.cpp > /users/atma/PCC-artefacts/results/single_thread/30_sec/pcc_128_64/tmp_sssp_Kronecker_25/compiler_output.txt 2> /users/atma/PCC-artefacts/results/single_thread/30_sec/pcc_128_64/tmp_sssp_Kronecker_25/compiler_err.txt
+Executing application...
+numactl -C 0 --membind 0 sudo ./main /users/atma/PCC-artefacts/data/Kronecker_25/ 21 0 "perf stat -p %d -B -v -o perf_output_21_0.txt -e instructions:u -e cpu-cycles:u -e L1-dcache-loads:u -e L1-dcache-load-misses:u -e L1-dcache-stores:u -e LLC-loads:u -e LLC-load-misses:u -e LLC-stores:u -e LLC-store-misses:u -e dTLB-loads:u -e dTLB-stores:u -e page-faults:u -e dtlb_load_misses.stlb_hit:u -e dtlb_load_misses.miss_causes_a_walk:u -e dtlb_load_misses.walk_completed:u -e dtlb_load_misses.walk_completed_1g:u -e dtlb_load_misses.walk_completed_2m_4m:u -e dtlb_load_misses.walk_completed_4k:u -e dtlb_store_misses.stlb_hit:u -e dtlb_store_misses.miss_causes_a_walk:u -e dtlb_store_misses.walk_completed:u -e dtlb_store_misses.walk_completed_1g:u -e dtlb_store_misses.walk_completed_2m_4m:u -e dtlb_store_misses.walk_completed_4k:u -e dtlb_load_misses.walk_duration:u -e dtlb_store_misses.walk_duration:u -e dtlb_load_misses.stlb_hit_4k:u -e dtlb_load_misses.stlb_hit_2m:u -e dtlb_store_misses.stlb_hit_4k:u -e dtlb_store_misses.stlb_hit_2m:u -e page_walker_loads.dtlb_l1:u -e page_walker_loads.dtlb_l2:u -e page_walker_loads.dtlb_l3:u -e page_walker_loads.dtlb_memory:u" access_output_21_0.txt pf_output_21_0.txt /users/atma/PCC-artefacts/pin3.7/source/tools/PromotionCache/output/promotion_data/single_thread/pcc_128/30_sec/sssp/kron25_64 > app_output_21_0.txt 2> err_output_21_0.txt
+Gathering measurements...
+instructions 166035879144
+cpucycles 464326033038
+L1dcacheloads 69184175875
+L1dcacheloadmisses 19823503634
+L1dcachestores 13885955843
+LLCloads 19072722656
+LLCloadmisses 10841666376
+LLCstores 7924686
+LLCstoremisses 191859
+dTLBloads 69395466781
+dTLBstores 13899428348
+pagefaults 125330
+dtlb_load_misses.stlb_hit 2822514614
+dtlb_load_misses.miss_causes_a_walk 2929758054
+dtlb_load_misses.walk_completed 2918980905
+dtlb_load_misses.walk_completed_1g 0
+dtlb_load_misses.walk_completed_2m_4m 71655164
+dtlb_load_misses.walk_completed_4k 2847189074
+dtlb_store_misses.stlb_hit 3729248
+dtlb_store_misses.miss_causes_a_walk 1523350
+dtlb_store_misses.walk_completed 1408911
+dtlb_store_misses.walk_completed_1g 0
+dtlb_store_misses.walk_completed_2m_4m 2755
+dtlb_store_misses.walk_completed_4k 1354296
+dtlb_load_misses.walk_duration 136901265125
+dtlb_store_misses.walk_duration 118593308
+dtlb_load_misses.stlb_hit_4k 244195979
+dtlb_load_misses.stlb_hit_2m 2578793335
+dtlb_store_misses.stlb_hit_4k 3534471
+dtlb_store_misses.stlb_hit_2m 195126
+page_walker_loads.dtlb_l1 963228598
+page_walker_loads.dtlb_l2 548648452
+page_walker_loads.dtlb_l3 1513957388
+page_walker_loads.dtlb_memory 70611656
+
+
+reaching here
+
+Executing application...
+numactl -C 0 --membind 0 sudo ./main /users/atma/PCC-artefacts/data/Kronecker_25/ 21 0 "perf stat -p %d -B -v -o perf_output_21_1.txt -e instructions:u -e cpu-cycles:u -e L1-dcache-loads:u -e L1-dcache-load-misses:u -e L1-dcache-stores:u -e LLC-loads:u -e LLC-load-misses:u -e LLC-stores:u -e LLC-store-misses:u -e dTLB-loads:u -e dTLB-stores:u -e page-faults:u -e dtlb_load_misses.stlb_hit:u -e dtlb_load_misses.miss_causes_a_walk:u -e dtlb_load_misses.walk_completed:u -e dtlb_load_misses.walk_completed_1g:u -e dtlb_load_misses.walk_completed_2m_4m:u -e dtlb_load_misses.walk_completed_4k:u -e dtlb_store_misses.stlb_hit:u -e dtlb_store_misses.miss_causes_a_walk:u -e dtlb_store_misses.walk_completed:u -e dtlb_store_misses.walk_completed_1g:u -e dtlb_store_misses.walk_completed_2m_4m:u -e dtlb_store_misses.walk_completed_4k:u -e dtlb_load_misses.walk_duration:u -e dtlb_store_misses.walk_duration:u -e dtlb_load_misses.stlb_hit_4k:u -e dtlb_load_misses.stlb_hit_2m:u -e dtlb_store_misses.stlb_hit_4k:u -e dtlb_store_misses.stlb_hit_2m:u -e page_walker_loads.dtlb_l1:u -e page_walker_loads.dtlb_l2:u -e page_walker_loads.dtlb_l3:u -e page_walker_loads.dtlb_memory:u" access_output_21_1.txt pf_output_21_1.txt /users/atma/PCC-artefacts/pin3.7/source/tools/PromotionCache/output/promotion_data/single_thread/pcc_128/30_sec/sssp/kron25_64 > app_output_21_1.txt 2> err_output_21_1.txt
+Gathering measurements...
+instructions 166151944066
+cpucycles 470312558052
+L1dcacheloads 69182758754
+L1dcacheloadmisses 19798068542
+L1dcachestores 13877071983
+LLCloads 19059247944
+LLCloadmisses 11132937537
+LLCstores 8128928
+LLCstoremisses 201109
+dTLBloads 69369781913
+dTLBstores 13901615592
+pagefaults 125330
+dtlb_load_misses.stlb_hit 2821950155
+dtlb_load_misses.miss_causes_a_walk 2932509959
+dtlb_load_misses.walk_completed 2920343756
+dtlb_load_misses.walk_completed_1g 0
+dtlb_load_misses.walk_completed_2m_4m 73758645
+dtlb_load_misses.walk_completed_4k 2847329535
+dtlb_store_misses.stlb_hit 3787072
+dtlb_store_misses.miss_causes_a_walk 1614562
+dtlb_store_misses.walk_completed 1507715
+dtlb_store_misses.walk_completed_1g 0
+dtlb_store_misses.walk_completed_2m_4m 2986
+dtlb_store_misses.walk_completed_4k 1478577
+dtlb_load_misses.walk_duration 137520110054
+dtlb_store_misses.walk_duration 131881556
+dtlb_load_misses.stlb_hit_4k 243752821
+dtlb_load_misses.stlb_hit_2m 2579487666
+dtlb_store_misses.stlb_hit_4k 3585696
+dtlb_store_misses.stlb_hit_2m 220552
+page_walker_loads.dtlb_l1 960307140
+page_walker_loads.dtlb_l2 532372951
+page_walker_loads.dtlb_l3 1515905287
+page_walker_loads.dtlb_memory 72787195
+
+
+reaching here
+
+Executing application...
+numactl -C 0 --membind 0 sudo ./main /users/atma/PCC-artefacts/data/Kronecker_25/ 21 0 "perf stat -p %d -B -v -o perf_output_21_2.txt -e instructions:u -e cpu-cycles:u -e L1-dcache-loads:u -e L1-dcache-load-misses:u -e L1-dcache-stores:u -e LLC-loads:u -e LLC-load-misses:u -e LLC-stores:u -e LLC-store-misses:u -e dTLB-loads:u -e dTLB-stores:u -e page-faults:u -e dtlb_load_misses.stlb_hit:u -e dtlb_load_misses.miss_causes_a_walk:u -e dtlb_load_misses.walk_completed:u -e dtlb_load_misses.walk_completed_1g:u -e dtlb_load_misses.walk_completed_2m_4m:u -e dtlb_load_misses.walk_completed_4k:u -e dtlb_store_misses.stlb_hit:u -e dtlb_store_misses.miss_causes_a_walk:u -e dtlb_store_misses.walk_completed:u -e dtlb_store_misses.walk_completed_1g:u -e dtlb_store_misses.walk_completed_2m_4m:u -e dtlb_store_misses.walk_completed_4k:u -e dtlb_load_misses.walk_duration:u -e dtlb_store_misses.walk_duration:u -e dtlb_load_misses.stlb_hit_4k:u -e dtlb_load_misses.stlb_hit_2m:u -e dtlb_store_misses.stlb_hit_4k:u -e dtlb_store_misses.stlb_hit_2m:u -e page_walker_loads.dtlb_l1:u -e page_walker_loads.dtlb_l2:u -e page_walker_loads.dtlb_l3:u -e page_walker_loads.dtlb_memory:u" access_output_21_2.txt pf_output_21_2.txt /users/atma/PCC-artefacts/pin3.7/source/tools/PromotionCache/output/promotion_data/single_thread/pcc_128/30_sec/sssp/kron25_64 > app_output_21_2.txt 2> err_output_21_2.txt
+Gathering measurements...
+instructions 165893496606
+cpucycles 469234521520
+L1dcacheloads 69172301550
+L1dcacheloadmisses 19811283875
+L1dcachestores 13889472211
+LLCloads 19064405339
+LLCloadmisses 11152895212
+LLCstores 7951266
+LLCstoremisses 191550
+dTLBloads 69357693508
+dTLBstores 13890639287
+pagefaults 125330
+dtlb_load_misses.stlb_hit 2833560659
+dtlb_load_misses.miss_causes_a_walk 2930854051
+dtlb_load_misses.walk_completed 2919728365
+dtlb_load_misses.walk_completed_1g 0
+dtlb_load_misses.walk_completed_2m_4m 73405408
+dtlb_load_misses.walk_completed_4k 2841372696
+dtlb_store_misses.stlb_hit 3835846
+dtlb_store_misses.miss_causes_a_walk 1674188
+dtlb_store_misses.walk_completed 1515879
+dtlb_store_misses.walk_completed_1g 0
+dtlb_store_misses.walk_completed_2m_4m 2937
+dtlb_store_misses.walk_completed_4k 1511053
+dtlb_load_misses.walk_duration 137174938600
+dtlb_store_misses.walk_duration 124756309
+dtlb_load_misses.stlb_hit_4k 244158152
+dtlb_load_misses.stlb_hit_2m 2587434004
+dtlb_store_misses.stlb_hit_4k 3601366
+dtlb_store_misses.stlb_hit_2m 236570
+page_walker_loads.dtlb_l1 959202492
+page_walker_loads.dtlb_l2 549661909
+page_walker_loads.dtlb_l3 1509339621
+page_walker_loads.dtlb_memory 72552481
+
+
+reaching here
+
+reaching here
+
+Total Time = 1742 seconds.
+
+3.58user 0.29system 29:01.98elapsed 0%CPU (0avgtext+0avgdata 237712maxresident)k
+0inputs+1368outputs (0major+79385minor)pagefaults 0swaps
+Application: sssp
+Application file path: launch/sssp/main.cpp
+Application input: Kronecker_25
+Output directory: /users/atma/PCC-artefacts/results/single_thread/30_sec/pcc_128_100/tmp_sssp_Kronecker_25/
+------------------------------------------------------------
+
+Compiling application...
+
+g++ -O3 -o main -std=c++11 -Wno-unused-result main.cpp > /users/atma/PCC-artefacts/results/single_thread/30_sec/pcc_128_100/tmp_sssp_Kronecker_25/compiler_output.txt 2> /users/atma/PCC-artefacts/results/single_thread/30_sec/pcc_128_100/tmp_sssp_Kronecker_25/compiler_err.txt
+Executing application...
+numactl -C 0 --membind 0 sudo ./main /users/atma/PCC-artefacts/data/Kronecker_25/ 21 0 "perf stat -p %d -B -v -o perf_output_21_0.txt -e instructions:u -e cpu-cycles:u -e L1-dcache-loads:u -e L1-dcache-load-misses:u -e L1-dcache-stores:u -e LLC-loads:u -e LLC-load-misses:u -e LLC-stores:u -e LLC-store-misses:u -e dTLB-loads:u -e dTLB-stores:u -e page-faults:u -e dtlb_load_misses.stlb_hit:u -e dtlb_load_misses.miss_causes_a_walk:u -e dtlb_load_misses.walk_completed:u -e dtlb_load_misses.walk_completed_1g:u -e dtlb_load_misses.walk_completed_2m_4m:u -e dtlb_load_misses.walk_completed_4k:u -e dtlb_store_misses.stlb_hit:u -e dtlb_store_misses.miss_causes_a_walk:u -e dtlb_store_misses.walk_completed:u -e dtlb_store_misses.walk_completed_1g:u -e dtlb_store_misses.walk_completed_2m_4m:u -e dtlb_store_misses.walk_completed_4k:u -e dtlb_load_misses.walk_duration:u -e dtlb_store_misses.walk_duration:u -e dtlb_load_misses.stlb_hit_4k:u -e dtlb_load_misses.stlb_hit_2m:u -e dtlb_store_misses.stlb_hit_4k:u -e dtlb_store_misses.stlb_hit_2m:u -e page_walker_loads.dtlb_l1:u -e page_walker_loads.dtlb_l2:u -e page_walker_loads.dtlb_l3:u -e page_walker_loads.dtlb_memory:u" access_output_21_0.txt pf_output_21_0.txt /users/atma/PCC-artefacts/pin3.7/source/tools/PromotionCache/output/promotion_data/single_thread/pcc_128/30_sec/sssp/kron25_100 > app_output_21_0.txt 2> err_output_21_0.txt
+Gathering measurements...
+instructions 166053367903
+cpucycles 464282799549
+L1dcacheloads 69174489535
+L1dcacheloadmisses 19820566772
+L1dcachestores 13879146745
+LLCloads 19070453065
+LLCloadmisses 10842765576
+LLCstores 7954085
+LLCstoremisses 192915
+dTLBloads 69326492942
+dTLBstores 13891783015
+pagefaults 125330
+dtlb_load_misses.stlb_hit 2829006028
+dtlb_load_misses.miss_causes_a_walk 2930219408
+dtlb_load_misses.walk_completed 2917493447
+dtlb_load_misses.walk_completed_1g 0
+dtlb_load_misses.walk_completed_2m_4m 71533166
+dtlb_load_misses.walk_completed_4k 2841735904
+dtlb_store_misses.stlb_hit 3754586
+dtlb_store_misses.miss_causes_a_walk 1486044
+dtlb_store_misses.walk_completed 1382091
+dtlb_store_misses.walk_completed_1g 0
+dtlb_store_misses.walk_completed_2m_4m 3018
+dtlb_store_misses.walk_completed_4k 1358573
+dtlb_load_misses.walk_duration 137269001983
+dtlb_store_misses.walk_duration 134055242
+dtlb_load_misses.stlb_hit_4k 244760213
+dtlb_load_misses.stlb_hit_2m 2586268719
+dtlb_store_misses.stlb_hit_4k 3529877
+dtlb_store_misses.stlb_hit_2m 192226
+page_walker_loads.dtlb_l1 959828949
+page_walker_loads.dtlb_l2 541559440
+page_walker_loads.dtlb_l3 1519585846
+page_walker_loads.dtlb_memory 70934714
+
+
+reaching here
+
+Executing application...
+numactl -C 0 --membind 0 sudo ./main /users/atma/PCC-artefacts/data/Kronecker_25/ 21 0 "perf stat -p %d -B -v -o perf_output_21_1.txt -e instructions:u -e cpu-cycles:u -e L1-dcache-loads:u -e L1-dcache-load-misses:u -e L1-dcache-stores:u -e LLC-loads:u -e LLC-load-misses:u -e LLC-stores:u -e LLC-store-misses:u -e dTLB-loads:u -e dTLB-stores:u -e page-faults:u -e dtlb_load_misses.stlb_hit:u -e dtlb_load_misses.miss_causes_a_walk:u -e dtlb_load_misses.walk_completed:u -e dtlb_load_misses.walk_completed_1g:u -e dtlb_load_misses.walk_completed_2m_4m:u -e dtlb_load_misses.walk_completed_4k:u -e dtlb_store_misses.stlb_hit:u -e dtlb_store_misses.miss_causes_a_walk:u -e dtlb_store_misses.walk_completed:u -e dtlb_store_misses.walk_completed_1g:u -e dtlb_store_misses.walk_completed_2m_4m:u -e dtlb_store_misses.walk_completed_4k:u -e dtlb_load_misses.walk_duration:u -e dtlb_store_misses.walk_duration:u -e dtlb_load_misses.stlb_hit_4k:u -e dtlb_load_misses.stlb_hit_2m:u -e dtlb_store_misses.stlb_hit_4k:u -e dtlb_store_misses.stlb_hit_2m:u -e page_walker_loads.dtlb_l1:u -e page_walker_loads.dtlb_l2:u -e page_walker_loads.dtlb_l3:u -e page_walker_loads.dtlb_memory:u" access_output_21_1.txt pf_output_21_1.txt /users/atma/PCC-artefacts/pin3.7/source/tools/PromotionCache/output/promotion_data/single_thread/pcc_128/30_sec/sssp/kron25_100 > app_output_21_1.txt 2> err_output_21_1.txt
+Gathering measurements...
+instructions 166027810084
+cpucycles 469272797852
+L1dcacheloads 69194324893
+L1dcacheloadmisses 19813953116
+L1dcachestores 13886817152
+LLCloads 19073290654
+LLCloadmisses 11158664955
+LLCstores 7957817
+LLCstoremisses 194816
+dTLBloads 69304828586
+dTLBstores 13885487846
+pagefaults 125330
+dtlb_load_misses.stlb_hit 2837426618
+dtlb_load_misses.miss_causes_a_walk 2932044324
+dtlb_load_misses.walk_completed 2918444521
+dtlb_load_misses.walk_completed_1g 0
+dtlb_load_misses.walk_completed_2m_4m 73075341
+dtlb_load_misses.walk_completed_4k 2842751626
+dtlb_store_misses.stlb_hit 3833504
+dtlb_store_misses.miss_causes_a_walk 1673001
+dtlb_store_misses.walk_completed 1527828
+dtlb_store_misses.walk_completed_1g 0
+dtlb_store_misses.walk_completed_2m_4m 2846
+dtlb_store_misses.walk_completed_4k 1487954
+dtlb_load_misses.walk_duration 136994254468
+dtlb_store_misses.walk_duration 123436208
+dtlb_load_misses.stlb_hit_4k 243699349
+dtlb_load_misses.stlb_hit_2m 2580175106
+dtlb_store_misses.stlb_hit_4k 3570994
+dtlb_store_misses.stlb_hit_2m 228588
+page_walker_loads.dtlb_l1 960405736
+page_walker_loads.dtlb_l2 543577401
+page_walker_loads.dtlb_l3 1507121601
+page_walker_loads.dtlb_memory 72715945
+
+
+reaching here
+
+Executing application...
+numactl -C 0 --membind 0 sudo ./main /users/atma/PCC-artefacts/data/Kronecker_25/ 21 0 "perf stat -p %d -B -v -o perf_output_21_2.txt -e instructions:u -e cpu-cycles:u -e L1-dcache-loads:u -e L1-dcache-load-misses:u -e L1-dcache-stores:u -e LLC-loads:u -e LLC-load-misses:u -e LLC-stores:u -e LLC-store-misses:u -e dTLB-loads:u -e dTLB-stores:u -e page-faults:u -e dtlb_load_misses.stlb_hit:u -e dtlb_load_misses.miss_causes_a_walk:u -e dtlb_load_misses.walk_completed:u -e dtlb_load_misses.walk_completed_1g:u -e dtlb_load_misses.walk_completed_2m_4m:u -e dtlb_load_misses.walk_completed_4k:u -e dtlb_store_misses.stlb_hit:u -e dtlb_store_misses.miss_causes_a_walk:u -e dtlb_store_misses.walk_completed:u -e dtlb_store_misses.walk_completed_1g:u -e dtlb_store_misses.walk_completed_2m_4m:u -e dtlb_store_misses.walk_completed_4k:u -e dtlb_load_misses.walk_duration:u -e dtlb_store_misses.walk_duration:u -e dtlb_load_misses.stlb_hit_4k:u -e dtlb_load_misses.stlb_hit_2m:u -e dtlb_store_misses.stlb_hit_4k:u -e dtlb_store_misses.stlb_hit_2m:u -e page_walker_loads.dtlb_l1:u -e page_walker_loads.dtlb_l2:u -e page_walker_loads.dtlb_l3:u -e page_walker_loads.dtlb_memory:u" access_output_21_2.txt pf_output_21_2.txt /users/atma/PCC-artefacts/pin3.7/source/tools/PromotionCache/output/promotion_data/single_thread/pcc_128/30_sec/sssp/kron25_100 > app_output_21_2.txt 2> err_output_21_2.txt
+Gathering measurements...
+instructions 166093636798
+cpucycles 469349863245
+L1dcacheloads 69188628214
+L1dcacheloadmisses 19815484752
+L1dcachestores 13885022295
+LLCloads 19070901070
+LLCloadmisses 11154270669
+LLCstores 8090713
+LLCstoremisses 195307
+dTLBloads 69310312085
+dTLBstores 13889968144
+pagefaults 125330
+dtlb_load_misses.stlb_hit 2828776801
+dtlb_load_misses.miss_causes_a_walk 2923446832
+dtlb_load_misses.walk_completed 2914137506
+dtlb_load_misses.walk_completed_1g 0
+dtlb_load_misses.walk_completed_2m_4m 73112005
+dtlb_load_misses.walk_completed_4k 2845312835
+dtlb_store_misses.stlb_hit 3785387
+dtlb_store_misses.miss_causes_a_walk 1617565
+dtlb_store_misses.walk_completed 1519533
+dtlb_store_misses.walk_completed_1g 0
+dtlb_store_misses.walk_completed_2m_4m 3093
+dtlb_store_misses.walk_completed_4k 1517935
+dtlb_load_misses.walk_duration 137351171600
+dtlb_store_misses.walk_duration 134042285
+dtlb_load_misses.stlb_hit_4k 243798828
+dtlb_load_misses.stlb_hit_2m 2587980716
+dtlb_store_misses.stlb_hit_4k 3595357
+dtlb_store_misses.stlb_hit_2m 237685
+page_walker_loads.dtlb_l1 959635862
+page_walker_loads.dtlb_l2 543002373
+page_walker_loads.dtlb_l3 1513673014
+page_walker_loads.dtlb_memory 72789350
+
+
+reaching here
+
+reaching here
+
+Total Time = 1740 seconds.
+
+3.57user 0.31system 28:59.62elapsed 0%CPU (0avgtext+0avgdata 237712maxresident)k
+0inputs+1368outputs (0major+79385minor)pagefaults 0swaps
+time python3 measure.py -s launch/sssp/main.cpp -d /users/atma/PCC-artefacts/data/Kronecker_25/ -o /users/atma/PCC-artefacts/results/single_thread/30_sec/none/tmp_sssp_Kronecker_25/ -ma 0 -pd /users/atma/PCC-artefacts/pin3.7/source/tools/PromotionCache/output/promotion_data/single_thread/pcc_128/30_sec/sssp/kron25_0 -ss 0 -x 3
+Done! Navigate to /users/atma/PCC-artefacts/results/single_thread/30_sec/none/sssp_Kronecker_25/results.txt to see the results!
+time python3 measure.py -s launch/sssp/main.cpp -d /users/atma/PCC-artefacts/data/Kronecker_25/ -o /users/atma/PCC-artefacts/results/single_thread/30_sec/pcc_128_1/tmp_sssp_Kronecker_25/ -ma 21 -pd /users/atma/PCC-artefacts/pin3.7/source/tools/PromotionCache/output/promotion_data/single_thread/pcc_128/30_sec/sssp/kron25_1 -ss 0 -x 3
+Done! Navigate to /users/atma/PCC-artefacts/results/single_thread/30_sec/pcc_128_1/sssp_Kronecker_25/results.txt to see the results!
+time python3 measure.py -s launch/sssp/main.cpp -d /users/atma/PCC-artefacts/data/Kronecker_25/ -o /users/atma/PCC-artefacts/results/single_thread/30_sec/pcc_128_2/tmp_sssp_Kronecker_25/ -ma 21 -pd /users/atma/PCC-artefacts/pin3.7/source/tools/PromotionCache/output/promotion_data/single_thread/pcc_128/30_sec/sssp/kron25_2 -ss 0 -x 3
+Done! Navigate to /users/atma/PCC-artefacts/results/single_thread/30_sec/pcc_128_2/sssp_Kronecker_25/results.txt to see the results!
+time python3 measure.py -s launch/sssp/main.cpp -d /users/atma/PCC-artefacts/data/Kronecker_25/ -o /users/atma/PCC-artefacts/results/single_thread/30_sec/pcc_128_4/tmp_sssp_Kronecker_25/ -ma 21 -pd /users/atma/PCC-artefacts/pin3.7/source/tools/PromotionCache/output/promotion_data/single_thread/pcc_128/30_sec/sssp/kron25_4 -ss 0 -x 3
+Done! Navigate to /users/atma/PCC-artefacts/results/single_thread/30_sec/pcc_128_4/sssp_Kronecker_25/results.txt to see the results!
+time python3 measure.py -s launch/sssp/main.cpp -d /users/atma/PCC-artefacts/data/Kronecker_25/ -o /users/atma/PCC-artefacts/results/single_thread/30_sec/pcc_128_8/tmp_sssp_Kronecker_25/ -ma 21 -pd /users/atma/PCC-artefacts/pin3.7/source/tools/PromotionCache/output/promotion_data/single_thread/pcc_128/30_sec/sssp/kron25_8 -ss 0 -x 3
+Done! Navigate to /users/atma/PCC-artefacts/results/single_thread/30_sec/pcc_128_8/sssp_Kronecker_25/results.txt to see the results!
+time python3 measure.py -s launch/sssp/main.cpp -d /users/atma/PCC-artefacts/data/Kronecker_25/ -o /users/atma/PCC-artefacts/results/single_thread/30_sec/pcc_128_16/tmp_sssp_Kronecker_25/ -ma 21 -pd /users/atma/PCC-artefacts/pin3.7/source/tools/PromotionCache/output/promotion_data/single_thread/pcc_128/30_sec/sssp/kron25_16 -ss 0 -x 3
+Done! Navigate to /users/atma/PCC-artefacts/results/single_thread/30_sec/pcc_128_16/sssp_Kronecker_25/results.txt to see the results!
+time python3 measure.py -s launch/sssp/main.cpp -d /users/atma/PCC-artefacts/data/Kronecker_25/ -o /users/atma/PCC-artefacts/results/single_thread/30_sec/pcc_128_32/tmp_sssp_Kronecker_25/ -ma 21 -pd /users/atma/PCC-artefacts/pin3.7/source/tools/PromotionCache/output/promotion_data/single_thread/pcc_128/30_sec/sssp/kron25_32 -ss 0 -x 3
+Done! Navigate to /users/atma/PCC-artefacts/results/single_thread/30_sec/pcc_128_32/sssp_Kronecker_25/results.txt to see the results!
+time python3 measure.py -s launch/sssp/main.cpp -d /users/atma/PCC-artefacts/data/Kronecker_25/ -o /users/atma/PCC-artefacts/results/single_thread/30_sec/pcc_128_64/tmp_sssp_Kronecker_25/ -ma 21 -pd /users/atma/PCC-artefacts/pin3.7/source/tools/PromotionCache/output/promotion_data/single_thread/pcc_128/30_sec/sssp/kron25_64 -ss 0 -x 3
+Done! Navigate to /users/atma/PCC-artefacts/results/single_thread/30_sec/pcc_128_64/sssp_Kronecker_25/results.txt to see the results!
+time python3 measure.py -s launch/sssp/main.cpp -d /users/atma/PCC-artefacts/data/Kronecker_25/ -o /users/atma/PCC-artefacts/results/single_thread/30_sec/pcc_128_100/tmp_sssp_Kronecker_25/ -ma 21 -pd /users/atma/PCC-artefacts/pin3.7/source/tools/PromotionCache/output/promotion_data/single_thread/pcc_128/30_sec/sssp/kron25_100 -ss 0 -x 3
+Done! Navigate to /users/atma/PCC-artefacts/results/single_thread/30_sec/pcc_128_100/sssp_Kronecker_25/results.txt to see the results!

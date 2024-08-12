@@ -8,8 +8,8 @@ datasets=(Kronecker_25 DBG_Kronecker_25 Twitter DBG_Twitter Sd1_Arc DBG_Sd1_Arc)
 
 offset=3072
 
-NUMA_NODE=1 # EDIT THIS VALUE (NUMA NODE)
-MAX_RAM=64000 # EDIT THIS VALUE (AMOUNT OF MEMORY ON NUMA NODE)
+NUMA_NODE=0 # EDIT THIS VALUE (NUMA NODE)
+MAX_RAM=128856 # EDIT THIS VALUE (AMOUNT OF MEMORY ON NUMA NODE)
 
 for i in ${!footprints[@]}
 do
@@ -21,7 +21,7 @@ do
 	screen -dm -S memhog $cmd
 	pid=$(screen -ls | awk '/\.memhog\t/ {print strtonum($1)}')
 	echo "sleeping..."
-	sleep 20
+	sleep 30
 
 	num_datasets=${#datasets[@]}
 	if (( $i < $num_datasets )) ; then

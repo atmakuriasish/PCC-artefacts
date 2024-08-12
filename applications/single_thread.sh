@@ -41,3 +41,6 @@ echo "echo madvise > /sys/kernel/mm/transparent_hugepage/defrag"
 echo madvise > /sys/kernel/mm/transparent_hugepage/defrag
 
 # -------------------- END THP --------------------
+
+echo "sudo bash run_frag.sh"
+sudo bash run_frag.sh
