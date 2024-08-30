@@ -1,6 +1,7 @@
 #include "common.h"
 #include "huge_page_reuse.h"
 #include "hawkeye.h"
+//#include <features.h>
 
 static VOID RecordMem(VOID * ip, CHAR r, VOID * addr, INT32 size, BOOL isPrefetch)
 {
@@ -85,12 +86,13 @@ int main(int argc, char *argv[])
     string path = argv[6];
     string exec = path.substr(path.find_last_of("/\\") + 1);
 
+    srand(time(0));
+
     if (std::find(other_benchmarks, other_benchmarks + 5, exec) != other_benchmarks + 5) {
         isROI = true;
     }
- 
+    //cout << "Asish changed"<<endl;
     cout << argc << " arguments, path = " << path << ", exec = " << exec << endl;
-
     if (argc > NUM_ARGS) {
         mode = pcc_str.compare(argv[NUM_ARGS]);
     }

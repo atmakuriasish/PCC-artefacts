@@ -17,7 +17,7 @@ PCC_SIZE=128
 INTERVAL_FACTOR=30
 
 # ----- APPLICATIONS -----
-vp_apps=(sssp)
+vp_apps=(bfs)
 parsec_apps=()
 spec_apps=()
 other_apps=("${parsec_apps[@]}" "${spec_apps[@]}")

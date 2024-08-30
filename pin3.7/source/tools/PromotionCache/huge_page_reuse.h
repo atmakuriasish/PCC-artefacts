@@ -29,8 +29,15 @@ void summarize_promotions() {
   bool res;
   vector<uint64_t> addresses = promotion_cache->get_entries();
 
-  cout << "\n" << dec << total_num_accesses << ": Memory Regions:" << endl;
-  for (unsigned long i = 0; i < addresses.size(); i++) {
+  //unsigned int sz= rand()%(addresses.size()); //Asish: changed pcc size
+  //cout<<"Asish changed : "<<addresses.size()<<" "<<sz<<"\n"; 
+  //int asishCt=0;
+  /*two ways : remove top sz elements or remove bottom size elements to dynamically change pcc size*/
+   cout << "\n" << dec << total_num_accesses << ": Memory Regions:" << endl;
+  for (unsigned long i = 0; i < addresses.size(); i++) { //Asish : changed pcc size
+    /*third way: remove any entry randomly from pcc*/
+    //if(rand()%2==0) continue;
+    //asishCt++;
     base = addresses[i];
     freq = boost::get<2>(reuse_map[base]);
     reuse_dist = boost::get<3>(reuse_map[base]);
@@ -60,6 +67,7 @@ void summarize_promotions() {
     cout << endl;
     promotion_cache->evict(base*PAGE_SIZE, &l1_2m_dirty_evict);
   }
+  //cout<<"Asish changed asishCt : "<<addresses.size()<<" "<<asishCt<<"\n"; 
 }
 
 void pcc_track_access(uint64_t vaddr, bool print=false) {
