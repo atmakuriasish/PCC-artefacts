@@ -21,7 +21,7 @@ NUM_ITER = 3
 
 # APPS
 #vp = ["bfs", "sssp", "pagerank"]
-vp = ["pagerank"]
+vp = ["sssp"]
 parsec = []
 spec = []
 apps = vp + parsec + spec
@@ -59,7 +59,7 @@ vp_inputs = ["Kronecker_25/"]
        #}
        
 inputs = {
-         "pagerank": vp_inputs
+         "sssp": vp_inputs
        }
 
 #start_seed = {"Kronecker_21/": "0", "Kronecker_25/": "0", "Twitter/": "0", "Sd1_Arc/": "0", "DBG_Kronecker_25/": "3287496", "DBG_Twitter/": "15994127", "DBG_Sd1_Arc/": "18290613"}

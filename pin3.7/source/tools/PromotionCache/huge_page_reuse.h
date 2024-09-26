@@ -36,7 +36,7 @@ void summarize_promotions() {
    cout << "\n" << dec << total_num_accesses << ": Memory Regions:" << endl;
   for (unsigned long i = 0; i < addresses.size(); i++) { //Asish : changed pcc size
     /*third way: remove any entry randomly from pcc*/
-    //if(rand()%2==0) continue;
+    //if(rand()%3!=0) continue;
     //asishCt++;
     base = addresses[i];
     freq = boost::get<2>(reuse_map[base]);
@@ -70,6 +70,18 @@ void summarize_promotions() {
   //cout<<"Asish changed asishCt : "<<addresses.size()<<" "<<asishCt<<"\n"; 
 }
 
+//Asish : added function to flush PCC contents
+void flush_pcc() {
+  unsigned long base;
+  vector<uint64_t> addresses = promotion_cache->get_entries();
+  cout<<"Flush PCC called\n";
+  for (unsigned long i = 0; i < addresses.size(); i++) { 
+    base = addresses[i];
+    promotion_cache->evict(base*PAGE_SIZE, &l1_2m_dirty_evict);
+  }
+  cout<<"PCC flushed\n";
+}
+
 void pcc_track_access(uint64_t vaddr, bool print=false) {
     uint64_t base;
 
@@ -79,6 +91,11 @@ void pcc_track_access(uint64_t vaddr, bool print=false) {
       summarize_promotions();
     } else if (total_num_accesses % (FACTOR*ACCESS_INTERVAL) == 0) {
       summarize_promotions();
+    } 
+    if ((FACTOR > 1) && (total_num_accesses % (FACTOR*ACCESS_INTERVAL) == ACCESS_INTERVAL-CONTEXT_SWITCH)) {
+      flush_pcc();
+    } else if (total_num_accesses % (FACTOR*ACCESS_INTERVAL) == FACTOR*ACCESS_INTERVAL-CONTEXT_SWITCH) {
+      flush_pcc();
     } 
     base = (uint64_t) (vaddr/HUGE_PAGE_SIZE);
 

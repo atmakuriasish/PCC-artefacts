@@ -51,6 +51,7 @@ int mode = 0; // 0 = PCC, 8 = HawkEye
 int NUM_ARGS = 9;
 unsigned int PROMOTION_CACHE_SIZE = 128, FACTOR = 30;
 unsigned long ACCESS_INTERVAL = 1000000000, total_num_accesses = 0, curr_num_accesses = 0, num_2mb_ptw = 0;
+unsigned long CONTEXT_SWITCH = 4000000; //Asish : added context switch time
 double ALPHA = 0.9;
 string pcc_str("pcc");
 

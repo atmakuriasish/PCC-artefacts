@@ -1,0 +1,107 @@
+CLEANING GRAPH APPLICATIONS
+
+sssp : make clean
+rm main
+CLEANING OTHER APPLICATIONS
+
+COMPILING GRAPH APPLICATIONS
+
+sssp : make
+g++ -std=c++11 -o main main.cpp
+COMPILING OTHER APPLICATIONS
+
+LAUNCH
+
+sudo /mydata/PCC-artefacts/pin3.7/source/tools/PromotionCache/../../../../pin3.7/pin -t /mydata/PCC-artefacts/pin3.7/source/tools/PromotionCache/obj-intel64/roi.so -- /mydata/PCC-artefacts/pin3.7/source/tools/PromotionCache/../../../../applications/pin_source/sssp/main /mydata/PCC-artefacts/pin3.7/source/tools/PromotionCache/../../../../data/Kronecker_25/ 0 pcc 732856447 128 30 > /mydata/PCC-artefacts/pin3.7/source/tools/PromotionCache/output/single_thread/pcc_128/30_sec/sssp/kron25
+python3 get_promotions.py output/single_thread/pcc_128/30_sec/sssp/kron25 1
+mode = cache, offset = 189, promotion percent = 1, promotion directory = output/promotion_data/single_thread/pcc_128/30_sec/sssp/
+
+READING: output/single_thread/pcc_128/30_sec/sssp/kron25
+MEM REGION: 3fffe9b - 3ffff1c
+Total footprint = 8547 huge pages
+----------
+
+python3 get_promotions.py output/single_thread/pcc_128/30_sec/sssp/kron25 2
+mode = cache, offset = 189, promotion percent = 2, promotion directory = output/promotion_data/single_thread/pcc_128/30_sec/sssp/
+
+READING: output/single_thread/pcc_128/30_sec/sssp/kron25
+MEM REGION: 3fffe9b - 3ffff1c
+Total footprint = 8547 huge pages
+----------
+
+python3 get_promotions.py output/single_thread/pcc_128/30_sec/sssp/kron25 4
+mode = cache, offset = 189, promotion percent = 4, promotion directory = output/promotion_data/single_thread/pcc_128/30_sec/sssp/
+
+READING: output/single_thread/pcc_128/30_sec/sssp/kron25
+MEM REGION: 3fffe9b - 3ffff1c
+Total footprint = 8547 huge pages
+----------
+
+python3 get_promotions.py output/single_thread/pcc_128/30_sec/sssp/kron25 8
+mode = cache, offset = 189, promotion percent = 8, promotion directory = output/promotion_data/single_thread/pcc_128/30_sec/sssp/
+
+READING: output/single_thread/pcc_128/30_sec/sssp/kron25
+MEM REGION: 3fffe9b - 3ffff1c
+Total footprint = 8547 huge pages
+----------
+
+python3 get_promotions.py output/single_thread/pcc_128/30_sec/sssp/kron25 16
+mode = cache, offset = 189, promotion percent = 16, promotion directory = output/promotion_data/single_thread/pcc_128/30_sec/sssp/
+
+READING: output/single_thread/pcc_128/30_sec/sssp/kron25
+MEM REGION: 3fffe9b - 3ffff1c
+Total footprint = 8547 huge pages
+----------
+
+python3 get_promotions.py output/single_thread/pcc_128/30_sec/sssp/kron25 32
+mode = cache, offset = 189, promotion percent = 32, promotion directory = output/promotion_data/single_thread/pcc_128/30_sec/sssp/
+
+READING: output/single_thread/pcc_128/30_sec/sssp/kron25
+MEM REGION: 3fffe9b - 3ffff1c
+Total footprint = 8547 huge pages
+----------
+
+DID NOT PROMOTE ENOUGH PAGES: 2643/2735
+python3 get_promotions.py output/single_thread/pcc_128/30_sec/sssp/kron25 64
+mode = cache, offset = 189, promotion percent = 64, promotion directory = output/promotion_data/single_thread/pcc_128/30_sec/sssp/
+
+READING: output/single_thread/pcc_128/30_sec/sssp/kron25
+MEM REGION: 3fffe9b - 3ffff1c
+Total footprint = 8547 huge pages
+----------
+
+DID NOT PROMOTE ENOUGH PAGES: 2643/5470
+python3 get_promotions.py output/single_thread/pcc_128/30_sec/sssp/kron25 100
+mode = cache, offset = 189, promotion percent = 100, promotion directory = output/promotion_data/single_thread/pcc_128/30_sec/sssp/
+
+READING: output/single_thread/pcc_128/30_sec/sssp/kron25
+MEM REGION: 3fffe9b - 3ffff1c
+Total footprint = 8547 huge pages
+----------
+
+DID NOT PROMOTE ENOUGH PAGES: 2643/8547
+python3 get_demotions.py output/single_thread/pcc_128/30_sec/sssp/kron25
+mode = cache, offset = 189, demotion directory = output/demotion_data/single_thread/pcc_128/30_sec/sssp/
+
+READING: output/single_thread/pcc_128/30_sec/sssp/kron25
+MEM REGION: 3fffe9b - 3ffff1c
+Total footprint = 8547 huge pages
+----------
+
+demoting: 131071 18
+demoting: 131056 11
+demoting: 131065 11
+demoting: 131057 10
+demoting: 131064 21
+demoting: 131063 14
+demoting: 131070 25
+demoting: 131062 25
+demoting: 131055 17
+demoting: 131069 47
+demoting: 131061 45
+demoting: 131058 36
+demoting: 131059 32
+demoting: 131066 30
+demoting: 131067 30
+demoting: 131060 22
+demoting: 131068 12
