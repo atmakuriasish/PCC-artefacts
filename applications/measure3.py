@@ -1,16 +1,16 @@
 from go import *
 from metrics import *
-import subprocess
-import threading
 
 NUMA_NODE = 0
 CPU = 2
 #CPU_LIST = [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54]
 CPU_LIST = [2]
 FREQ = 2.1e9
+cpuuu = 0
 
 def parse_args():
     parser = argparse.ArgumentParser()
+    parser.add_argument("-cpu", type=int, required=True, help="CPU core to bind this instance to")
     parser.add_argument("-x", "--num_samples", type=int, default=5, help="Number of experiment samples")
     parser.add_argument("-s", "--source", type=str, required=True, help="Path to source code file")
     parser.add_argument("-d", "--data", type=str, required=True, help="Path to data file")
@@ -39,52 +39,6 @@ def compile():
     print(cmd)
     os.system(cmd)
 
-def monitor_memory(output_dir, stop_event):
-  log_file = os.path.join(output_dir, "memory_usage.csv")
-  with open(log_file, "w") as f:
-      f.write("timestamp,total_mb,free_mb,available_mb,buffers_mb,cached_mb,used_mb\n")
-      
-      while not stop_event.is_set():
-          try:
-              with open('/proc/meminfo', 'r') as memfile:
-                  mem_data = memfile.readlines()
-              
-              mem_stats = {}
-              for line in mem_data:
-                  parts = line.split(':')
-                  key = parts[0].strip()
-                  value = int(parts[1].strip().split()[0])
-                  
-                  if key == 'MemTotal':
-                      mem_stats['MemTotal'] = value // 1024
-                  elif key == 'MemFree':
-                      mem_stats['MemFree'] = value // 1024
-                  elif key == 'MemAvailable':
-                      mem_stats['MemAvailable'] = value // 1024
-                  elif key == 'Buffers':
-                      mem_stats['Buffers'] = value // 1024
-                  elif key == 'Cached':  # Exact match for Cached
-                      mem_stats['Cached'] = value // 1024
-              
-              used = mem_stats['MemTotal'] - mem_stats['MemAvailable']
-              
-              f.write(f"{time.time()},"
-                      f"{mem_stats['MemTotal']},"
-                      f"{mem_stats['MemFree']},"
-                      f"{mem_stats['MemAvailable']},"
-                      f"{mem_stats['Buffers']},"
-                      f"{mem_stats['Cached']},"
-                      f"{used}\n")
-              f.flush()
-              
-          except Exception as e:
-              print(f"Error: {str(e)}")
-              break
-          
-          time.sleep(5)
-
-
-
 def execute(run_kernel, iteration=""):
     print("Executing application...")
     input_path = os.path.relpath(data, new_dir) if relative else data
@@ -107,7 +61,7 @@ def execute(run_kernel, iteration=""):
 
     start_idx = multiprocess_id if "multiprocess" in source else 0
     cpu_list = ",".join([str(t) for t in CPU_LIST[start_idx:start_idx+threads+1]])
-    cmd_args = ["numactl", "-C", cpu_list, "--membind", str(NUMA_NODE), "sudo", "./main"] if threads > 0 else ["numactl", "-C", str(CPU_LIST[start_idx]), "--membind", str(NUMA_NODE), "sudo", "./main"]
+    cmd_args = ["numactl", "-C", cpu_list, "--membind", str(NUMA_NODE), "sudo", "./main"] if threads > 0 else ["numactl", "-C", str(cpuuu), "--membind", str(NUMA_NODE), "sudo", "./main"]
     if app_name.replace("_multiprocess", "") not in vp:
       os.chdir(LAUNCH_DIR)
       os.system("make")
@@ -132,20 +86,7 @@ def execute(run_kernel, iteration=""):
 
     cmd = " ".join(cmd_args)
     print(cmd)
-    # Create termination event
-    stop_event = threading.Event()
-
-    # Start monitoring thread (MODIFIED)
-    mem_thread = threading.Thread(
-        target=monitor_memory,
-        args=(output, stop_event)  # Pass event
-    )
-    mem_thread.start()
     os.system(cmd)
-    # Signal thread to stop (ADD THIS)
-    stop_event.set()
-    # Let monitoring thread finish
-    mem_thread.join()
     time.sleep(10)
 
     for filename in [perf_name, app_out_name, err_name, access_name, pf_name]:
@@ -399,6 +340,7 @@ def main():
     global app_name, app_input, new_dir, start_seed, multiprocess_id, promotion_data, demotion_data
 
     args = parse_args()
+    cpuuu = args.cpu
 
     if not os.path.isfile(args.source):
         print("Invalid file path entered!\n")

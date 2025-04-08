@@ -92,11 +92,11 @@ void pcc_track_access(uint64_t vaddr, bool print=false) {
     } else if (total_num_accesses % (FACTOR*ACCESS_INTERVAL) == 0) {
       summarize_promotions();
     } 
-    if ((FACTOR > 1) && (total_num_accesses % (FACTOR*ACCESS_INTERVAL) == ACCESS_INTERVAL-CONTEXT_SWITCH)) {
-      flush_pcc();
-    } else if (total_num_accesses % (FACTOR*ACCESS_INTERVAL) == FACTOR*ACCESS_INTERVAL-CONTEXT_SWITCH) {
-      flush_pcc();
-    } 
+    // if ((FACTOR > 1) && (total_num_accesses % (FACTOR*ACCESS_INTERVAL) == ACCESS_INTERVAL-CONTEXT_SWITCH)) {
+    //   flush_pcc();
+    // } else if (total_num_accesses % (FACTOR*ACCESS_INTERVAL) == FACTOR*ACCESS_INTERVAL-CONTEXT_SWITCH) {
+    //   flush_pcc();
+    // } 
     base = (uint64_t) (vaddr/HUGE_PAGE_SIZE);
 
     /********** START: TLB hierarchy logic **********/

@@ -14,10 +14,10 @@ APPS_DIR=${HOME_DIR}/applications/
 DATA_DIR=${HOME_DIR}/data/
 
 PCC_SIZE=128
-INTERVAL_FACTOR=30
+INTERVAL_FACTOR=10
 
 # ----- APPLICATIONS -----
-vp_apps=(sssp)
+vp_apps=(bfs)
 parsec_apps=()
 spec_apps=()
 other_apps=("${parsec_apps[@]}" "${spec_apps[@]}")
@@ -315,7 +315,7 @@ launch() {
       filename=${result_dir}other/${app}
       access_interval=${other_intervals[$idx]}
 
-      app_command="${APPS_DIR}launch/${app}/${app} ${DATA_DIR}${app}/${dataset} 0 $MODE $access_interval $PCC_SIZE $INTERVAL_FACTOR"
+      app_command="${APPS_DIR}launch/${app}/${app} ${DATA_DIR}${app}/${dataset} 0 $MODE $access_interval $PCC_SIZE $INTERVAL_FACTOR $FACTOR"
       
       run_pin $filename "$app_command"
       parse_promotions other $app $PCC_SIZE $INTERVAL_FACTOR

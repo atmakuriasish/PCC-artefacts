@@ -1,5 +1,35 @@
 CLEANING GRAPH APPLICATIONS
 
+pagerank : make clean
+rm main
+CLEANING OTHER APPLICATIONS
+
+COMPILING GRAPH APPLICATIONS
+
+pagerank : make
+g++ -std=c++11 -o main main.cpp
+COMPILING OTHER APPLICATIONS
+
+LAUNCH
+
+sudo /mydata/PCC-artefacts/pin3.7/source/tools/PromotionCache/../../../../pin3.7/pin -t /mydata/PCC-artefacts/pin3.7/source/tools/PromotionCache/obj-intel64/roi.so -- /mydata/PCC-artefacts/pin3.7/source/tools/PromotionCache/../../../../applications/pin_source/pagerank/main /mydata/PCC-artefacts/pin3.7/source/tools/PromotionCache/../../../../data/Kronecker_25/ 0 pcc 732856447 128 30 > /mydata/PCC-artefacts/pin3.7/source/tools/PromotionCache/output/single_thread/pcc_128/30_sec/pagerank/kron25
+CLEANING GRAPH APPLICATIONS
+
+bfs : make clean
+rm main
+CLEANING OTHER APPLICATIONS
+
+COMPILING GRAPH APPLICATIONS
+
+bfs : make
+g++ -std=c++11 -o main main.cpp
+COMPILING OTHER APPLICATIONS
+
+LAUNCH
+
+sudo /mydata/PCC-artefacts/pin3.7/source/tools/PromotionCache/../../../../pin3.7/pin -t /mydata/PCC-artefacts/pin3.7/source/tools/PromotionCache/obj-intel64/roi.so -- /mydata/PCC-artefacts/pin3.7/source/tools/PromotionCache/../../../../applications/pin_source/bfs/main /mydata/PCC-artefacts/pin3.7/source/tools/PromotionCache/../../../../data/Kronecker_25/ 0 pcc 732856447 128 1 > /mydata/PCC-artefacts/pin3.7/source/tools/PromotionCache/output/single_thread/pcc_128/1_sec/bfs/kron25
+CLEANING GRAPH APPLICATIONS
+
 sssp : make clean
 rm main
 CLEANING OTHER APPLICATIONS
@@ -12,96 +42,670 @@ COMPILING OTHER APPLICATIONS
 
 LAUNCH
 
-sudo /mydata/PCC-artefacts/pin3.7/source/tools/PromotionCache/../../../../pin3.7/pin -t /mydata/PCC-artefacts/pin3.7/source/tools/PromotionCache/obj-intel64/roi.so -- /mydata/PCC-artefacts/pin3.7/source/tools/PromotionCache/../../../../applications/pin_source/sssp/main /mydata/PCC-artefacts/pin3.7/source/tools/PromotionCache/../../../../data/Kronecker_25/ 0 pcc 732856447 128 30 > /mydata/PCC-artefacts/pin3.7/source/tools/PromotionCache/output/single_thread/pcc_128/30_sec/sssp/kron25
-python3 get_promotions.py output/single_thread/pcc_128/30_sec/sssp/kron25 1
-mode = cache, offset = 189, promotion percent = 1, promotion directory = output/promotion_data/single_thread/pcc_128/30_sec/sssp/
+sudo /mydata/PCC-artefacts/pin3.7/source/tools/PromotionCache/../../../../pin3.7/pin -t /mydata/PCC-artefacts/pin3.7/source/tools/PromotionCache/obj-intel64/roi.so -- /mydata/PCC-artefacts/pin3.7/source/tools/PromotionCache/../../../../applications/pin_source/sssp/main /mydata/PCC-artefacts/pin3.7/source/tools/PromotionCache/../../../../data/Kronecker_25/ 0 pcc 732856447 128 1 > /mydata/PCC-artefacts/pin3.7/source/tools/PromotionCache/output/single_thread/pcc_128/1_sec/sssp/kron25
+CLEANING GRAPH APPLICATIONS
 
-READING: output/single_thread/pcc_128/30_sec/sssp/kron25
-MEM REGION: 3fffe9b - 3ffff1c
-Total footprint = 8547 huge pages
+pagerank : make clean
+rm main
+CLEANING OTHER APPLICATIONS
+
+COMPILING GRAPH APPLICATIONS
+
+pagerank : make
+g++ -std=c++11 -o main main.cpp
+COMPILING OTHER APPLICATIONS
+
+LAUNCH
+
+sudo /mydata/PCC-artefacts/pin3.7/source/tools/PromotionCache/../../../../pin3.7/pin -t /mydata/PCC-artefacts/pin3.7/source/tools/PromotionCache/obj-intel64/roi.so -- /mydata/PCC-artefacts/pin3.7/source/tools/PromotionCache/../../../../applications/pin_source/pagerank/main /mydata/PCC-artefacts/pin3.7/source/tools/PromotionCache/../../../../data/Kronecker_25/ 0 pcc 732856447 128 1 > /mydata/PCC-artefacts/pin3.7/source/tools/PromotionCache/output/single_thread/pcc_128/1_sec/pagerank/kron25
+CLEANING GRAPH APPLICATIONS
+
+pagerank : make clean
+rm main
+CLEANING OTHER APPLICATIONS
+
+COMPILING GRAPH APPLICATIONS
+
+pagerank : make
+g++ -std=c++11 -o main main.cpp
+COMPILING OTHER APPLICATIONS
+
+LAUNCH
+
+sudo /mydata/PCC-artefacts/pin3.7/source/tools/PromotionCache/../../../../pin3.7/pin -t /mydata/PCC-artefacts/pin3.7/source/tools/PromotionCache/obj-intel64/roi.so -- /mydata/PCC-artefacts/pin3.7/source/tools/PromotionCache/../../../../applications/pin_source/pagerank/main /mydata/PCC-artefacts/pin3.7/source/tools/PromotionCache/../../../../data/Kronecker_25/ 0 pcc 732856447 128 10 > /mydata/PCC-artefacts/pin3.7/source/tools/PromotionCache/output/single_thread/pcc_128/10_sec/pagerank/kron25
+CLEANING GRAPH APPLICATIONS
+
+sssp : make clean
+rm main
+CLEANING OTHER APPLICATIONS
+
+COMPILING GRAPH APPLICATIONS
+
+sssp : make
+g++ -std=c++11 -o main main.cpp
+COMPILING OTHER APPLICATIONS
+
+LAUNCH
+
+sudo /mydata/PCC-artefacts/pin3.7/source/tools/PromotionCache/../../../../pin3.7/pin -t /mydata/PCC-artefacts/pin3.7/source/tools/PromotionCache/obj-intel64/roi.so -- /mydata/PCC-artefacts/pin3.7/source/tools/PromotionCache/../../../../applications/pin_source/sssp/main /mydata/PCC-artefacts/pin3.7/source/tools/PromotionCache/../../../../data/Kronecker_25/ 0 pcc 732856447 128 10 > /mydata/PCC-artefacts/pin3.7/source/tools/PromotionCache/output/single_thread/pcc_128/10_sec/sssp/kron25
+CLEANING GRAPH APPLICATIONS
+
+bfs : make clean
+rm main
+CLEANING OTHER APPLICATIONS
+
+COMPILING GRAPH APPLICATIONS
+
+bfs : make
+g++ -std=c++11 -o main main.cpp
+COMPILING OTHER APPLICATIONS
+
+LAUNCH
+
+sudo /mydata/PCC-artefacts/pin3.7/source/tools/PromotionCache/../../../../pin3.7/pin -t /mydata/PCC-artefacts/pin3.7/source/tools/PromotionCache/obj-intel64/roi.so -- /mydata/PCC-artefacts/pin3.7/source/tools/PromotionCache/../../../../applications/pin_source/bfs/main /mydata/PCC-artefacts/pin3.7/source/tools/PromotionCache/../../../../data/Kronecker_25/ 0 pcc 732856447 128 10 > /mydata/PCC-artefacts/pin3.7/source/tools/PromotionCache/output/single_thread/pcc_128/10_sec/bfs/kron25
+python3 get_promotions.py output/single_thread/pcc_128/1_sec/bfs/kron25 1
+mode = cache, offset = 189, promotion percent = 1, promotion directory = output/promotion_data/single_thread/pcc_128/1_sec/bfs/
+
+READING: output/single_thread/pcc_128/1_sec/bfs/kron25
+MEM REGION: 3fffe95 - 3ffff16
+Total footprint = 4374 huge pages
 ----------
 
-python3 get_promotions.py output/single_thread/pcc_128/30_sec/sssp/kron25 2
-mode = cache, offset = 189, promotion percent = 2, promotion directory = output/promotion_data/single_thread/pcc_128/30_sec/sssp/
+python3 get_promotions.py output/single_thread/pcc_128/1_sec/bfs/kron25 2
+mode = cache, offset = 189, promotion percent = 2, promotion directory = output/promotion_data/single_thread/pcc_128/1_sec/bfs/
 
-READING: output/single_thread/pcc_128/30_sec/sssp/kron25
-MEM REGION: 3fffe9b - 3ffff1c
-Total footprint = 8547 huge pages
+READING: output/single_thread/pcc_128/1_sec/bfs/kron25
+MEM REGION: 3fffe95 - 3ffff16
+Total footprint = 4374 huge pages
 ----------
 
-python3 get_promotions.py output/single_thread/pcc_128/30_sec/sssp/kron25 4
-mode = cache, offset = 189, promotion percent = 4, promotion directory = output/promotion_data/single_thread/pcc_128/30_sec/sssp/
+python3 get_promotions.py output/single_thread/pcc_128/1_sec/bfs/kron25 4
+mode = cache, offset = 189, promotion percent = 4, promotion directory = output/promotion_data/single_thread/pcc_128/1_sec/bfs/
 
-READING: output/single_thread/pcc_128/30_sec/sssp/kron25
-MEM REGION: 3fffe9b - 3ffff1c
-Total footprint = 8547 huge pages
+READING: output/single_thread/pcc_128/1_sec/bfs/kron25
+MEM REGION: 3fffe95 - 3ffff16
+Total footprint = 4374 huge pages
 ----------
 
-python3 get_promotions.py output/single_thread/pcc_128/30_sec/sssp/kron25 8
-mode = cache, offset = 189, promotion percent = 8, promotion directory = output/promotion_data/single_thread/pcc_128/30_sec/sssp/
+python3 get_promotions.py output/single_thread/pcc_128/1_sec/bfs/kron25 8
+mode = cache, offset = 189, promotion percent = 8, promotion directory = output/promotion_data/single_thread/pcc_128/1_sec/bfs/
 
-READING: output/single_thread/pcc_128/30_sec/sssp/kron25
-MEM REGION: 3fffe9b - 3ffff1c
-Total footprint = 8547 huge pages
+READING: output/single_thread/pcc_128/1_sec/bfs/kron25
+MEM REGION: 3fffe95 - 3ffff16
+Total footprint = 4374 huge pages
 ----------
 
-python3 get_promotions.py output/single_thread/pcc_128/30_sec/sssp/kron25 16
-mode = cache, offset = 189, promotion percent = 16, promotion directory = output/promotion_data/single_thread/pcc_128/30_sec/sssp/
+python3 get_promotions.py output/single_thread/pcc_128/1_sec/bfs/kron25 16
+mode = cache, offset = 189, promotion percent = 16, promotion directory = output/promotion_data/single_thread/pcc_128/1_sec/bfs/
 
-READING: output/single_thread/pcc_128/30_sec/sssp/kron25
-MEM REGION: 3fffe9b - 3ffff1c
-Total footprint = 8547 huge pages
+READING: output/single_thread/pcc_128/1_sec/bfs/kron25
+MEM REGION: 3fffe95 - 3ffff16
+Total footprint = 4374 huge pages
 ----------
 
-python3 get_promotions.py output/single_thread/pcc_128/30_sec/sssp/kron25 32
-mode = cache, offset = 189, promotion percent = 32, promotion directory = output/promotion_data/single_thread/pcc_128/30_sec/sssp/
+python3 get_promotions.py output/single_thread/pcc_128/1_sec/bfs/kron25 32
+mode = cache, offset = 189, promotion percent = 32, promotion directory = output/promotion_data/single_thread/pcc_128/1_sec/bfs/
 
-READING: output/single_thread/pcc_128/30_sec/sssp/kron25
-MEM REGION: 3fffe9b - 3ffff1c
-Total footprint = 8547 huge pages
+READING: output/single_thread/pcc_128/1_sec/bfs/kron25
+MEM REGION: 3fffe95 - 3ffff16
+Total footprint = 4374 huge pages
 ----------
 
-DID NOT PROMOTE ENOUGH PAGES: 2643/2735
-python3 get_promotions.py output/single_thread/pcc_128/30_sec/sssp/kron25 64
-mode = cache, offset = 189, promotion percent = 64, promotion directory = output/promotion_data/single_thread/pcc_128/30_sec/sssp/
+python3 get_promotions.py output/single_thread/pcc_128/1_sec/bfs/kron25 64
+mode = cache, offset = 189, promotion percent = 64, promotion directory = output/promotion_data/single_thread/pcc_128/1_sec/bfs/
 
-READING: output/single_thread/pcc_128/30_sec/sssp/kron25
-MEM REGION: 3fffe9b - 3ffff1c
-Total footprint = 8547 huge pages
+READING: output/single_thread/pcc_128/1_sec/bfs/kron25
+MEM REGION: 3fffe95 - 3ffff16
+Total footprint = 4374 huge pages
 ----------
 
-DID NOT PROMOTE ENOUGH PAGES: 2643/5470
-python3 get_promotions.py output/single_thread/pcc_128/30_sec/sssp/kron25 100
-mode = cache, offset = 189, promotion percent = 100, promotion directory = output/promotion_data/single_thread/pcc_128/30_sec/sssp/
+DID NOT PROMOTE ENOUGH PAGES: 2740/2799
+python3 get_promotions.py output/single_thread/pcc_128/1_sec/bfs/kron25 100
+mode = cache, offset = 189, promotion percent = 100, promotion directory = output/promotion_data/single_thread/pcc_128/1_sec/bfs/
 
-READING: output/single_thread/pcc_128/30_sec/sssp/kron25
-MEM REGION: 3fffe9b - 3ffff1c
-Total footprint = 8547 huge pages
+READING: output/single_thread/pcc_128/1_sec/bfs/kron25
+MEM REGION: 3fffe95 - 3ffff16
+Total footprint = 4374 huge pages
 ----------
 
-DID NOT PROMOTE ENOUGH PAGES: 2643/8547
-python3 get_demotions.py output/single_thread/pcc_128/30_sec/sssp/kron25
-mode = cache, offset = 189, demotion directory = output/demotion_data/single_thread/pcc_128/30_sec/sssp/
+DID NOT PROMOTE ENOUGH PAGES: 2740/4374
+python3 get_demotions.py output/single_thread/pcc_128/1_sec/bfs/kron25
+mode = cache, offset = 189, demotion directory = output/demotion_data/single_thread/pcc_128/1_sec/bfs/
 
-READING: output/single_thread/pcc_128/30_sec/sssp/kron25
-MEM REGION: 3fffe9b - 3ffff1c
-Total footprint = 8547 huge pages
+READING: output/single_thread/pcc_128/1_sec/bfs/kron25
+MEM REGION: 3fffe95 - 3ffff16
+Total footprint = 4374 huge pages
 ----------
 
-demoting: 131071 18
-demoting: 131056 11
-demoting: 131065 11
-demoting: 131057 10
-demoting: 131064 21
-demoting: 131063 14
-demoting: 131070 25
-demoting: 131062 25
-demoting: 131055 17
-demoting: 131069 47
-demoting: 131061 45
-demoting: 131058 36
-demoting: 131059 32
-demoting: 131066 30
-demoting: 131067 30
-demoting: 131060 22
-demoting: 131068 12
+demoting: 131070 131
+demoting: 131067 88
+demoting: 131065 51
+demoting: 131071 52
+demoting: 131068 71
+demoting: 131066 48
+demoting: 131069 78
+demoting: 131063 109
+demoting: 131064 60
+run.sh: line 437: unexpected EOF while looking for matching `"'
+run.sh: line 439: syntax error: unexpected end of file
+python3 get_promotions.py output/single_thread/pcc_128/10_sec/bfs/kron25 1
+mode = cache, offset = 189, promotion percent = 1, promotion directory = output/promotion_data/single_thread/pcc_128/10_sec/bfs/
+
+READING: output/single_thread/pcc_128/10_sec/bfs/kron25
+MEM REGION: 3fffe95 - 3ffff16
+Total footprint = 4345 huge pages
+----------
+
+python3 get_promotions.py output/single_thread/pcc_128/10_sec/bfs/kron25 2
+mode = cache, offset = 189, promotion percent = 2, promotion directory = output/promotion_data/single_thread/pcc_128/10_sec/bfs/
+
+READING: output/single_thread/pcc_128/10_sec/bfs/kron25
+MEM REGION: 3fffe95 - 3ffff16
+Total footprint = 4345 huge pages
+----------
+
+python3 get_promotions.py output/single_thread/pcc_128/10_sec/bfs/kron25 4
+mode = cache, offset = 189, promotion percent = 4, promotion directory = output/promotion_data/single_thread/pcc_128/10_sec/bfs/
+
+READING: output/single_thread/pcc_128/10_sec/bfs/kron25
+MEM REGION: 3fffe95 - 3ffff16
+Total footprint = 4345 huge pages
+----------
+
+python3 get_promotions.py output/single_thread/pcc_128/10_sec/bfs/kron25 8
+mode = cache, offset = 189, promotion percent = 8, promotion directory = output/promotion_data/single_thread/pcc_128/10_sec/bfs/
+
+READING: output/single_thread/pcc_128/10_sec/bfs/kron25
+MEM REGION: 3fffe95 - 3ffff16
+Total footprint = 4345 huge pages
+----------
+
+python3 get_promotions.py output/single_thread/pcc_128/10_sec/bfs/kron25 16
+mode = cache, offset = 189, promotion percent = 16, promotion directory = output/promotion_data/single_thread/pcc_128/10_sec/bfs/
+
+READING: output/single_thread/pcc_128/10_sec/bfs/kron25
+MEM REGION: 3fffe95 - 3ffff16
+Total footprint = 4345 huge pages
+----------
+
+DID NOT PROMOTE ENOUGH PAGES: 638/695
+python3 get_promotions.py output/single_thread/pcc_128/10_sec/bfs/kron25 32
+mode = cache, offset = 189, promotion percent = 32, promotion directory = output/promotion_data/single_thread/pcc_128/10_sec/bfs/
+
+READING: output/single_thread/pcc_128/10_sec/bfs/kron25
+MEM REGION: 3fffe95 - 3ffff16
+Total footprint = 4345 huge pages
+----------
+
+DID NOT PROMOTE ENOUGH PAGES: 638/1390
+python3 get_promotions.py output/single_thread/pcc_128/10_sec/bfs/kron25 64
+mode = cache, offset = 189, promotion percent = 64, promotion directory = output/promotion_data/single_thread/pcc_128/10_sec/bfs/
+
+READING: output/single_thread/pcc_128/10_sec/bfs/kron25
+MEM REGION: 3fffe95 - 3ffff16
+Total footprint = 4345 huge pages
+----------
+
+DID NOT PROMOTE ENOUGH PAGES: 638/2780
+python3 get_promotions.py output/single_thread/pcc_128/10_sec/bfs/kron25 100
+mode = cache, offset = 189, promotion percent = 100, promotion directory = output/promotion_data/single_thread/pcc_128/10_sec/bfs/
+
+READING: output/single_thread/pcc_128/10_sec/bfs/kron25
+MEM REGION: 3fffe95 - 3ffff16
+Total footprint = 4345 huge pages
+----------
+
+DID NOT PROMOTE ENOUGH PAGES: 638/4345
+python3 get_demotions.py output/single_thread/pcc_128/10_sec/bfs/kron25
+mode = cache, offset = 189, demotion directory = output/demotion_data/single_thread/pcc_128/10_sec/bfs/
+
+READING: output/single_thread/pcc_128/10_sec/bfs/kron25
+MEM REGION: 3fffe95 - 3ffff16
+Total footprint = 4345 huge pages
+----------
+
+demoting: 131068 195
+demoting: 131069 103
+run.sh: line 437: unexpected EOF while looking for matching `"'
+run.sh: line 439: syntax error: unexpected end of file
+python3 get_promotions.py output/single_thread/pcc_128/1_sec/sssp/kron25 1
+mode = cache, offset = 189, promotion percent = 1, promotion directory = output/promotion_data/single_thread/pcc_128/1_sec/sssp/
+
+READING: output/single_thread/pcc_128/1_sec/sssp/kron25
+MEM REGION: 3fffe95 - 3ffff16
+Total footprint = 8654 huge pages
+----------
+
+python3 get_promotions.py output/single_thread/pcc_128/1_sec/sssp/kron25 2
+mode = cache, offset = 189, promotion percent = 2, promotion directory = output/promotion_data/single_thread/pcc_128/1_sec/sssp/
+
+READING: output/single_thread/pcc_128/1_sec/sssp/kron25
+MEM REGION: 3fffe95 - 3ffff16
+Total footprint = 8654 huge pages
+----------
+
+python3 get_promotions.py output/single_thread/pcc_128/1_sec/sssp/kron25 4
+mode = cache, offset = 189, promotion percent = 4, promotion directory = output/promotion_data/single_thread/pcc_128/1_sec/sssp/
+
+READING: output/single_thread/pcc_128/1_sec/sssp/kron25
+MEM REGION: 3fffe95 - 3ffff16
+Total footprint = 8654 huge pages
+----------
+
+python3 get_promotions.py output/single_thread/pcc_128/1_sec/sssp/kron25 8
+mode = cache, offset = 189, promotion percent = 8, promotion directory = output/promotion_data/single_thread/pcc_128/1_sec/sssp/
+
+READING: output/single_thread/pcc_128/1_sec/sssp/kron25
+MEM REGION: 3fffe95 - 3ffff16
+Total footprint = 8654 huge pages
+----------
+
+python3 get_promotions.py output/single_thread/pcc_128/1_sec/sssp/kron25 16
+mode = cache, offset = 189, promotion percent = 16, promotion directory = output/promotion_data/single_thread/pcc_128/1_sec/sssp/
+
+READING: output/single_thread/pcc_128/1_sec/sssp/kron25
+MEM REGION: 3fffe95 - 3ffff16
+Total footprint = 8654 huge pages
+----------
+
+python3 get_promotions.py output/single_thread/pcc_128/1_sec/sssp/kron25 32
+mode = cache, offset = 189, promotion percent = 32, promotion directory = output/promotion_data/single_thread/pcc_128/1_sec/sssp/
+
+READING: output/single_thread/pcc_128/1_sec/sssp/kron25
+MEM REGION: 3fffe95 - 3ffff16
+Total footprint = 8654 huge pages
+----------
+
+python3 get_promotions.py output/single_thread/pcc_128/1_sec/sssp/kron25 64
+mode = cache, offset = 189, promotion percent = 64, promotion directory = output/promotion_data/single_thread/pcc_128/1_sec/sssp/
+
+READING: output/single_thread/pcc_128/1_sec/sssp/kron25
+MEM REGION: 3fffe95 - 3ffff16
+Total footprint = 8654 huge pages
+----------
+
+python3 get_promotions.py output/single_thread/pcc_128/1_sec/sssp/kron25 100
+mode = cache, offset = 189, promotion percent = 100, promotion directory = output/promotion_data/single_thread/pcc_128/1_sec/sssp/
+
+READING: output/single_thread/pcc_128/1_sec/sssp/kron25
+MEM REGION: 3fffe95 - 3ffff16
+Total footprint = 8654 huge pages
+----------
+
+DID NOT PROMOTE ENOUGH PAGES: 8518/8654
+python3 get_demotions.py output/single_thread/pcc_128/1_sec/sssp/kron25
+mode = cache, offset = 189, demotion directory = output/demotion_data/single_thread/pcc_128/1_sec/sssp/
+
+READING: output/single_thread/pcc_128/1_sec/sssp/kron25
+MEM REGION: 3fffe95 - 3ffff16
+Total footprint = 8654 huge pages
+----------
+
+demoting: 131055 241
+demoting: 131056 230
+demoting: 131064 225
+demoting: 131058 64
+demoting: 131066 57
+demoting: 131063 95
+demoting: 131071 91
+demoting: 131057 51
+demoting: 131065 40
+demoting: 131060 105
+demoting: 131068 95
+demoting: 131067 54
+demoting: 131059 46
+demoting: 131062 139
+demoting: 131070 138
+demoting: 131069 40
+demoting: 131061 31
+demoting: 131054 1
+demoting: 131052 1
+run.sh: line 437: unexpected EOF while looking for matching `"'
+run.sh: line 439: syntax error: unexpected end of file
+python3 get_promotions.py output/single_thread/pcc_128/10_sec/sssp/kron25 1
+mode = cache, offset = 189, promotion percent = 1, promotion directory = output/promotion_data/single_thread/pcc_128/10_sec/sssp/
+
+READING: output/single_thread/pcc_128/10_sec/sssp/kron25
+MEM REGION: 3fffe95 - 3ffff16
+Total footprint = 8620 huge pages
+----------
+
+python3 get_promotions.py output/single_thread/pcc_128/10_sec/sssp/kron25 2
+mode = cache, offset = 189, promotion percent = 2, promotion directory = output/promotion_data/single_thread/pcc_128/10_sec/sssp/
+
+READING: output/single_thread/pcc_128/10_sec/sssp/kron25
+MEM REGION: 3fffe95 - 3ffff16
+Total footprint = 8620 huge pages
+----------
+
+python3 get_promotions.py output/single_thread/pcc_128/10_sec/sssp/kron25 4
+mode = cache, offset = 189, promotion percent = 4, promotion directory = output/promotion_data/single_thread/pcc_128/10_sec/sssp/
+
+READING: output/single_thread/pcc_128/10_sec/sssp/kron25
+MEM REGION: 3fffe95 - 3ffff16
+Total footprint = 8620 huge pages
+----------
+
+python3 get_promotions.py output/single_thread/pcc_128/10_sec/sssp/kron25 8
+mode = cache, offset = 189, promotion percent = 8, promotion directory = output/promotion_data/single_thread/pcc_128/10_sec/sssp/
+
+READING: output/single_thread/pcc_128/10_sec/sssp/kron25
+MEM REGION: 3fffe95 - 3ffff16
+Total footprint = 8620 huge pages
+----------
+
+python3 get_promotions.py output/single_thread/pcc_128/10_sec/sssp/kron25 16
+mode = cache, offset = 189, promotion percent = 16, promotion directory = output/promotion_data/single_thread/pcc_128/10_sec/sssp/
+
+READING: output/single_thread/pcc_128/10_sec/sssp/kron25
+MEM REGION: 3fffe95 - 3ffff16
+Total footprint = 8620 huge pages
+----------
+
+python3 get_promotions.py output/single_thread/pcc_128/10_sec/sssp/kron25 32
+mode = cache, offset = 189, promotion percent = 32, promotion directory = output/promotion_data/single_thread/pcc_128/10_sec/sssp/
+
+READING: output/single_thread/pcc_128/10_sec/sssp/kron25
+MEM REGION: 3fffe95 - 3ffff16
+Total footprint = 8620 huge pages
+----------
+
+python3 get_promotions.py output/single_thread/pcc_128/10_sec/sssp/kron25 64
+mode = cache, offset = 189, promotion percent = 64, promotion directory = output/promotion_data/single_thread/pcc_128/10_sec/sssp/
+
+READING: output/single_thread/pcc_128/10_sec/sssp/kron25
+MEM REGION: 3fffe95 - 3ffff16
+Total footprint = 8620 huge pages
+----------
+
+python3 get_promotions.py output/single_thread/pcc_128/10_sec/sssp/kron25 100
+mode = cache, offset = 189, promotion percent = 100, promotion directory = output/promotion_data/single_thread/pcc_128/10_sec/sssp/
+
+READING: output/single_thread/pcc_128/10_sec/sssp/kron25
+MEM REGION: 3fffe95 - 3ffff16
+Total footprint = 8620 huge pages
+----------
+
+DID NOT PROMOTE ENOUGH PAGES: 8157/8620
+python3 get_demotions.py output/single_thread/pcc_128/10_sec/sssp/kron25
+mode = cache, offset = 189, demotion directory = output/demotion_data/single_thread/pcc_128/10_sec/sssp/
+
+READING: output/single_thread/pcc_128/10_sec/sssp/kron25
+MEM REGION: 3fffe95 - 3ffff16
+Total footprint = 8620 huge pages
+----------
+
+demoting: 131055 123
+demoting: 131066 46
+demoting: 131058 46
+demoting: 131071 81
+demoting: 131063 193
+demoting: 131057 192
+demoting: 131065 161
+demoting: 131056 78
+demoting: 131064 72
+demoting: 131070 26
+demoting: 131060 95
+demoting: 131068 86
+demoting: 131067 66
+demoting: 131059 54
+demoting: 131062 14
+demoting: 131061 11
+demoting: 131069 3
+run.sh: line 437: unexpected EOF while looking for matching `"'
+run.sh: line 439: syntax error: unexpected end of file
+python3 get_promotions.py output/single_thread/pcc_128/1_sec/pagerank/kron25 1
+mode = cache, offset = 189, promotion percent = 1, promotion directory = output/promotion_data/single_thread/pcc_128/1_sec/pagerank/
+
+READING: output/single_thread/pcc_128/1_sec/pagerank/kron25
+MEM REGION: 3fffe95 - 3ffff16
+Total footprint = 4759 huge pages
+----------
+
+python3 get_promotions.py output/single_thread/pcc_128/1_sec/pagerank/kron25 2
+mode = cache, offset = 189, promotion percent = 2, promotion directory = output/promotion_data/single_thread/pcc_128/1_sec/pagerank/
+
+READING: output/single_thread/pcc_128/1_sec/pagerank/kron25
+MEM REGION: 3fffe95 - 3ffff16
+Total footprint = 4759 huge pages
+----------
+
+python3 get_promotions.py output/single_thread/pcc_128/1_sec/pagerank/kron25 4
+mode = cache, offset = 189, promotion percent = 4, promotion directory = output/promotion_data/single_thread/pcc_128/1_sec/pagerank/
+
+READING: output/single_thread/pcc_128/1_sec/pagerank/kron25
+MEM REGION: 3fffe95 - 3ffff16
+Total footprint = 4759 huge pages
+----------
+
+python3 get_promotions.py output/single_thread/pcc_128/1_sec/pagerank/kron25 8
+mode = cache, offset = 189, promotion percent = 8, promotion directory = output/promotion_data/single_thread/pcc_128/1_sec/pagerank/
+
+READING: output/single_thread/pcc_128/1_sec/pagerank/kron25
+MEM REGION: 3fffe95 - 3ffff16
+Total footprint = 4759 huge pages
+----------
+
+python3 get_promotions.py output/single_thread/pcc_128/1_sec/pagerank/kron25 16
+mode = cache, offset = 189, promotion percent = 16, promotion directory = output/promotion_data/single_thread/pcc_128/1_sec/pagerank/
+
+READING: output/single_thread/pcc_128/1_sec/pagerank/kron25
+MEM REGION: 3fffe95 - 3ffff16
+Total footprint = 4759 huge pages
+----------
+
+python3 get_promotions.py output/single_thread/pcc_128/1_sec/pagerank/kron25 32
+mode = cache, offset = 189, promotion percent = 32, promotion directory = output/promotion_data/single_thread/pcc_128/1_sec/pagerank/
+
+READING: output/single_thread/pcc_128/1_sec/pagerank/kron25
+MEM REGION: 3fffe95 - 3ffff16
+Total footprint = 4759 huge pages
+----------
+
+python3 get_promotions.py output/single_thread/pcc_128/1_sec/pagerank/kron25 64
+mode = cache, offset = 189, promotion percent = 64, promotion directory = output/promotion_data/single_thread/pcc_128/1_sec/pagerank/
+
+READING: output/single_thread/pcc_128/1_sec/pagerank/kron25
+MEM REGION: 3fffe95 - 3ffff16
+Total footprint = 4759 huge pages
+----------
+
+python3 get_promotions.py output/single_thread/pcc_128/1_sec/pagerank/kron25 100
+mode = cache, offset = 189, promotion percent = 100, promotion directory = output/promotion_data/single_thread/pcc_128/1_sec/pagerank/
+
+READING: output/single_thread/pcc_128/1_sec/pagerank/kron25
+MEM REGION: 3fffe95 - 3ffff16
+Total footprint = 4759 huge pages
+----------
+
+DID NOT PROMOTE ENOUGH PAGES: 4682/4759
+python3 get_demotions.py output/single_thread/pcc_128/1_sec/pagerank/kron25
+mode = cache, offset = 189, demotion directory = output/demotion_data/single_thread/pcc_128/1_sec/pagerank/
+
+READING: output/single_thread/pcc_128/1_sec/pagerank/kron25
+MEM REGION: 3fffe95 - 3ffff16
+Total footprint = 4759 huge pages
+----------
+
+demoting: 131062 59
+demoting: 131063 164
+demoting: 131071 39
+demoting: 131066 13
+demoting: 131065 12
+demoting: 131064 27
+demoting: 131069 19
+demoting: 131067 15
+demoting: 131070 13
+demoting: 131068 25
+run.sh: line 438: syntax error near unexpected token `fi'
+run.sh: line 438: `fi'
+python3 get_promotions.py output/single_thread/pcc_128/10_sec/pagerank/kron25 1
+mode = cache, offset = 189, promotion percent = 1, promotion directory = output/promotion_data/single_thread/pcc_128/10_sec/pagerank/
+
+READING: output/single_thread/pcc_128/10_sec/pagerank/kron25
+MEM REGION: 3fffe95 - 3ffff16
+Total footprint = 4757 huge pages
+----------
+
+python3 get_promotions.py output/single_thread/pcc_128/10_sec/pagerank/kron25 2
+mode = cache, offset = 189, promotion percent = 2, promotion directory = output/promotion_data/single_thread/pcc_128/10_sec/pagerank/
+
+READING: output/single_thread/pcc_128/10_sec/pagerank/kron25
+MEM REGION: 3fffe95 - 3ffff16
+Total footprint = 4757 huge pages
+----------
+
+python3 get_promotions.py output/single_thread/pcc_128/10_sec/pagerank/kron25 4
+mode = cache, offset = 189, promotion percent = 4, promotion directory = output/promotion_data/single_thread/pcc_128/10_sec/pagerank/
+
+READING: output/single_thread/pcc_128/10_sec/pagerank/kron25
+MEM REGION: 3fffe95 - 3ffff16
+Total footprint = 4757 huge pages
+----------
+
+python3 get_promotions.py output/single_thread/pcc_128/10_sec/pagerank/kron25 8
+mode = cache, offset = 189, promotion percent = 8, promotion directory = output/promotion_data/single_thread/pcc_128/10_sec/pagerank/
+
+READING: output/single_thread/pcc_128/10_sec/pagerank/kron25
+MEM REGION: 3fffe95 - 3ffff16
+Total footprint = 4757 huge pages
+----------
+
+python3 get_promotions.py output/single_thread/pcc_128/10_sec/pagerank/kron25 16
+mode = cache, offset = 189, promotion percent = 16, promotion directory = output/promotion_data/single_thread/pcc_128/10_sec/pagerank/
+
+READING: output/single_thread/pcc_128/10_sec/pagerank/kron25
+MEM REGION: 3fffe95 - 3ffff16
+Total footprint = 4757 huge pages
+----------
+
+python3 get_promotions.py output/single_thread/pcc_128/10_sec/pagerank/kron25 32
+mode = cache, offset = 189, promotion percent = 32, promotion directory = output/promotion_data/single_thread/pcc_128/10_sec/pagerank/
+
+READING: output/single_thread/pcc_128/10_sec/pagerank/kron25
+MEM REGION: 3fffe95 - 3ffff16
+Total footprint = 4757 huge pages
+----------
+
+python3 get_promotions.py output/single_thread/pcc_128/10_sec/pagerank/kron25 64
+mode = cache, offset = 189, promotion percent = 64, promotion directory = output/promotion_data/single_thread/pcc_128/10_sec/pagerank/
+
+READING: output/single_thread/pcc_128/10_sec/pagerank/kron25
+MEM REGION: 3fffe95 - 3ffff16
+Total footprint = 4757 huge pages
+----------
+
+python3 get_promotions.py output/single_thread/pcc_128/10_sec/pagerank/kron25 100
+mode = cache, offset = 189, promotion percent = 100, promotion directory = output/promotion_data/single_thread/pcc_128/10_sec/pagerank/
+
+READING: output/single_thread/pcc_128/10_sec/pagerank/kron25
+MEM REGION: 3fffe95 - 3ffff16
+Total footprint = 4757 huge pages
+----------
+
+DID NOT PROMOTE ENOUGH PAGES: 4596/4757
+python3 get_demotions.py output/single_thread/pcc_128/10_sec/pagerank/kron25
+mode = cache, offset = 189, demotion directory = output/demotion_data/single_thread/pcc_128/10_sec/pagerank/
+
+READING: output/single_thread/pcc_128/10_sec/pagerank/kron25
+MEM REGION: 3fffe95 - 3ffff16
+Total footprint = 4757 huge pages
+----------
+
+demoting: 131063 237
+demoting: 131065 17
+demoting: 131071 113
+demoting: 131062 107
+demoting: 131064 38
+demoting: 131068 25
+demoting: 131070 19
+demoting: 131067 18
+demoting: 131066 18
+demoting: 131069 17
+run.sh: line 437: syntax error near unexpected token `fi'
+run.sh: line 437: `fi'
+python3 get_promotions.py output/single_thread/pcc_128/30_sec/pagerank/kron25 1
+mode = cache, offset = 189, promotion percent = 1, promotion directory = output/promotion_data/single_thread/pcc_128/30_sec/pagerank/
+
+READING: output/single_thread/pcc_128/30_sec/pagerank/kron25
+MEM REGION: 3fffe95 - 3ffff16
+Total footprint = 4757 huge pages
+----------
+
+python3 get_promotions.py output/single_thread/pcc_128/30_sec/pagerank/kron25 2
+mode = cache, offset = 189, promotion percent = 2, promotion directory = output/promotion_data/single_thread/pcc_128/30_sec/pagerank/
+
+READING: output/single_thread/pcc_128/30_sec/pagerank/kron25
+MEM REGION: 3fffe95 - 3ffff16
+Total footprint = 4757 huge pages
+----------
+
+python3 get_promotions.py output/single_thread/pcc_128/30_sec/pagerank/kron25 4
+mode = cache, offset = 189, promotion percent = 4, promotion directory = output/promotion_data/single_thread/pcc_128/30_sec/pagerank/
+
+READING: output/single_thread/pcc_128/30_sec/pagerank/kron25
+MEM REGION: 3fffe95 - 3ffff16
+Total footprint = 4757 huge pages
+----------
+
+python3 get_promotions.py output/single_thread/pcc_128/30_sec/pagerank/kron25 8
+mode = cache, offset = 189, promotion percent = 8, promotion directory = output/promotion_data/single_thread/pcc_128/30_sec/pagerank/
+
+READING: output/single_thread/pcc_128/30_sec/pagerank/kron25
+MEM REGION: 3fffe95 - 3ffff16
+Total footprint = 4757 huge pages
+----------
+
+python3 get_promotions.py output/single_thread/pcc_128/30_sec/pagerank/kron25 16
+mode = cache, offset = 189, promotion percent = 16, promotion directory = output/promotion_data/single_thread/pcc_128/30_sec/pagerank/
+
+READING: output/single_thread/pcc_128/30_sec/pagerank/kron25
+MEM REGION: 3fffe95 - 3ffff16
+Total footprint = 4757 huge pages
+----------
+
+python3 get_promotions.py output/single_thread/pcc_128/30_sec/pagerank/kron25 32
+mode = cache, offset = 189, promotion percent = 32, promotion directory = output/promotion_data/single_thread/pcc_128/30_sec/pagerank/
+
+READING: output/single_thread/pcc_128/30_sec/pagerank/kron25
+MEM REGION: 3fffe95 - 3ffff16
+Total footprint = 4757 huge pages
+----------
+
+python3 get_promotions.py output/single_thread/pcc_128/30_sec/pagerank/kron25 64
+mode = cache, offset = 189, promotion percent = 64, promotion directory = output/promotion_data/single_thread/pcc_128/30_sec/pagerank/
+
+READING: output/single_thread/pcc_128/30_sec/pagerank/kron25
+MEM REGION: 3fffe95 - 3ffff16
+Total footprint = 4757 huge pages
+----------
+
+python3 get_promotions.py output/single_thread/pcc_128/30_sec/pagerank/kron25 100
+mode = cache, offset = 189, promotion percent = 100, promotion directory = output/promotion_data/single_thread/pcc_128/30_sec/pagerank/
+
+READING: output/single_thread/pcc_128/30_sec/pagerank/kron25
+MEM REGION: 3fffe95 - 3ffff16
+Total footprint = 4757 huge pages
+----------
+
+DID NOT PROMOTE ENOUGH PAGES: 4549/4757
+python3 get_demotions.py output/single_thread/pcc_128/30_sec/pagerank/kron25
+mode = cache, offset = 189, demotion directory = output/demotion_data/single_thread/pcc_128/30_sec/pagerank/
+
+READING: output/single_thread/pcc_128/30_sec/pagerank/kron25
+MEM REGION: 3fffe95 - 3ffff16
+Total footprint = 4757 huge pages
+----------
+
+demoting: 131063 244
+demoting: 131071 183
+demoting: 131062 180
+demoting: 131064 52
+demoting: 131065 13
+demoting: 131070 29
+demoting: 131069 15
+demoting: 131068 7
+demoting: 131066 6
+demoting: 131067 124
+run.sh: line 437: syntax error near unexpected token `fi'
+run.sh: line 437: `fi'

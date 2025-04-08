@@ -349,7 +349,7 @@ void launch_promoter(int cpid, const char* promotion_filename, const char* demot
 
       iov.iov_base = (char*) 0 + base*pmd_pagesize;
       iov.iov_len = offset*pmd_pagesize;
-      cout << "PROMOTING: " << (unsigned long) base << " " << offset;
+      cout << time << " " << "PROMOTING: " << (unsigned long) base << " " << offset;
       fflush(stdout);
       err = syscall(SYS_process_madvise, pidfd, &iov, 1, MADV_PROMOTE, 0);
       if (err < 0) perror("Error!");
@@ -363,7 +363,7 @@ void launch_promoter(int cpid, const char* promotion_filename, const char* demot
 
         iov.iov_base = (char*) 0 + base*pmd_pagesize;
         iov.iov_len = offset*pmd_pagesize;
-        cout << "DEMOTING: " << (unsigned long) base << " " << offset;
+        cout << time << " " << "DEMOTING: " << (unsigned long) base << " " << offset;
         fflush(stdout);
         err = syscall(SYS_process_madvise, pidfd, &iov, 1, MADV_DEMOTE, 0);
         if (err < 0) perror("Error!");

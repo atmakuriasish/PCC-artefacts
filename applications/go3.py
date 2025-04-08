@@ -4,6 +4,8 @@ import os
 import re
 import sys
 import time
+import subprocess
+from threading import Thread
 
 from subprocess import Popen, PIPE
 
@@ -18,6 +20,7 @@ NUM_THREADS = 4
 NUM_SIZES = 9
 NUM_POLICIES = 2
 NUM_ITER = 1
+cpuu = 0
 
 # APPS
 #vp = ["bfs", "sssp", "pagerank"]
@@ -71,6 +74,7 @@ start_seed = {"Kronecker_25/": "0"}
 
 def parse_args():
   parser = argparse.ArgumentParser()
+  parser.add_argument("-cpu", type=int, required=True, help="CPU core to bind this instance to")
   parser.add_argument("-a", "--app", type=str, help="Application to run (bfs, sssp, pagerank, canneal, dedup, mcf, omnetpp, xalancbmk)")
   parser.add_argument("-x", "--experiment", type=str, default=-1, help="Experiment to run (hawkeye, single_thread_pcc, sensitivity, multithread)")
   parser.add_argument("-d", "--dataset", type=str, help="Dataset to run")
@@ -79,14 +83,30 @@ def parse_args():
   args = parser.parse_args()
   return args
 
+def monitor_memory(pid, output_dir):
+  """Monitor memory usage of a process and write to CSV"""
+  log_file = os.path.join(output_dir, "memory_usage.csv")
+  with open(log_file, "w") as f:
+      f.write("timestamp,memory_rss_mb\n")
+      while True:
+          try:
+              # Get RSS memory in MB
+              result = subprocess.check_output(
+                  f"ps -o rss= -p {pid}", 
+                  shell=True,
+                  stderr=subprocess.DEVNULL
+              )
+              rss_mb = int(result.strip()) // 1024
+              f.write(f"{time.time()},{rss_mb}\n")
+              f.flush()
+          except subprocess.CalledProcessError:
+              break  # Process exited
+          time.sleep(5)
+
 def exec_run(cmd, tmp_output, output):
   print(cmd)
-  os.makedirs(output, exist_ok=True)
   exit = os.system(cmd)
   if not exit and "screen" not in cmd:
-    # Verify memory log was created
-    if not os.path.exists(os.path.join(tmp_output, "memory_usage.csv")):
-        print("Warning: Memory monitoring failed!")
     if tmp_output != output:
       os.system("cp -r " + tmp_output + " " + output)
       os.system("rm -r " + tmp_output)
@@ -94,7 +114,7 @@ def exec_run(cmd, tmp_output, output):
   else:
     print("Experiment failed!")
 
-def run(exp_type, config, size=PCC_SIZE, access_time=ACCESS_TIME, num_threads=0, policy=0, demotion=False): 
+def run(exp_type, config, size=PCC_SIZE, access_time=ACCESS_TIME, num_threads=0, policy=0, demotion=True): 
   if "pcc" in exp_type:
     exp_type += "_" + str(size) 
   exp_name = str(num_threads) + "_threads/" if num_threads > 0 else ""
@@ -139,7 +159,7 @@ def run(exp_type, config, size=PCC_SIZE, access_time=ACCESS_TIME, num_threads=0,
           promotion_data += "_" + str(policy)
         demotion_data = DEMOTION_CACHE_DIR + demotion_dir + "/" + dataset_names[input]
 
-        cmd_args = ["time python3 measure.py", "-s", source, "-d", data, "-o", tmp_output, "-ma", madvise]
+        cmd_args = ["time python3 measure.py", "-s", source, "-d", data, "-o", tmp_output, "-ma", madvise, "-cpu", str(cpuu)]
         
         cmd_args += ["-pd", promotion_data] 
         if demotion:
@@ -161,10 +181,13 @@ def main():
   global is_thp, apps, inputs, datasets, num_iter
 
   args = parse_args()
+  cpuu = args.cpu
 
   HOME_DIR = os.path.dirname(os.getcwd()) + "/"
   LAUNCH_DIR = HOME_DIR + "applications/launch/" 
-  RESULT_DIR = HOME_DIR + "results/"
+  #RESULT_DIR = HOME_DIR + "results/"
+  RESULT_DIR = os.path.join(HOME_DIR, f"results{args.cpu}/")
+  # os.makedirs(RESULT_DIR, exist_ok=True)
   GRAPH_DIR = HOME_DIR + "data/"
   PROMOTION_CACHE_DIR = HOME_DIR + "pin3.7/source/tools/PromotionCache/output/promotion_data/"
   DEMOTION_CACHE_DIR = HOME_DIR + "pin3.7/source/tools/PromotionCache/output/demotion_data/"
