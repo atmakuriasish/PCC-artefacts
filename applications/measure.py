@@ -42,7 +42,7 @@ def compile():
 def monitor_memory(output_dir, stop_event):
   log_file = os.path.join(output_dir, "memory_usage.csv")
   with open(log_file, "w") as f:
-      f.write("timestamp,total_mb,free_mb,available_mb,buffers_mb,cached_mb,used_mb\n")
+      f.write("timestamp,total_mb,free_mb,available_mb,buffers_mb,cached_mb,sreclaimable_mb,shmem_mb,used_mb\n")
       
       while not stop_event.is_set():
           try:
@@ -63,10 +63,14 @@ def monitor_memory(output_dir, stop_event):
                       mem_stats['MemAvailable'] = value // 1024
                   elif key == 'Buffers':
                       mem_stats['Buffers'] = value // 1024
+                  elif key == 'SReclaimable':
+                      mem_stats['SReclaimable'] = value // 1024
+                  elif key == 'Shmem':
+                      mem_stats['Shmem'] = value // 1024
                   elif key == 'Cached':  # Exact match for Cached
                       mem_stats['Cached'] = value // 1024
               
-              used = mem_stats['MemTotal'] - mem_stats['MemAvailable']
+              used = mem_stats['MemTotal'] - mem_stats['MemFree'] - mem_stats['Buffers'] - mem_stats['Cached'] - mem_stats['SReclaimable'] + mem_stats['Shmem'] 
               
               f.write(f"{time.time()},"
                       f"{mem_stats['MemTotal']},"
@@ -74,6 +78,8 @@ def monitor_memory(output_dir, stop_event):
                       f"{mem_stats['MemAvailable']},"
                       f"{mem_stats['Buffers']},"
                       f"{mem_stats['Cached']},"
+                      f"{mem_stats['SReclaimable']},"
+                      f"{mem_stats['Shmem']},"
                       f"{used}\n")
               f.flush()
               

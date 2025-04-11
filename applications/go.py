@@ -21,7 +21,7 @@ NUM_ITER = 1
 
 # APPS
 #vp = ["bfs", "sssp", "pagerank"]
-vp = ["bfs"]
+vp = ["bfs", "sssp", "pagerank"]
 parsec = []
 spec = []
 apps = vp + parsec + spec
