@@ -42,7 +42,7 @@ def compile():
 def monitor_memory(output_dir, stop_event):
   log_file = os.path.join(output_dir, "memory_usage.csv")
   with open(log_file, "w") as f:
-      f.write("timestamp,total_mb,free_mb,available_mb,buffers_mb,cached_mb,sreclaimable_mb,shmem_mb,used_mb\n")
+      f.write("timestamp,total_mb,free_mb,available_mb,buffers_mb,cached_mb,sreclaimable_mb,shmem_mb,used_mb,swap_total_mb,swap_free_mb,swap_used_mb\n")
       
       while not stop_event.is_set():
           try:
@@ -69,8 +69,13 @@ def monitor_memory(output_dir, stop_event):
                       mem_stats['Shmem'] = value // 1024
                   elif key == 'Cached':  # Exact match for Cached
                       mem_stats['Cached'] = value // 1024
+                  elif key == 'SwapTotal':
+                      mem_stats['SwapTotal'] = value // 1024
+                  elif key == 'SwapFree':
+                      mem_stats['SwapFree'] = value // 1024
               
-              used = mem_stats['MemTotal'] - mem_stats['MemFree'] - mem_stats['Buffers'] - mem_stats['Cached'] - mem_stats['SReclaimable'] + mem_stats['Shmem'] 
+              swap_used = mem_stats['SwapTotal'] - mem_stats['SwapFree']
+              used = mem_stats['MemTotal'] - mem_stats['MemFree'] - mem_stats['Buffers'] - mem_stats['Cached'] - mem_stats['SReclaimable'] + mem_stats['Shmem'] + swap_used
               
               f.write(f"{time.time()},"
                       f"{mem_stats['MemTotal']},"
@@ -80,7 +85,10 @@ def monitor_memory(output_dir, stop_event):
                       f"{mem_stats['Cached']},"
                       f"{mem_stats['SReclaimable']},"
                       f"{mem_stats['Shmem']},"
-                      f"{used}\n")
+                      f"{used},"
+                      f"{mem_stats['SwapTotal']},"
+                      f"{mem_stats['SwapFree']},"
+                      f"{swap_used}\n")
               f.flush()
               
           except Exception as e:
@@ -285,8 +293,10 @@ def write_results(measurements):
       tlb_sts = 0
     tlb_refs = tlb_lds + tlb_sts
     #tlb_misses = tlb_ld_misses + tlb_st_misses
+    instructions = metric_vals["instructions"]
 
     if measure_full:
+
       tlb_ld_stlb = metric_vals["dtlb_load_misses.stlb_hit"]
       tlb_ld_walks = metric_vals["dtlb_load_misses.miss_causes_a_walk"]
       tlb_ld_walk_cycles = metric_vals["dtlb_load_misses.walk_duration"]
@@ -329,6 +339,14 @@ def write_results(measurements):
       measurements.write("Page Walker L2 Loads: " + str(walker_loads_l2*100.0/tlb_walks) + "\n")
       measurements.write("Page Walker L3 Loads: " + str(walker_loads_l3*100.0/tlb_walks) + "\n")
       measurements.write("Page Walker Mem Loads: " + str(walker_loads_mem*100.0/tlb_walks) + "\n")
+      measurements.write("Instructions: " + str(instructions) + "\n")
+      measurements.write("Cycles: " + str(cycles) + "\n")
+      measurements.write("dTLB accesses: " + str(tlb_refs) + "\n")
+      measurements.write("dTLB loads: " + str(tlb_lds) + "\n")
+      measurements.write("dTLB stores: " + str(tlb_sts) + "\n")
+      measurements.write("PTWs: " + str(tlb_walks) + "\n")
+      measurements.write("load PTWs: " + str(tlb_ld_walks) + "\n")
+      measurements.write("store PTWs: " + str(tlb_st_walks) + "\n")
       measurements.write("\n")
 
       measurements.write("TLB:\n")
@@ -370,7 +388,7 @@ def write_results(measurements):
       mem_stalls = metric_vals["cycle_activity.stalls_ldm_pending"] if "cycle_activity.stalls_ldm_pending" in metric_vals else 0
       tot_stalls = metric_vals["cycle_activity.cycles_no_execute"] if "cycle_activity.cycles_no_execute" in metric_vals else 0
 
-      instructions = metric_vals["instructions"]
+      # instructions = metric_vals["instructions"]
       memory_ops = l1_refs
       compute_ops = instructions - memory_ops
       ratio = compute_ops/memory_ops
